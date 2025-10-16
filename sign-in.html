@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description"
+        content="Secure login page for registered users. Access your dashboard and continue your workflow safely.">
+</head>
+
+<body>
+    <section class="section signin">
+        <button class="icon close large" aria-label="Close" title="Close"></button>
+        <div class="signin__wrap">
+            <h1 class="title main">Sign In</h1>
+            <form action="#" method="post" class="form">
+                <div class="form__wrap">
+                    <div class="form__input-field">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="form__input" name="email" id="email" type="email" placeholder="example@mail.com">
+                        <p class="form__desc hide">Enter a valid email with '@' and a domain.</p>
+                    </div>
+                    <div class="form__input-field">
+                        <label class="form__label" for="password">Password</label>
+                        <div class="password-field">
+                            <input class="form__input" name="password" id="password" type="password"
+                                placeholder="Enter your password">
+                            <span class="icon eye show"></span>
+                        </div>
+                        <p class="form__desc hide">Incorrect password. Please try again.</p>
+                        <a href="forgot-password.html" class="form__link">Forgot your password?</a>
+                    </div>
+                </div>
+                <div class="form__btns-field">
+                    <a href="#" class="btn form disabled">Sign In</a>
+                    <div class="definder">
+                        <span class="line"></span> or <span class="line"></span>
+                    </div>
+                    <button class="btn google">Continue with <span class="icon google"></span></button>
+                </div>
+                <div class="form__reg-field">
+                    Don't have an account yet?
+                    <a href="sign-up.html" class="form__link">Sign up</a>
+                </div>
+            </form>
+        </div>
+        <p class="signin__desc">By registering, you agree to the Privacy and Data Use Policy.</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('.form');
+            const emailInput = form.querySelector('input[name="email"]');
+            const passwordInput = form.querySelector('input[name="password"]');
+            const signInBtn = form.querySelector('.btn.form');
+            const emailError = emailInput.closest('.form__input-field').querySelector('.form__desc');
+            const eyeIcon = form.querySelector('.password-field .icon.eye.show');
+
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            function validateInputs() {
+                const email = emailInput.value.trim();
+                const password = passwordInput.value.trim();
+                const isEmailValid = validateEmail(email);
+                const isPasswordFilled = password.length > 0;
+
+                if (email && !isEmailValid) {
+                    emailError.classList.remove('hide');
+                    emailInput.classList.add('error');
+                } else {
+                    emailError.classList.add('hide');
+                    emailInput.classList.remove('error');
+                }
+
+                if (isEmailValid && isPasswordFilled) {
+                    signInBtn.classList.remove('disabled');
+                } else {
+                    signInBtn.classList.add('disabled');
+                }
+            }
+
+            eyeIcon.addEventListener('click', () => {
+                const isActive = eyeIcon.classList.toggle('active');
+                passwordInput.type = isActive ? 'text' : 'password';
+            });
+
+            emailInput.addEventListener('input', validateInputs);
+            passwordInput.addEventListener('input', validateInputs);
+        });
+    </script>
+</body>
+
+</html>

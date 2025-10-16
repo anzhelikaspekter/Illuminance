@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticator Verification</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description" content="Verify your identity using the authentication code from your authenticator app to securely access your account.">
+</head>
+
+
+<body>
+    <section class="section auth-verification">
+        <button class="icon close large" aria-label="Close" title="Close"></button>
+        <div class="auth-verification__wrap">
+            <div class="auth-verification__title-wrap">
+                <h1 class="title main">Enter the 6-digit code from your authenticator app</h1>
+                <p class="auth-verification__desc">This helps us keep your account secure by verifying that it’s really you.</p>
+            </div>
+            <form action="#" method="post" class="form" data-expected-code="123456">
+                <div class="form__input-field">
+                    <div class="form__code-field">
+                        <span class="form__code"></span>
+                        <span class="form__code"></span>
+                        <span class="form__code"></span>
+                        <span class="form__code"></span>
+                        <span class="form__code"></span>
+                        <span class="form__code"></span>
+                    </div>
+                    <p class="form__desc hide">The code you entered is not valid</p>
+                </div>
+                <div class="form__btns-field">
+                    <a href="#" class="btn form disabled">Submit</a>
+                    <div class="form__resend-field">
+                        Didn’t get the auth?
+                        <a href="sign-in.html" class="form__link resend">Resend code</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <p class="auth-verification__desc">By registering, you agree to the Privacy and Data Use Policy.</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('.form');
+            const codeField = form.querySelector('.form__code-field');
+            const codeSpans = Array.from(codeField.querySelectorAll('.form__code'));
+            const errorText = form.querySelector('.form__desc');
+            const submitBtn = form.querySelector('.btn.form');
+            const expectedCode = (form.dataset.expectedCode || '123456').replace(/\D/g, '');
+
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'text';
+            hiddenInput.inputMode = 'numeric';
+            hiddenInput.autocomplete = 'one-time-code';
+            hiddenInput.maxLength = codeSpans.length;
+            hiddenInput.style.position = 'absolute';
+            hiddenInput.style.opacity = '0';
+            hiddenInput.style.pointerEvents = 'none';
+            hiddenInput.style.width = '0';
+            hiddenInput.style.height = '0';
+            codeField.appendChild(hiddenInput);
+
+            function render() {
+                const val = hiddenInput.value.replace(/\D/g, '').slice(0, codeSpans.length);
+                hiddenInput.value = val;
+
+                codeSpans.forEach((s, i) => {
+                    s.textContent = val[i] || '';
+                    s.classList.toggle('filled', Boolean(val[i]));
+                });
+
+                if (val.length < codeSpans.length) {
+                    hideError();
+                    setEnabled(false);
+                    return;
+                }
+
+                if (val === expectedCode) {
+                    hideError();
+                    setEnabled(true);
+                } else {
+                    showError('The code you entered is not valid');
+                    setEnabled(false);
+                }
+            }
+
+            function showError(message) {
+                if (errorText) {
+                    if (message) errorText.textContent = message;
+                    errorText.classList.remove('hide');
+                }
+                codeSpans.forEach(s => s.classList.add('error'));
+            }
+
+            function hideError() {
+                if (errorText) errorText.classList.add('hide');
+                codeSpans.forEach(s => s.classList.remove('error'));
+            }
+
+            function setEnabled(ok) {
+                submitBtn.classList.toggle('disabled', !ok);
+            }
+
+            codeField.addEventListener('click', () => hiddenInput.focus());
+
+            hiddenInput.addEventListener('input', render);
+
+            codeField.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace') {
+                    hiddenInput.value = hiddenInput.value.slice(0, -1);
+                    render();
+                    e.preventDefault();
+                }
+            });
+
+            hiddenInput.focus();
+            render();
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,48 @@
+:root {
+
+
+    --btn-form-bg-color: rgba(50, 73, 120, 1);
+    --btn-form-color: rgba(255, 253, 254, 1);
+    --btn-form-bg-disabled-color: rgba(50, 73, 120, 1);
+    --btn-form-disabled-color: rgba(255, 253, 254, 1);
+
+    --btn-google-bg-color: rgba(255, 253, 254, .05);
+    --btn-google-border-color: rgba(255, 253, 254, .1);
+    --btn-google-color: rgba(255, 253, 254, 1);
+}
+
+@mixin btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 16px;
+    gap: 12px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: transparent;
+    text-decoration: none;
+    box-shadow: inset 1.5px 1.5px 1px rgba(255, 255, 255, 0.09), inset -1.5px -1.5px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn {
+    @include btn;
+    &.form {
+        background: var(--btn-form-bg-color);
+        color: var(--btn-form-color);
+        &.disabled {
+            background: var(--btn-form-bg-disabled-color);
+            color: var(--btn-form-disabled-color);
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+    }
+    &.google {
+        background: var(--btn-google-bg-color);
+        border: 1px solid var(--btn-google-border-color);
+        color: var(--btn-google-color);
+        box-shadow: none;
+    }
+}

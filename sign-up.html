@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description"
+        content="Sign up to get started — it only takes a few seconds to join and unlock all features.">
+</head>
+
+<body>
+    <section class="section signup">
+        <button class="icon close large" aria-label="Close" title="Close"></button>
+        <div class="signup__wrap">
+            <h1 class="title main">Create account</h1>
+            <form action="#" method="post" class="form scroll">
+                <div class="form__wrap">
+                    <div class="form__field">
+                        <div class="form__input-field">
+                            <label class="form__label" for="frst_name">First name</label>
+                            <input class="form__input" name="frst_name" id="frst_name" type="text"
+                                placeholder="Enter your first name">
+                        </div>
+                        <div class="form__input-field">
+                            <label class="form__label" for="last_name">Last name</label>
+                            <input class="form__input" name="last_name" id="last_name" type="text"
+                                placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    <div class="form__input-field">
+                        <label class="form__label" for="nickname">Nickname</label>
+                        <input class="form__input" name="nickname" id="nickname" type="text"
+                            placeholder="Enter your nickname">
+                    </div>
+                    <div class="form__field">
+                        <div class="form__input-field">
+                            <label class="form__label" for="email">Email</label>
+                            <input class="form__input" name="email" id="email" type="email"
+                                placeholder="example@mail.com">
+                            <p class="form__desc hide">Enter a valid email with '@' and a domain.</p>
+                        </div>
+                        <div class="form__input-field">
+                            <label class="form__label" for="phone">Phone</label>
+                            <input class="form__input" name="phone" id="phone" type="tel" placeholder="+1 980">
+                        </div>
+                    </div>
+                    <div class="form__input-field">
+                        <label class="form__label" for="password">Password</label>
+                        <div class="password-field">
+                            <input class="form__input" name="password" id="password" type="password"
+                                placeholder="Enter your password">
+                            <span class="icon eye show"></span>
+                        </div>
+                        <p class="form__desc hide">Minimum of 8 letters, 1 number and 1 upper case letter.</p>
+                    </div>
+                    <div class="form__input-field">
+                        <label class="form__label" for="repeat_password">Repeat password</label>
+                        <div class="password-field">
+                            <input class="form__input" name="repeat_password" id="repeat_password" type="password"
+                                placeholder="Confirm your password">
+                            <span class="icon eye show"></span>
+                        </div>
+                        <p class="form__desc hide">Minimum of 8 letters, 1 number and 1 upper case letter.</p>
+                    </div>
+                    <div class="form__input-field">
+                        <label class="form__label" for="referral">Referral</label>
+                        <input class="form__input" name="referral" id="referral" type="text"
+                            placeholder="Enter referral code (optional)">
+                    </div>
+                </div>
+                <div class="form__btns-field">
+                    <a href="#" class="btn form disabled">Sign Up</a>
+                    <div class="definder">
+                        <span class="line"></span> or <span class="line"></span>
+                    </div>
+                    <button class="btn google">Continue with <span class="icon google"></span></button>
+                </div>
+                <div class="form__reg-field">
+                    Already have an account?
+                    <a href="sign-in.html" class="form__link">Sign In</a>
+                </div>
+            </form>
+        </div>
+        <p class="signup__desc">By registering, you agree to the Privacy and Data Use Policy.</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('.form');
+            const firstNameInput = form.querySelector('input[name="frst_name"]');
+            const lastNameInput = form.querySelector('input[name="last_name"]');
+            const nicknameInput = form.querySelector('input[name="nickname"]');
+            const emailInput = form.querySelector('input[name="email"]');
+            const phoneInput = form.querySelector('input[name="phone"]');
+            const passwordInput = form.querySelector('input[name="password"]');
+            const repeatInput = form.querySelector('input[name="repeat_password"]');
+
+            const emailError = emailInput.closest('.form__input-field').querySelector('.form__desc');
+            const passError = passwordInput.closest('.form__input-field').querySelector('.form__desc');
+            const repeatError = repeatInput.closest('.form__input-field').querySelector('.form__desc');
+
+            if (!passError.textContent.trim()) {
+                passError.textContent = 'Minimum of 8 characters, 1 number and 1 uppercase letter.';
+            }
+            if (!repeatError.textContent.trim()) {
+                repeatError.textContent = 'Minimum of 8 characters, 1 number and 1 uppercase letter.';
+            }
+            const defaultPassErrorText = 'Minimum of 8 characters, 1 number and 1 uppercase letter.';
+            const defaultRepeatErrorText = 'Minimum of 8 characters, 1 number and 1 uppercase letter.';
+
+            const signUpBtn = form.querySelector('.btn.form');
+
+            const eyeIcons = form.querySelectorAll('.password-field .icon.eye.show');
+
+            const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+            const validatePasswordRules = (val) =>
+                val.length >= 8 && /[A-Z]/.test(val) && /\d/.test(val);
+
+            function setErrorState(input, hasError) {
+                if (!input) return;
+                input.classList.toggle('error', !!hasError);
+            }
+
+            function updateErrors() {
+                const email = emailInput.value.trim();
+                const pass = passwordInput.value;
+                const rep = repeatInput.value;
+
+                const emailValid = email ? validateEmail(email) : true;
+                const passValid = pass ? validatePasswordRules(pass) : true;
+                const matchValid = rep ? (rep === pass) : true;
+
+                emailError.classList.toggle('hide', emailValid);
+                setErrorState(emailInput, !emailValid);
+
+                passError.textContent = defaultPassErrorText;
+                passError.classList.toggle('hide', passValid);
+                setErrorState(passwordInput, !passValid);
+
+                if (rep && rep !== pass) {
+                    repeatError.textContent = 'Passwords do not match. Please check.';
+                    repeatError.classList.remove('hide');
+                    setErrorState(repeatInput, true);
+                } else {
+                    repeatError.textContent = defaultRepeatErrorText;
+                    repeatError.classList.add('hide');
+                    setErrorState(repeatInput, false);
+                }
+            }
+
+            function validateForm() {
+                updateErrors();
+
+                const allRequiredFilled = [
+                    firstNameInput.value.trim(),
+                    lastNameInput.value.trim(),
+                    nicknameInput.value.trim(),
+                    emailInput.value.trim(),
+                    phoneInput.value.trim(),
+                    passwordInput.value,
+                    repeatInput.value
+                ].every(Boolean);
+
+                const isEmailOk = validateEmail(emailInput.value.trim());
+                const isPassOk = validatePasswordRules(passwordInput.value);
+                const isMatch = repeatInput.value === passwordInput.value;
+
+                const formOk = allRequiredFilled && isEmailOk && isPassOk && isMatch;
+
+                signUpBtn.classList.toggle('disabled', !formOk);
+            }
+
+            [
+                firstNameInput, lastNameInput, nicknameInput,
+                emailInput, phoneInput, passwordInput, repeatInput
+            ].forEach(el => {
+                el.addEventListener('input', validateForm);
+                el.addEventListener('blur', validateForm);
+            });
+
+            eyeIcons.forEach(icon => {
+                const input = icon.closest('.password-field')?.querySelector('input');
+                if (!input) return;
+                icon.addEventListener('click', () => {
+                    const active = icon.classList.toggle('active');
+                    input.type = active ? 'text' : 'password';
+                });
+            });
+
+            validateForm();
+        });
+    </script>
+</body>
+
+</html>

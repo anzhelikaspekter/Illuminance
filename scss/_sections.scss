@@ -1,0 +1,81 @@
+:root {
+    --registration-bg: rgba(12, 17, 28, .8);
+}
+
+.section {
+    &.signin {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: calc(16px + (32 - 16) * ((100vw - 320px) / (1440 - 320)));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        /* Overlay */
+        background: var(--registration-bg);
+        backdrop-filter: blur(60px);
+        overflow: hidden;
+    }
+    &.signup {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: calc(16px + (32 - 16) * ((100vw - 320px) / (1440 - 320)));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        /* Overlay */
+        background: var(--registration-bg);
+        backdrop-filter: blur(60px);
+        overflow: hidden;
+    }
+    &.forgot-password {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: calc(16px + (32 - 16) * ((100vw - 320px) / (1440 - 320)));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        /* Overlay */
+        background: var(--registration-bg);
+        backdrop-filter: blur(60px);
+        overflow: hidden;
+    }
+    &.auth-verification {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: calc(16px + (32 - 16) * ((100vw - 320px) / (1440 - 320)));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        /* Overlay */
+        background: var(--registration-bg);
+        backdrop-filter: blur(60px);
+        overflow: hidden;
+    }
+    &.email-verification {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: calc(16px + (32 - 16) * ((100vw - 320px) / (1440 - 320)));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        /* Overlay */
+        background: var(--registration-bg);
+        backdrop-filter: blur(60px);
+        overflow: hidden;
+    }
+}

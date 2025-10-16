@@ -1,0 +1,177 @@
+:root {
+    --form-label-color: rgba(255, 255, 255, 1);
+    --form-input-color: rgba(255, 253, 254, 1);
+    --form-input-bg-color: rgba(255, 253, 254, 0.05);
+    --form-input-placeholder-color: rgba(255, 253, 254, 0.3);
+    --form-link-color: rgba(255, 255, 255, 0.7);
+
+    --form-input-error-bg-color: rgba(255, 66, 66, 0.2);
+    --form-input-error-color: rgba(255, 255, 255, 1);
+    --form-desc-error-color: rgba(255, 129, 129, 0.8);
+
+    --form-reg-field-color: rgba(255, 255, 255, 0.4);
+
+    --form-code-bg-color: rgba(255, 255, 255, 0.05);
+    --form-code-color: rgba(255, 255, 255, 1);
+    --form-code-bg-error-color: rgba(255, 66, 66, 0.2);
+
+    --form-resend-field-color: rgba(255, 255, 255, 0.4);
+    --form-resend-color: rgba(50, 73, 120, 1);
+
+    --form-definder-line-color: rgba(255, 255, 255, 0.1);
+    --form-definder-color: rgba(255, 255, 255, 0.3);
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &__field {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        gap: 12px;
+    }
+    &__input-field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__label {
+        font-size: calc(15px + (15 - 15) * ((100vw - 320px) / (1440 - 320)));
+        font-weight: 400;
+        letter-spacing: -0.2px;
+        color: var(--form-label-color);
+    }
+    &__input {
+        width: 100%;
+        padding: 16px 16px;
+        border-radius: 12px;
+        border: none;
+        color: var(--form-input-color);
+        background-color: var(--form-input-bg-color);
+        &::placeholder {
+            font-size: calc(16px + (16 - 16) * ((100vw - 320px) / (1440 - 320)));
+            font-weight: 400;
+            letter-spacing: -0.5;
+            color: var(--form-input-placeholder-color);
+        }
+        &.error {
+            background: var(--form-input-error-bg-color);
+            color: var(--form-input-error-color);
+        }
+    }
+    &__link {
+        font-size: calc(14px + (14 - 14) * ((100vw - 320px) / (1440 - 320)));
+        font-weight: 400;
+        color: var(--form-link-color);
+        text-align: center;
+        text-decoration: underline;
+        &.resend {
+            color: var(--form-resend-color);
+            text-decoration: none;
+        }
+    }
+    &__desc {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.2;
+        color: var(--form-desc-error-color);
+    }
+    &__btns-field {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__reg-field {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--form-reg-field-color);
+    }
+    &__code-field {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+    }
+    &__code {
+        width: 100%;
+        height: calc(70px + (96 - 70) * ((100vw - 320px) / (1440 - 320)));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1440 - 320)));
+        background: var(--form-code-bg-color);
+        font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1440 - 320)));
+        font-weight: 400;
+        color: var(--form-code-color);
+        &.error {
+            background: var(--form-code-bg-error-color);
+        }
+    }
+    &__resend-field {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--form-resend-field-color);
+    }
+    &.scroll {
+        height: 100%;
+        max-height: calc(100vh - 350px);
+        overflow: hidden;
+        overflow-y: auto;
+        scrollbar-width: none;
+        scrollbar-gutter: stable;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.password-field {
+    position: relative;
+    & .icon {
+        &.eye {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+}
+
+.definder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--form-definder-color);
+    & .line {
+        width: 100%;
+        height: 1px;
+        background: var(--form-definder-line-color);
+    }
+}

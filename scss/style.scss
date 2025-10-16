@@ -1,0 +1,46 @@
+:root {
+    --bg-color: rgba(50, 73, 120, 1);
+    --font-primary: 'Euclid Circular B';
+}
+
+@import "_fonts";
+@import "_outline";
+@import "_scrollbar";
+@import "_sections";
+
+@import "components/_title";
+@import "components/_btn";
+@import "components/_icon";
+@import "components/_form";
+
+@import "sections/_signin";
+@import "sections/_signup";
+@import "sections/_forgot-password";
+@import "sections/_email-verification";
+@import "sections/_auth-verification";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+    font-family: var(--font-primary);
+    line-height: 1.2;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+.hide {
+    display: none !important;
+}

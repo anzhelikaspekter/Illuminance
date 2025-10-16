@@ -1,0 +1,53 @@
+:root {
+    --icon-close: url(./../../img/icons/close.svg) no-repeat center / contain;
+    --icon-show: url(./../../img/icons/mdi_eye.svg) no-repeat center / contain;
+    --icon-hide: url(../../img/icons/mdi_eye-off.svg) no-repeat center / contain;
+    --icon-google: url(./../../img/icons/google.svg) no-repeat center/ contain;
+    --icon-prev: url(./../../img/icons/solar_arrow-up-outline.svg) no-repeat center/ contain;
+}
+
+
+.icon {
+    position: relative;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    object-fit: contain;
+    display: block;
+    border: none;
+    cursor: pointer;
+    &.close {
+        &.large {
+            width: 72px;
+            min-width: 72px;
+            height: 72px;
+            min-height: 72px;
+            margin-left: auto;
+            background: var(--icon-close);
+        }
+        background: var(--icon-close);
+    }
+    &.eye {
+        &.show {
+            background: var(--icon-show);
+        }
+        &.active {
+            background: var(--icon-hide);
+        }
+    }
+    &.google {
+        background: var(--icon-google);
+    }
+    &.prev {
+        &.large {
+            width: 72px;
+            min-width: 72px;
+            height: 72px;
+            min-height: 72px;
+            margin-left: auto;
+            background: var(--icon-prev);
+        }
+        background: var(--icon-prev);
+    }
+}
