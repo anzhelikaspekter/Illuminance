@@ -1,0 +1,30 @@
+:root {
+    
+}
+
+.header {
+    & .icon {
+        &.close {
+            position: absolute;
+            top: calc(0px + (16 - 0) * ((100vw - 320px) / (1440 - 320)));;
+            right: calc(0px + (16 - 0) * ((100vw - 320px) / (1440 - 320)));;
+        }
+    }
+    &__wrap {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        flex: 1;
+    }
+    &__desc {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--signin-desc-color);
+        text-align: center;
+        margin-top: auto;
+    }
+}

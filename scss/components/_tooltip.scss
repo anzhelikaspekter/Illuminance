@@ -1,0 +1,16 @@
+:root {
+    --tooltip-bg-color: rgba(255, 255, 255, 1);
+    --tooltip-title-color: rgba(0, 0, 0, 1);
+}
+
+.tooltip {
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: var(--tooltip-bg-color);
+    &__title {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: var(--tooltip-title-color);
+    }
+}

@@ -12,12 +12,16 @@
 @import "components/_btn";
 @import "components/_icon";
 @import "components/_form";
+@import "components/_card";
+@import "components/_tooltip";
 
 @import "sections/_signin";
 @import "sections/_signup";
 @import "sections/_forgot-password";
 @import "sections/_email-verification";
 @import "sections/_auth-verification";
+@import "sections/_header";
+@import "sections/_menu";
 
 * {
     margin: 0;

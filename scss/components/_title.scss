@@ -1,17 +1,35 @@
 :root {
-    --main-title-color: rgba(255, 255, 255, 1);
+    --title-main-color: rgba(255, 255, 255, 1);
+    --title-news-card-color: rgba(255, 255, 255, 1);
+    --title-card-color: rgba(255, 255, 255, 1);
 }
 
 @mixin title-main {
     font-size: calc(28px + (38 - 28) * ((100vw - 320px) / (1440 - 320)));
     font-weight: 500;
     letter-spacing: -1;
-    color: var(--main-title-color);
+    color: var(--title-main-color);
+}
+
+@mixin title-news-card {
+    font-size: calc(20px + (24 - 24) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 500;
+    color: var(--title-news-card-color);
+}
+
+@mixin title-card {
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: -0.3;
+    color: var(--title-card-color);
 }
 
 .title {
     &.main {
         @include title-main;
         text-align: center;
+    }
+    &.news-card {
+        @include title-news-card();
     }
 }

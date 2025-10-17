@@ -4,6 +4,7 @@
     --icon-hide: url(../../img/icons/mdi_eye-off.svg) no-repeat center / contain;
     --icon-google: url(./../../img/icons/google.svg) no-repeat center/ contain;
     --icon-prev: url(./../../img/icons/solar_arrow-up-outline.svg) no-repeat center/ contain;
+    --icon-arrow-left-up: url(./../../img/icons/arrow_left_up.svg) no-repeat center/ contain;
 }
 
 
@@ -49,5 +50,8 @@
             background: var(--icon-prev);
         }
         background: var(--icon-prev);
+    }
+    &.left-up {
+        background: var(--icon-arrow-left-up);
     }
 }

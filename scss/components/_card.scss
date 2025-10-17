@@ -1,0 +1,49 @@
+:root {
+    --card-bg-color: url(../../img/bg-card.svg) no-repeat center, rgba(255, 255, 255, 0.06);
+    --card-title-color: rgba(255, 255, 255, 1);
+    --card-desc-color: rgba(255, 255, 255, 0.5);
+}
+
+.card {
+    width: 100%;
+    padding: 16px;
+    border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: var(--card-bg-color);
+    overflow: hidden;
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    & .tooltip {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    &__wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        position: relative;
+    }
+    &__title {
+        @include title-card();
+    }
+    &__desc {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--card-desc-color);
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

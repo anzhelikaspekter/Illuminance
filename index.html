@@ -5,10 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="Secure login page for registered users. Access your dashboard and continue your workflow safely.">
+    <title>Illuminance</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+    <header class="header">
+        <section class="section menu" data-include="templates/menu.html"></section>
+    </header>
+    <main class="content">
+
+    </main>
+    <footer class="footer">
+
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('[data-include]').forEach(async el => {
+                try {
+                    const res = await fetch(el.dataset.include);
+                    if (res.ok) el.innerHTML = await res.text();
+                } catch (err) {
+                    console.error('Error include:', err);
+                }
+            });
+        });
+    </script>
 
 </body>
 
