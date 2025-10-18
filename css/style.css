@@ -330,7 +330,7 @@ html {
   --icon-prev: url(./../../img/icons/solar_arrow-up-outline.svg) no-repeat center/ contain;
   --icon-arrow-left-up: url(./../../img/icons/arrow_left_up.svg) no-repeat center/ contain;
   --icon-menu: url(./../../img/icons/menu.svg) no-repeat center / contain;
-  --icon-lang: url(./../../img/lang.svg) no-repeat center / 14px;
+  --icon-lang: url(./../../img/lang.svg) no-repeat center / contain;
   --icon-twitter: url(./../../img/icons/prime_twitter.svg) no-repeat center / contain;
   --icon-facebook: url(./../../img/icons/ic_baseline-facebook.svg) no-repeat center / contain;
   --icon-youtube: url(./../../img/icons/mdi_youtube.svg) no-repeat center / contain;
@@ -840,11 +840,6 @@ html {
   --menu-news-link-bg-color: rgba(255, 255, 255, 0.07);
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
 .menu__header {
   width: 100%;
   display: flex;
@@ -915,21 +910,51 @@ html {
 
 :root {
   --header-btn-border-color: rgba(255, 255, 255, 0.12);
+  --header-btn-border-active-color: rgba(52, 52, 51, 1);
+  --header-btn-bg-active-color: rgba(52, 52, 51, 1);
 }
 
 .header__menu {
+  width: 40px;
+  max-width: 40px;
+  height: 40px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
-  border: none;
   padding: 4px;
   border-radius: 50%;
   border: 1px solid var(--header-btn-border-color);
 }
+.header__menu:hover {
+  border: 1px solid var(--header-btn-border-active-color);
+  background: var(--header-btn-bg-active-color);
+}
+.header__menu.active {
+  border: 1px solid var(--header-btn-border-active-color);
+  background: var(--header-btn-bg-active-color);
+}
 .header__lang {
+  width: 40px;
+  max-width: 40px;
+  height: 40px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
-  border: none;
   padding: 4px;
   border-radius: 50%;
   border: 1px solid var(--header-btn-border-color);
+}
+.header__lang:hover {
+  border: 1px solid var(--header-btn-border-active-color);
+  background: var(--header-btn-bg-active-color);
+}
+.header__lang.active {
+  border: 1px solid var(--header-btn-border-active-color);
+  background: var(--header-btn-bg-active-color);
 }
 
 :root {
@@ -1026,6 +1051,9 @@ html {
   font-weight: 400;
   color: var(--footer-link-color);
   text-decoration: none;
+}
+.footer__link:hover {
+  color: var(--footer-desc-color);
 }
 
 * {

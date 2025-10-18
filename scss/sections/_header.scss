@@ -1,20 +1,50 @@
 :root {
     --header-btn-border-color: rgba(255, 255, 255, 0.12);
+    --header-btn-border-active-color: rgba(52, 52, 51, 1);
+    --header-btn-bg-active-color: rgba(52, 52, 51, 1);
 }
 
 .header {
     &__menu {
+        width: 40px;
+        max-width: 40px;
+        height: 40px;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: transparent;
-        border: none;
         padding: 4px;
         border-radius: 50%;
         border: 1px solid var(--header-btn-border-color);
+        &:hover {
+            border: 1px solid var(--header-btn-border-active-color);
+            background: var(--header-btn-bg-active-color);
+        }
+        &.active {
+            border: 1px solid var(--header-btn-border-active-color);
+            background: var(--header-btn-bg-active-color);
+        }
     }
     &__lang {
+        width: 40px;
+        max-width: 40px;
+        height: 40px;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: transparent;
-        border: none;
         padding: 4px;
         border-radius: 50%;
         border: 1px solid var(--header-btn-border-color);
+        &:hover {
+            border: 1px solid var(--header-btn-border-active-color);
+            background: var(--header-btn-bg-active-color);
+        }
+        &.active {
+            border: 1px solid var(--header-btn-border-active-color);
+            background: var(--header-btn-bg-active-color);
+        }
     }
 }

@@ -83,5 +83,8 @@
         font-weight: 400;
         color: var(--footer-link-color);
         text-decoration: none;
+        &:hover {
+            color: var(--footer-desc-color);
+        }
     }
 }

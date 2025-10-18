@@ -108,16 +108,15 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('[data-include]').forEach(async el => {
-                try {
-                    const res = await fetch(el.dataset.include);
-                    if (res.ok) el.innerHTML = await res.text();
-                } catch (err) {
-                    console.error('Error include:', err);
-                }
+            const menuBtn = document.querySelector('.header__menu');
+
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.add('active');
+                window.location.href = 'menu.html';
             });
         });
     </script>
+
 </body>
 
 </html>
