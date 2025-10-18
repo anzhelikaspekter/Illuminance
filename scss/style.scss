@@ -1,5 +1,5 @@
 :root {
-    --bg-color: rgba(50, 73, 120, 1);
+    --bg-color: rgba(205, 217, 241, 1);
     --font-primary: 'Euclid Circular B';
 }
 
@@ -11,17 +11,20 @@
 @import "components/_title";
 @import "components/_btn";
 @import "components/_icon";
+@import "components/_logo";
 @import "components/_form";
 @import "components/_card";
 @import "components/_tooltip";
+@import "components/_social";
 
 @import "sections/_signin";
 @import "sections/_signup";
 @import "sections/_forgot-password";
 @import "sections/_email-verification";
 @import "sections/_auth-verification";
-@import "sections/_header";
 @import "sections/_menu";
+@import "sections/_header";
+@import "sections/_footer";
 
 * {
     margin: 0;

@@ -1,5 +1,6 @@
 :root {
-    --registration-bg: url(../img/bg-right-up.svg) no-repeat top right, url(../img/bg-left-down.svg) no-repeat bottom left, rgba(12, 17, 28, .8);
+    --registration-bg: url(../img/bg-right-up.svg) no-repeat top right,
+        url(../img/bg-left-down.svg) no-repeat bottom left, rgba(12, 17, 28, 0.8);
 }
 
 .section {
@@ -92,5 +93,23 @@
         background: var(--registration-bg);
         backdrop-filter: blur(60px);
         overflow: hidden;
+    }
+    &.header {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: calc(16px + (28 - 16) * ((100vw - 320px) / (1440 - 320)));
+        position: sticky;
+        top: 0;
+    }
+    &.footer {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: calc(16px + (54 - 16) * ((100vw - 320px) / (1440 - 320)));
     }
 }

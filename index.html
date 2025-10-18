@@ -13,14 +13,97 @@
 </head>
 
 <body>
-    <header class="header">
-        <section class="section menu" data-include="templates/menu.html"></section>
+    <header class="section header">
+        <button class="header__menu" aria-label="Menu" title="Menu"><span class="icon menu"></span></button>
+        <a href="/" aria-label="Illuminance" title="Illuminance"><img src="img/logo.svg" width="208" height="24"
+                alt="Illuminance" class="logo"></a>
+        <button class="header__lang" aria-label="Language" title="Language"><span class="icon lang"></span></button>
     </header>
     <main class="content">
 
     </main>
-    <footer class="footer">
-
+    <footer class="section footer">
+        <div class="footer__wrap">
+            <div class="footer__info">
+                <div class="footer__info-wrap">
+                    <a href="/" aria-label="Illuminance" title="Illuminance"><img src="img/logo_black.svg" width="208"
+                            height="24" alt="Illuminance" class="logo"></a>
+                    <p class="footer__desc">Illuminance.com provides information and resources about the fundamentals of
+                        the
+                        decentralised non-custodial liquidity protocol called the Aave Protocol, comprised.</p>
+                </div>
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="#" class="social__link"><span class="icon twitter"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link"><span class="icon facebook"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link"><span class="icon youtube"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <p class="footer__item-title">Resources</p>
+                    <ul class="footer__list--inner">
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Blog</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Brand</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">FAQ</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Help & Support</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Governance</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer__item">
+                    <p class="footer__item-title">Developers</p>
+                    <ul class="footer__list--inner">
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Build</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Case Studies</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Documentation</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Technical Paper</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Security</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Bug Bounty</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer__item">
+                    <p class="footer__item-title">Company</p>
+                    <ul class="footer__list--inner">
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Privacy Policy</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Terms of Use</a>
+                        </li>
+                        <li class="footer__item--inner">
+                            <a href="#" class="footer__link">Contact</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </footer>
 
     <script>
@@ -35,7 +118,6 @@
             });
         });
     </script>
-
 </body>
 
 </html>
