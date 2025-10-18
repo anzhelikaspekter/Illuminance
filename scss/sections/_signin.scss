@@ -19,12 +19,16 @@
         justify-content: center;
         gap: 40px;
         flex: 1;
+        outline: none;
     }
-    &__desc {
-        font-size: 14px;
-        font-weight: 400;
-        color: var(--signin-desc-color);
-        text-align: center;
-        margin-top: auto;
+    &__form {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        flex: 1;
     }
 }

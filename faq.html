@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Secure login page for registered users. Access your dashboard and continue your workflow safely.">
-    <title>Illuminance</title>
+    <meta name="description" content="Find answers to the most frequently asked questions about Illuminance.">
+    <title>FAQ</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -17,13 +15,13 @@
     <header class="section header" role="banner">
         <nav class="header__nav" aria-label="Primary">
             <!-- Menu -->
-            <a href="menu.html" class="header__menu header__menu--light">
-                <span class="icon menu menu--light" aria-hidden="true"></span>
-                <span class="desc primary primary--dark" hidden>Menu</span>
+            <a href="menu.html" class="header__menu header__menu--dark">
+                <span class="icon menu menu--dark" aria-hidden="true"></span>
+                <span class="desc primary primary--light" hidden>Menu</span>
             </a>
             <!-- Logo -->
             <a href="/">
-                <img src="img/logo.svg" width="208" height="24" alt="Illuminance" class="logo">
+                <img src="img/logo_black.svg" width="208" height="24" alt="Illuminance" class="logo">
             </a>
 
             <!-- Lang Menu -->
@@ -55,7 +53,73 @@
     </header>
     <!-- Main -->
     <main class="content">
-
+        <section class="section hero hero__faq hero--light">
+            <h1 class="title primary primary--middle">Frequently Asked Questions</h1>
+            <p class="desc primary primary--dark">We are focused on effectively navigating our dynamic and
+                multi-jurisdictional regulatory environment. Our professional in-house legal and compliance teams
+                provide control, guidance and oversight.</p>
+        </section>
+        <section class="section faq" aria-labelledby="faq-title">
+            <h2 class="title primary primary--middle" id="faq-title" hidden>Frequently Asked Questions</h2>
+            <ul class="faq__list">
+                <li class="faq__item">
+                    <h3 class="faq__heading">
+                        <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq-panel-1"
+                            id="faq-button-1">
+                            <span class="icon plus" aria-hidden="true"></span>
+                            <span class="title thirdly thirdly--middle">Who chooses the InvestEU projects?</span>
+                        </button>
+                    </h3>
+                    <div id="faq-panel-1" class="faq__panel hide" role="region" aria-labelledby="faq-button-1" hidden>
+                        <p class="desc primary primary--dark">The financial partners in InvestEU are responsible for the
+                            financing and investment operations under the InvestEU Fund since their governing bodies
+                            take the final decision on the financing. The Investment Committee, composed of independent
+                            external experts, approves the use of the EU guarantee under the InvestEU Fund to support
+                            those operations ahead of the final decision by the financial partner.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <h3 class="faq__heading">
+                        <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq-panel-2"
+                            id="faq-button-2">
+                            <span class="icon plus" aria-hidden="true"></span>
+                            <span class="title thirdly thirdly--middle">Why does EFSI cease to exist? Why not just
+                                create an
+                                EFSI 3.0?</span>
+                        </button>
+                    </h3>
+                    <div id="faq-panel-2" class="faq__panel hide" role="region" aria-labelledby="faq-button-2" hidden>
+                        <p class="desc primary primary--dark">??</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <h3 class="faq__heading">
+                        <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq-panel-3"
+                            id="faq-button-3">
+                            <span class="icon plus" aria-hidden="true"></span>
+                            <span class="title thirdly thirdly--middle">Can InvestEU financing be combined with EU
+                                grants?</span>
+                        </button>
+                    </h3>
+                    <div id="faq-panel-3" class="faq__panel hide" role="region" aria-labelledby="faq-button-3" hidden>
+                        <p class="desc primary primary--dark">??</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <h3 class="faq__heading">
+                        <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq-panel-4"
+                            id="faq-button-4">
+                            <span class="icon plus" aria-hidden="true"></span>
+                            <span class="title thirdly thirdly--middle">Who is accountable for the investments
+                                made?</span>
+                        </button>
+                    </h3>
+                    <div id="faq-panel-4" class="faq__panel hide" role="region" aria-labelledby="faq-button-4" hidden>
+                        <p class="desc primary primary--dark">??</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </main>
     <!-- Footer -->
     <footer class="section footer">
@@ -157,6 +221,7 @@
             </ul>
         </div>
     </footer>
+
     <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -300,6 +365,61 @@
                         closeLangMenu();
                     }
                 });
+            });
+
+            /* FAQ ACCORDION */
+            const faqItems = document.querySelectorAll('.faq__item');
+
+            function closeFaq(btn, panel, headingEl) {
+                btn.setAttribute('aria-expanded', 'false');
+                btn.classList.add('plus');
+                btn.classList.remove('close', 'close--dark');
+                if (headingEl) {
+                    headingEl.classList.remove('thirdly--dark');
+                    headingEl.classList.add('thirdly--middle');
+                }
+                panel.hidden = true;
+                panel.classList.add('hide');
+                const item = panel.closest('.faq__item');
+                if (item) item.classList.remove('is-open');
+            }
+
+            function openFaq(btn, panel, headingEl) {
+                btn.setAttribute('aria-expanded', 'true');
+                btn.classList.remove('plus');
+                btn.classList.add('close', 'close--dark');
+                if (headingEl) {
+                    headingEl.classList.remove('thirdly--middle');
+                    headingEl.classList.add('thirdly--dark');
+                }
+                panel.hidden = false;
+                panel.classList.remove('hide');
+                const item = panel.closest('.faq__item');
+                if (item) item.classList.add('is-open');
+            }
+
+            faqItems.forEach((item, idx) => {
+                const btn = item.querySelector('.faq__button');
+                const panel = item.querySelector('.faq__panel');
+                const headingEl = item.querySelector('.faq__heading');
+
+                if (btn && panel) {
+                    if (!btn.id) btn.id = `faq-button-${idx + 1}`;
+                    if (!panel.id) panel.id = `faq-panel-${idx + 1}`;
+                    btn.setAttribute('aria-controls', panel.id);
+                    panel.setAttribute('aria-labelledby', btn.id);
+
+                    btn.addEventListener('click', () => {
+                        const expanded = btn.getAttribute('aria-expanded') === 'true';
+                        faqItems.forEach(other => {
+                            const ob = other.querySelector('.faq__button');
+                            const op = other.querySelector('.faq__panel');
+                            const oh = other.querySelector('.faq__heading');
+                            if (ob && op && ob !== btn) closeFaq(ob, op, oh);
+                        });
+                        expanded ? closeFaq(btn, panel, headingEl) : openFaq(btn, panel, headingEl);
+                    });
+                }
             });
         });
     </script>

@@ -5,6 +5,14 @@
 }
 
 .header {
+    &__nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: calc(16px + (28 - 16) * ((100vw - 320px) / (1440 - 320)));
+    }
     &__menu {
         width: 40px;
         max-width: 40px;
@@ -16,15 +24,40 @@
         background: transparent;
         padding: 4px;
         border-radius: 50%;
-        border: 1px solid var(--header-btn-border-color);
-        &:hover {
-            border: 1px solid var(--header-btn-border-active-color);
-            background: var(--header-btn-bg-active-color);
+        &--light {
+            border: 1px solid var(--header-btn-border-color);
+            &:hover {
+                border: 1px solid var(--header-btn-border-active-color);
+                background: var(--header-btn-bg-active-color);
+            }
+            &.active {
+                border: 1px solid var(--header-btn-border-active-color);
+                background: var(--header-btn-bg-active-color);
+            }
         }
-        &.active {
+        &--dark {
             border: 1px solid var(--header-btn-border-active-color);
-            background: var(--header-btn-bg-active-color);
+            &:hover {
+                border: 1px solid var(--header-btn-border-active-color);
+                background: var(--header-btn-bg-active-color);
+                & .icon.menu--dark {
+                    background: var(--icon-menu-light);
+                }
+            }
+            &.active {
+                border: 1px solid var(--header-btn-border-active-color);
+                background: var(--header-btn-bg-active-color);
+                & .icon.menu--dark {
+                    background: var(--icon-menu-light);
+                }
+            }
         }
+    }
+    &__lang-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
     &__lang {
         width: 40px;
@@ -37,7 +70,12 @@
         background: transparent;
         padding: 4px;
         border-radius: 50%;
-        border: 1px solid var(--header-btn-border-color);
+        &--light {
+            border: 1px solid var(--header-btn-border-color);
+        }
+        &--dark {
+            border: 1px solid var(--header-btn-border-active-color);
+        }
         &:hover {
             border: 1px solid var(--header-btn-border-active-color);
             background: var(--header-btn-bg-active-color);
@@ -45,6 +83,17 @@
         &.active {
             border: 1px solid var(--header-btn-border-active-color);
             background: var(--header-btn-bg-active-color);
+        }
+    }
+    &__lang-menu {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        &[hidden] {
+            display: none !important;
         }
     }
 }

@@ -22,6 +22,16 @@
         gap: 40px;
         flex: 1;
     }
+    &__form {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        flex: 1;
+    }
     &__title-wrap {
         width: 100%;
         display: flex;
@@ -29,17 +39,5 @@
         align-items: center;
         justify-content: center;
         gap: 12px;
-    }
-    &__desc {
-        font-size: 14px;
-        font-weight: 400;
-        color: var(--email-verification-desc-color);
-        text-align: center;
-        margin-top: auto;
-        & > .active {
-            font-size: 14px;
-            font-weight: 400;
-            color: var(--email-verification-desc-active-color);
-        }
     }
 }

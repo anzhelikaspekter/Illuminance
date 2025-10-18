@@ -3,196 +3,219 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-    content="Sign up to get started — it only takes a few seconds to join and unlock all features.">
+        content="Sign up to get started — it only takes a few seconds to join and unlock all features.">
     <title>Sign Up</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-    <section class="section signup">
-        <button class="icon close large" aria-label="Close" title="Close"></button>
-        <div class="signup__wrap">
-            <h1 class="title main">Create account</h1>
-            <form action="#" method="post" class="form scroll">
+<body class="section signup">
+    <!-- Header -->
+    <header class="signup__header" role="banner">
+        <button id="close-btn" class="icon close large" type="button" aria-label="Close"></button>
+    </header>
+    <!-- Main -->
+    <main id="main" class="signup__wrap" tabindex="-1">
+        <div class="signup__form">
+            <h1 class="title primary primary--light">Create account</h1>
+
+            <form action="#" method="post" class="form scroll" novalidate>
                 <div class="form__wrap">
                     <div class="form__field">
                         <div class="form__input-field">
-                            <label class="form__label" for="frst_name">First name</label>
-                            <input class="form__input" name="frst_name" id="frst_name" type="text"
-                                placeholder="Enter your first name">
+                            <label class="desc primary primary--light" for="first_name">First name</label>
+                            <input class="form__input" name="first_name" id="first_name" type="text"
+                                placeholder="Enter your first name" required autocomplete="given-name"
+                                aria-invalid="false" />
                         </div>
+
                         <div class="form__input-field">
-                            <label class="form__label" for="last_name">Last name</label>
+                            <label class="desc primary primary--light" for="last_name">Last name</label>
                             <input class="form__input" name="last_name" id="last_name" type="text"
-                                placeholder="Enter your last name">
+                                placeholder="Enter your last name" required autocomplete="family-name"
+                                aria-invalid="false" />
                         </div>
                     </div>
+
                     <div class="form__input-field">
-                        <label class="form__label" for="nickname">Nickname</label>
+                        <label class="desc primary primary--light" for="nickname">Nickname</label>
                         <input class="form__input" name="nickname" id="nickname" type="text"
-                            placeholder="Enter your nickname">
+                            placeholder="Enter your nickname" required autocomplete="nickname" aria-invalid="false" />
                     </div>
+
                     <div class="form__field">
                         <div class="form__input-field">
-                            <label class="form__label" for="email">Email</label>
+                            <label class="desc primary primary--light" for="email">Email</label>
                             <input class="form__input" name="email" id="email" type="email"
-                                placeholder="example@mail.com">
-                            <p class="form__desc hide">Enter a valid email with '@' and a domain.</p>
+                                placeholder="example@mail.com" required inputmode="email" autocomplete="email"
+                                aria-invalid="false" aria-describedby="email-error" />
+                            <p id="email-error" class="desc primary primary--error hide" role="alert">Enter a valid
+                                email with “@” and a
+                                domain.</p>
                         </div>
+
                         <div class="form__input-field">
-                            <label class="form__label" for="phone">Phone</label>
-                            <input class="form__input" name="phone" id="phone" type="tel" placeholder="+1 980">
+                            <label class="desc primary primary--light" for="phone">Phone</label>
+                            <input class="form__input" name="phone" id="phone" type="tel" placeholder="+1 980" required
+                                inputmode="tel" autocomplete="tel" aria-invalid="false"
+                                aria-describedby="phone-error" />
+                            <p id="phone-error" class="desc primary primary--error hide" role="alert">Enter a valid
+                                phone number.</p>
                         </div>
                     </div>
+
                     <div class="form__input-field">
-                        <label class="form__label" for="password">Password</label>
+                        <label class="desc primary primary--light" for="password">Password</label>
                         <div class="password-field">
                             <input class="form__input" name="password" id="password" type="password"
-                                placeholder="Enter your password">
-                            <span class="icon eye show"></span>
+                                placeholder="Enter your password" required autocomplete="new-password"
+                                aria-invalid="false" aria-describedby="password-error" />
+                            <button type="button" class="toggle-pass icon eye show" aria-pressed="false"
+                                aria-label="Show password"></button>
                         </div>
-                        <p class="form__desc hide">Minimum of 8 letters, 1 number and 1 upper case letter.</p>
+                        <p id="password-error" class="desc primary primary--error hide" role="alert">
+                            Minimum of 8 characters, 1 number and 1 uppercase letter.
+                        </p>
                     </div>
+
                     <div class="form__input-field">
-                        <label class="form__label" for="repeat_password">Repeat password</label>
+                        <label class="desc primary primary--light" for="repeat_password">Repeat password</label>
                         <div class="password-field">
                             <input class="form__input" name="repeat_password" id="repeat_password" type="password"
-                                placeholder="Confirm your password">
-                            <span class="icon eye show"></span>
+                                placeholder="Confirm your password" required autocomplete="new-password"
+                                aria-invalid="false" aria-describedby="repeat-error" />
+                            <button type="button" class="toggle-pass icon eye show" aria-pressed="false"
+                                aria-label="Show password"></button>
                         </div>
-                        <p class="form__desc hide">Minimum of 8 letters, 1 number and 1 upper case letter.</p>
+                        <p id="repeat-error" class="desc primary primary--error hide" role="alert">
+                            Minimum of 8 characters, 1 number and 1 uppercase letter.
+                        </p>
                     </div>
+
                     <div class="form__input-field">
-                        <label class="form__label" for="referral">Referral</label>
+                        <label class="desc primary primary--light" for="referral">Referral</label>
                         <input class="form__input" name="referral" id="referral" type="text"
-                            placeholder="Enter referral code (optional)">
+                            placeholder="Enter referral code (optional)" autocomplete="one-time-code"
+                            aria-invalid="false" />
                     </div>
                 </div>
+
                 <div class="form__btns-field">
-                    <a href="#" class="btn form disabled">Sign Up</a>
-                    <div class="definder">
+                    <button type="submit" class="form__btn disabled" disabled>Sign Up</button>
+
+                    <div class="definder" aria-hidden="true">
                         <span class="line"></span> or <span class="line"></span>
                     </div>
-                    <button class="btn google">Continue with <span class="icon google"></span></button>
+
+                    <button type="button" class="btn google" aria-label="Continue with Google">
+                        Continue with <span class="icon google" aria-hidden="true"></span>
+                    </button>
                 </div>
+
                 <div class="form__reg-field">
-                    Already have an account?
+                    <span class="desc primary primary--middle">Already have an account?</span>
                     <a href="sign-in.html" class="form__link">Sign In</a>
                 </div>
             </form>
         </div>
-        <p class="signup__desc">By registering, you agree to the Privacy and Data Use Policy.</p>
-    </section>
 
+        <p class="desc primary primary--middle">By registering, you agree to the Privacy and Data Use Policy.</p>
+    </main>
+    <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            /* ===== Validate Form ===== */
             const form = document.querySelector('.form');
-            const firstNameInput = form.querySelector('input[name="frst_name"]');
-            const lastNameInput = form.querySelector('input[name="last_name"]');
-            const nicknameInput = form.querySelector('input[name="nickname"]');
-            const emailInput = form.querySelector('input[name="email"]');
-            const phoneInput = form.querySelector('input[name="phone"]');
-            const passwordInput = form.querySelector('input[name="password"]');
-            const repeatInput = form.querySelector('input[name="repeat_password"]');
+            const firstNameInput = form.querySelector('#first_name');
+            const lastNameInput = form.querySelector('#last_name');
+            const nicknameInput = form.querySelector('#nickname');
+            const emailInput = form.querySelector('#email');
+            const phoneInput = form.querySelector('#phone');
+            const passwordInput = form.querySelector('#password');
+            const repeatInput = form.querySelector('#repeat_password');
 
-            const emailError = emailInput.closest('.form__input-field').querySelector('.form__desc');
-            const passError = passwordInput.closest('.form__input-field').querySelector('.form__desc');
-            const repeatError = repeatInput.closest('.form__input-field').querySelector('.form__desc');
+            const emailError = document.getElementById('email-error');
+            const phoneError = document.getElementById('phone-error');
+            const passError = document.getElementById('password-error');
+            const repeatError = document.getElementById('repeat-error');
 
-            if (!passError.textContent.trim()) {
-                passError.textContent = 'Minimum of 8 characters, 1 number and 1 uppercase letter.';
-            }
-            if (!repeatError.textContent.trim()) {
-                repeatError.textContent = 'Minimum of 8 characters, 1 number and 1 uppercase letter.';
-            }
-            const defaultPassErrorText = 'Minimum of 8 characters, 1 number and 1 uppercase letter.';
-            const defaultRepeatErrorText = 'Minimum of 8 characters, 1 number and 1 uppercase letter.';
+            const submitBtn = form.querySelector('.form__btn');
+            const toggleBtns = form.querySelectorAll('.password-field .toggle-pass');
 
-            const signUpBtn = form.querySelector('.btn.form');
+            const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const PHONE_RE = /^[\s()+\-\.0-9]{6,}$/;
+            const passRules = (val) => val.length >= 8 && /[A-Z]/.test(val) && /\d/.test(val);
 
-            const eyeIcons = form.querySelectorAll('.password-field .icon.eye.show');
-
-            const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-            const validatePasswordRules = (val) =>
-                val.length >= 8 && /[A-Z]/.test(val) && /\d/.test(val);
-
-            function setErrorState(input, hasError) {
-                if (!input) return;
-                input.classList.toggle('error', !!hasError);
-            }
-
-            function updateErrors() {
-                const email = emailInput.value.trim();
-                const pass = passwordInput.value;
-                const rep = repeatInput.value;
-
-                const emailValid = email ? validateEmail(email) : true;
-                const passValid = pass ? validatePasswordRules(pass) : true;
-                const matchValid = rep ? (rep === pass) : true;
-
-                emailError.classList.toggle('hide', emailValid);
-                setErrorState(emailInput, !emailValid);
-
-                passError.textContent = defaultPassErrorText;
-                passError.classList.toggle('hide', passValid);
-                setErrorState(passwordInput, !passValid);
-
-                if (rep && rep !== pass) {
-                    repeatError.textContent = 'Passwords do not match. Please check.';
-                    repeatError.classList.remove('hide');
-                    setErrorState(repeatInput, true);
-                } else {
-                    repeatError.textContent = defaultRepeatErrorText;
-                    repeatError.classList.add('hide');
-                    setErrorState(repeatInput, false);
+            function setFieldError(input, errorEl, on, msg) {
+                input.setAttribute('aria-invalid', on ? 'true' : 'false');
+                input.classList.toggle('error', on);
+                if (errorEl) {
+                    if (msg) errorEl.textContent = msg;
+                    errorEl.classList.toggle('hide', !on);
                 }
             }
 
-            function validateForm() {
-                updateErrors();
+            function validate() {
+                const fn = firstNameInput.value.trim();
+                const ln = lastNameInput.value.trim();
+                const nn = nicknameInput.value.trim();
+                const em = emailInput.value.trim();
+                const ph = phoneInput.value.trim();
+                const pw = passwordInput.value;
+                const rp = repeatInput.value;
 
-                const allRequiredFilled = [
-                    firstNameInput.value.trim(),
-                    lastNameInput.value.trim(),
-                    nicknameInput.value.trim(),
-                    emailInput.value.trim(),
-                    phoneInput.value.trim(),
-                    passwordInput.value,
-                    repeatInput.value
-                ].every(Boolean);
+                const emailOk = em !== '' && EMAIL_RE.test(em);
+                const phoneOk = ph !== '' && PHONE_RE.test(ph);
+                const passOk = pw !== '' && passRules(pw);
+                const matchOk = rp !== '' && rp === pw;
 
-                const isEmailOk = validateEmail(emailInput.value.trim());
-                const isPassOk = validatePasswordRules(passwordInput.value);
-                const isMatch = repeatInput.value === passwordInput.value;
+                setFieldError(emailInput, emailError, em ? !emailOk : false);
+                setFieldError(phoneInput, phoneError, ph ? !phoneOk : false);
+                setFieldError(passwordInput, passError, pw ? !passOk : false, 'Minimum of 8 characters, 1 number and 1 uppercase letter.');
+                setFieldError(repeatInput, repeatError, rp ? !matchOk : false, rp && rp !== pw ? 'Passwords do not match. Please check.' : 'Minimum of 8 characters, 1 number and 1 uppercase letter.');
 
-                const formOk = allRequiredFilled && isEmailOk && isPassOk && isMatch;
+                const allFilled = fn && ln && nn && em && ph && pw && rp;
+                const formOk = allFilled && emailOk && phoneOk && passOk && matchOk;
 
-                signUpBtn.classList.toggle('disabled', !formOk);
+                submitBtn.disabled = !formOk;
+                submitBtn.classList.toggle('disabled', !formOk);
+                return formOk;
             }
 
-            [
-                firstNameInput, lastNameInput, nicknameInput,
-                emailInput, phoneInput, passwordInput, repeatInput
-            ].forEach(el => {
-                el.addEventListener('input', validateForm);
-                el.addEventListener('blur', validateForm);
+            [firstNameInput, lastNameInput, nicknameInput, emailInput, phoneInput, passwordInput, repeatInput].forEach(el => {
+                el.addEventListener('input', validate);
+                el.addEventListener('blur', validate);
             });
 
-            eyeIcons.forEach(icon => {
-                const input = icon.closest('.password-field')?.querySelector('input');
-                if (!input) return;
-                icon.addEventListener('click', () => {
-                    const active = icon.classList.toggle('active');
-                    input.type = active ? 'text' : 'password';
+            toggleBtns.forEach(btn => {
+                const input = btn.closest('.password-field')?.querySelector('input');
+                const iconEl = btn.querySelector('.icon') || btn;
+
+                btn.addEventListener('click', () => {
+                    const willShow = input.type === 'password';
+                    input.type = willShow ? 'text' : 'password';
+
+                    btn.setAttribute('aria-pressed', willShow ? 'true' : 'false');
+                    btn.setAttribute('aria-label', willShow ? 'Hide password' : 'Show password');
+
+                    const isShownNow = input.type === 'text';
+                    iconEl.classList.toggle('show', !isShownNow);
+                    iconEl.classList.toggle('unshow', isShownNow);
                 });
             });
 
-            validateForm();
+            form.addEventListener('submit', (e) => {
+                if (!validate()) {
+                    e.preventDefault();
+                    (document.querySelector('.form__input.error') || firstNameInput).focus();
+                    return;
+                }
+            });
+
+            document.getElementById('main')?.focus();
+            validate();
         });
     </script>
 </body>

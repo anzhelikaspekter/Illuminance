@@ -1,6 +1,7 @@
 :root {
-    --registration-bg: url(../img/bg-right-up.svg) no-repeat top right,
-        url(../img/bg-left-down.svg) no-repeat bottom left, rgba(12, 17, 28, 0.8);
+    --registration-bg: rgba(12, 17, 28, 0.8);
+
+    --hero-light-bg-color: url(../img/bg-main-dark.svg) no-repeat center / cover, rgba(255, 255, 255, 0.35);
 }
 
 .section {
@@ -17,7 +18,18 @@
         /* Overlay */
         background: var(--registration-bg);
         backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
         overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                url(../img/bg-right-up.svg) no-repeat top right,
+                url(../img/bg-left-down.svg) no-repeat bottom left;
+            background-size: auto;
+            z-index: -1;
+        }
     }
     &.signup {
         position: relative;
@@ -32,7 +44,18 @@
         /* Overlay */
         background: var(--registration-bg);
         backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
         overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                url(../img/bg-right-up.svg) no-repeat top right,
+                url(../img/bg-left-down.svg) no-repeat bottom left;
+            background-size: auto;
+            z-index: -1;
+        }
     }
     &.forgot-password {
         position: relative;
@@ -47,7 +70,18 @@
         /* Overlay */
         background: var(--registration-bg);
         backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
         overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                url(../img/bg-right-up.svg) no-repeat top right,
+                url(../img/bg-left-down.svg) no-repeat bottom left;
+            background-size: auto;
+            z-index: -1;
+        }
     }
     &.email-verification {
         position: relative;
@@ -62,7 +96,18 @@
         /* Overlay */
         background: var(--registration-bg);
         backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
         overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                url(../img/bg-right-up.svg) no-repeat top right,
+                url(../img/bg-left-down.svg) no-repeat bottom left;
+            background-size: auto;
+            z-index: -1;
+        }
     }
     &.auth-verification {
         position: relative;
@@ -77,7 +122,18 @@
         /* Overlay */
         background: var(--registration-bg);
         backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
         overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                url(../img/bg-right-up.svg) no-repeat top right,
+                url(../img/bg-left-down.svg) no-repeat bottom left;
+            background-size: auto;
+            z-index: -1;
+        }
     }
     &.menu {
         position: relative;
@@ -96,13 +152,25 @@
     }
     &.header {
         width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        padding: calc(16px + (28 - 16) * ((100vw - 320px) / (1440 - 320)));
-        position: sticky;
+        position: absolute;
         top: 0;
+    }
+    &.hero {
+        width: 100%;
+        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        padding: calc(24px + (48 - 24) * ((100vw - 320px) / (1440 - 320)));
+        padding-top: calc(130px + (150 - 130) * ((100vw - 320px) / (1440 - 320)));
+        &--light {
+            background: var(--hero-light-bg-color);
+        }
+    }
+    &.faq {
+        width: 100%;
+        padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding-left: calc(16px + (144 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding-right: calc(16px + (144 - 16) * ((100vw - 320px) / (1440 - 320)));
     }
     &.footer {
         width: 100vw;
@@ -111,5 +179,6 @@
         justify-content: space-between;
         gap: 20px;
         padding: calc(16px + (54 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding-top: 0;
     }
 }

@@ -1,6 +1,6 @@
 :root {
     --bg-color: rgba(205, 217, 241, 1);
-    --font-primary: 'Euclid Circular B';
+    --font-primary: "Euclid Circular B";
 }
 
 @import "_fonts";
@@ -9,6 +9,7 @@
 @import "_sections";
 
 @import "components/_title";
+@import "components/_desc";
 @import "components/_btn";
 @import "components/_icon";
 @import "components/_logo";
@@ -24,6 +25,8 @@
 @import "sections/_auth-verification";
 @import "sections/_menu";
 @import "sections/_header";
+@import "sections/_hero";
+@import "sections/_faq";
 @import "sections/_footer";
 
 * {
@@ -50,4 +53,16 @@ ul {
 
 .hide {
     display: none !important;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
 }

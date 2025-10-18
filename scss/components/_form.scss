@@ -3,6 +3,12 @@
     --form-input-color: rgba(255, 253, 254, 1);
     --form-input-bg-color: rgba(255, 253, 254, 0.05);
     --form-input-placeholder-color: rgba(255, 253, 254, 0.3);
+
+    --form-btn-bg-color: rgba(50, 73, 120, 1);
+    --form-btn-color: rgba(255, 253, 254, 1);
+    --form-btn-bg-disabled-color: rgba(50, 73, 120, 1);
+    --form-btn-disabled-color: rgba(255, 253, 254, 1);
+
     --form-link-color: rgba(255, 255, 255, 0.7);
 
     --form-input-error-bg-color: rgba(255, 66, 66, 0.2);
@@ -16,7 +22,7 @@
     --form-code-bg-error-color: rgba(255, 66, 66, 0.2);
 
     --form-resend-field-color: rgba(255, 255, 255, 0.4);
-    --form-resend-color: rgba(50, 73, 120, 1);
+    --form-resend-color: rgb(63, 96, 161);
 
     --form-definder-line-color: rgba(255, 255, 255, 0.1);
     --form-definder-color: rgba(255, 255, 255, 0.3);
@@ -33,25 +39,75 @@
         flex-direction: column;
         gap: 24px;
     }
-    &__field {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        justify-content: space-between;
-        gap: 12px;
-    }
     &__input-field {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    &__label {
-        font-size: calc(15px + (15 - 15) * ((100vw - 320px) / (1440 - 320)));
+    &__btns-field {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__code-field {
+        width: 100%;
+        position: relative;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+    &__code {
+        width: 100%;
+        height: calc(70px + (96 - 70) * ((100vw - 320px) / (1440 - 320)));
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1440 - 320)));
+        background: var(--form-code-bg-color);
+        font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1440 - 320)));
         font-weight: 400;
-        letter-spacing: -0.2px;
-        color: var(--form-label-color);
+        color: var(--form-code-color);
+        line-height: 1;
+        &.error {
+            background: var(--form-code-bg-error-color);
+        }
+    }
+    &__reg-field {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+    &__resend-field {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+    &__btn {
+        @include btn;
+        background: var(--form-btn-bg-color);
+        color: var(--form-btn-color);
+        &.disabled {
+            background: var(--form-btn-bg-disabled-color);
+            color: var(--form-btn-disabled-color);
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+    }
+    &__link {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--form-link-color);
+        text-align: center;
+        text-decoration: underline;
+        background: transparent;
+        border: none;
+        cursor: pointer;
     }
     &__input {
         width: 100%;
@@ -71,70 +127,13 @@
             color: var(--form-input-error-color);
         }
     }
-    &__link {
-        font-size: calc(14px + (14 - 14) * ((100vw - 320px) / (1440 - 320)));
-        font-weight: 400;
-        color: var(--form-link-color);
-        text-align: center;
-        text-decoration: underline;
-        &.resend {
-            color: var(--form-resend-color);
-            text-decoration: none;
-        }
-    }
-    &__desc {
-        font-size: 15px;
-        font-weight: 400;
-        letter-spacing: -0.2;
-        color: var(--form-desc-error-color);
-    }
-    &__btns-field {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-    &__reg-field {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        font-size: 14px;
-        font-weight: 400;
-        color: var(--form-reg-field-color);
-    }
-    &__code-field {
+    &__field {
         width: 100%;
         display: flex;
         flex-direction: row;
-        align-items: center;
-        gap: 4px;
-    }
-    &__code {
-        width: 100%;
-        height: calc(70px + (96 - 70) * ((100vw - 320px) / (1440 - 320)));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 16px;
-        border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1440 - 320)));
-        background: var(--form-code-bg-color);
-        font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1440 - 320)));
-        font-weight: 400;
-        color: var(--form-code-color);
-        &.error {
-            background: var(--form-code-bg-error-color);
-        }
-    }
-    &__resend-field {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        align-items: start;
+        justify-content: space-between;
         gap: 12px;
-        font-size: 14px;
-        font-weight: 400;
-        color: var(--form-resend-field-color);
     }
     &.scroll {
         height: 100%;
@@ -174,4 +173,36 @@
         height: 1px;
         background: var(--form-definder-line-color);
     }
+}
+
+input.real-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: text;
+}
+
+.resend {
+    color: var(--form-resend-color);
+    text-decoration: none;
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 0 var(--form-input-bg-color) inset !important;
+    -webkit-text-fill-color: var(--form-input-color) !important;
+    caret-color: var(--form-input-color);
+    transition: background-color 9999s ease-out, color 9999s ease-out;
+}
+input:-moz-autofill {
+    background-color: var(--form-input-bg-color) !important;
+    color: var(--form-input-color) !important;
 }

@@ -1,35 +1,62 @@
 :root {
-    --title-main-color: rgba(255, 255, 255, 1);
-    --title-news-card-color: rgba(255, 255, 255, 1);
-    --title-card-color: rgba(255, 255, 255, 1);
+    --title-primary-light-color: rgba(255, 255, 255, 1);
+    --title-primary-dark-color: rgba(0, 0, 0, 1);
+
+    --title-secondary-light-color: rgba(255, 255, 255, 1);
+    --title-secondary-dark-color: rgba(0, 0, 0, 1);
+
+    --title-thirdly-light-color: rgba(255, 255, 255, 1);
+    --title-thirdly-middle-color: rgba(86, 106, 146, 1);
+    --title-thirdly-dark-color: rgba(0, 0, 0, 1);
 }
 
-@mixin title-main {
+@mixin title-primary {
     font-size: calc(28px + (38 - 28) * ((100vw - 320px) / (1440 - 320)));
     font-weight: 500;
     letter-spacing: -1;
-    color: var(--title-main-color);
 }
 
-@mixin title-news-card {
+@mixin title-secondary {
     font-size: calc(20px + (24 - 24) * ((100vw - 320px) / (1440 - 320)));
     font-weight: 500;
-    color: var(--title-news-card-color);
 }
 
-@mixin title-card {
+@mixin title-thirdly {
     font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1440 - 320)));
     font-weight: 600;
     letter-spacing: -0.3;
-    color: var(--title-card-color);
 }
 
 .title {
-    &.main {
-        @include title-main;
+    &.primary {
+        @include title-primary();
         text-align: center;
+        &--light {
+            color: var(--title-primary-light-color);
+        }
+        &--dark {
+            color: var(--title-primary-dark-color);
+        }
     }
-    &.news-card {
-        @include title-news-card();
+    &.secondary {
+        @include title-secondary();
+        &--light {
+            color: var(--title-secondary-light-color);
+        }
+        &--dark {
+            color: var(--title-secondary-dark-color);
+        }
+    }
+    &.thirdly {
+        @include title-thirdly();
+        &--light {
+            color: var(--title-thirdly-light-color);
+        }
+        &--middle {
+            color: var(--title-thirdly-middle-color);
+        }
+        &--dark {
+            color: var(--title-thirdly-dark-color);
+        }
     }
 }

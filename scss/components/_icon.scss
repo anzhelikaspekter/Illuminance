@@ -1,12 +1,16 @@
 :root {
     --icon-close: url(./../../img/icons/close.svg) no-repeat center / contain;
+    --icon-close-dark: url(./../../img/icons/close-dark.svg) no-repeat center / contain;
+    --icon-plus: url(./../../img/icons/plus.svg) no-repeat center / contain;
     --icon-show: url(./../../img/icons/mdi_eye.svg) no-repeat center / contain;
     --icon-hide: url(../../img/icons/mdi_eye-off.svg) no-repeat center / contain;
     --icon-google: url(./../../img/icons/google.svg) no-repeat center/ contain;
     --icon-prev: url(./../../img/icons/solar_arrow-up-outline.svg) no-repeat center/ contain;
     --icon-arrow-left-up: url(./../../img/icons/arrow_left_up.svg) no-repeat center/ contain;
-    --icon-menu: url(./../../img/icons/menu.svg) no-repeat center / contain;
-    --icon-lang: url(./../../img/lang.svg) no-repeat center / contain;
+    --icon-menu-light: url(./../../img/icons/menu.svg) no-repeat center / contain;
+    --icon-menu-dark: url(./../../img/icons/menu_dark.svg) no-repeat center / contain;
+    --icon-en: url(./../../img/en.svg) no-repeat center / contain;
+    --icon-uk: url(./../../img/ua.svg) no-repeat center / contain;
     --icon-twitter: url(./../../img/icons/prime_twitter.svg) no-repeat center / contain;
     --icon-facebook: url(./../../img/icons/ic_baseline-facebook.svg) no-repeat center / contain;
     --icon-youtube: url(./../../img/icons/mdi_youtube.svg) no-repeat center / contain;
@@ -32,12 +36,15 @@
             background: var(--icon-close);
         }
         background: var(--icon-close);
+        &--dark {
+            background: var(--icon-close-dark);
+        }
     }
     &.eye {
         &.show {
             background: var(--icon-show);
         }
-        &.active {
+        &.unshow {
             background: var(--icon-hide);
         }
     }
@@ -59,10 +66,18 @@
         background: var(--icon-arrow-left-up);
     }
     &.menu {
-        background: var(--icon-menu);
+        &--light {
+            background: var(--icon-menu-light);
+        }
+        &--dark {
+            background: var(--icon-menu-dark);
+        }
     }
-    &.lang {
-        background: var(--icon-lang);
+    &.en {
+        background: var(--icon-en);
+    }
+    &.uk {
+        background: var(--icon-uk);
     }
     &.twitter {
         background: var(--icon-twitter);
@@ -72,5 +87,8 @@
     }
     &.youtube {
         background: var(--icon-youtube);
+    }
+    &.plus {
+        background: var(--icon-plus);
     }
 }

@@ -1,0 +1,63 @@
+:root {
+    --desc-primary-light-color: rgba(255, 255, 255, 1);
+    --desc-primary-middle-color: rgba(255, 255, 255, 0.3);
+    --desc-primary-dark-color: rgba(0, 0, 0, 1);
+    --desc-primary-error-color: rgba(229, 57, 53, 1);
+
+    --desc-secondary-light-color: rgba(255, 255, 255, 1);
+    --desc-secondary-middle-color: rgba(105, 123, 159, 1);
+    --desc-secondary-dark-color: rgba(0, 0, 0, 1);
+    --desc-secondary-error-color: rgba(229, 57, 53, 1);
+}
+
+@mixin desc-primary {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+}
+
+@mixin desc-secondary {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+    line-height: 28px;
+}
+
+@mixin desc-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.desc {
+    &.primary {
+        @include desc-primary;
+        &--light {
+            color: var(--desc-primary-light-color);
+        }
+        &--middle {
+            color: var(--desc-primary-middle-color);
+        }
+        &--dark {
+            color: var(--desc-primary-dark-color);
+        }
+        &--error {
+            color: var(--desc-primary-error-color);
+        }
+    }
+    &.secondary {
+        @include desc-secondary;
+        &--light {
+            color: var(--desc-secondary-light-color);
+        }
+        &--middle {
+            color: var(--desc-secondary-middle-color);
+        }
+        &--dark {
+            color: var(--desc-secondary-dark-color);
+        }
+        &--error {
+            color: var(--desc-secondary-error-color);
+        }
+    }
+}

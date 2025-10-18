@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Verify your email address to activate your account and start using all features.">
     <title>Email Verification</title>
@@ -11,117 +10,176 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-    <section class="section email-verification">
-        <button class="icon close large" aria-label="Close" title="Close"></button>
-        <div class="email-verification__wrap">
+<body class="section email-verification">
+    <!-- Header -->
+    <header class="email-verification__header" role="banner">
+        <button id="close-btn" class="icon close large" type="button" aria-label="Close"></button>
+    </header>
+    <!-- Main -->
+    <main id="main" class="email-verification__wrap" tabindex="-1">
+        <div class="email-verification__form">
             <div class="email-verification__title-wrap">
-                <h1 class="title main">Check your email</h1>
-                <p class="email-verification__desc">We’ve sent your verification link to <span
-                        class="active">samlee.mobbin@gmail.com</span></p>
+                <h1 class="title primary primary--light">Check your email</h1>
+                <p class="desc primary primary--middle">
+                    We’ve sent your verification code to
+                    <span class="desc primary primary--light">samlee.mobbin@gmail.com</span>
+                </p>
             </div>
-            <form action="#" method="post" class="form" data-expected-code="123456">
+
+            <!-- novalidate; data-expected-code — только для демо/макета -->
+            <form action="#" method="post" class="form" autocomplete="one-time-code" novalidate
+                data-expected-code="123456">
                 <div class="form__input-field">
-                    <div class="form__code-field">
-                        <span class="form__code"></span>
-                        <span class="form__code"></span>
-                        <span class="form__code"></span>
-                        <span class="form__code"></span>
-                        <span class="form__code"></span>
-                        <span class="form__code"></span>
+                    <div class="form__code-field" aria-describedby="code-hint code-error" role="group"
+                        aria-label="6-digit email verification code">
+                        <input id="email-code" class="real-input" type="text" name="code" inputmode="numeric"
+                            pattern="\d{6}" minlength="6" maxlength="6" autocomplete="one-time-code"
+                            aria-invalid="false" aria-describedby="code-hint code-error">
+                        <span class="form__code" aria-hidden="true"></span>
+                        <span class="form__code" aria-hidden="true"></span>
+                        <span class="form__code" aria-hidden="true"></span>
+                        <span class="form__code" aria-hidden="true"></span>
+                        <span class="form__code" aria-hidden="true"></span>
+                        <span class="form__code" aria-hidden="true"></span>
                     </div>
-                    <p class="form__desc hide">The code you entered is not valid</p>
+
+                    <p id="code-hint" class="visually-hidden desc primary primary--light">Enter the six-digit code from
+                        the email we sent you</p>
+                    <p id="code-error" class="desc primary primary--error hide" role="alert">The code you entered is not
+                        valid</p>
                 </div>
+
                 <div class="form__btns-field">
-                    <a href="#" class="btn form disabled">Submit</a>
-                    <div class="form__resend-field">
-                        Didn’t get the email?
-                        <a href="sign-in.html" class="form__link resend">Resend code</a>
+                    <button type="submit" class="form__btn disabled" disabled>Submit</button>
+
+                    <div class="form__resend-field" aria-live="polite">
+                        <span class="desc primary primary--middle">Didn’t get the email?</span>
+                        <button type="button" class="form__link resend">Resend code</button>
+                        <span class="desc primary primary--middle hide" aria-hidden="true">in 30s</span>
+                        <p id="code-status" class="visually-hidden" role="status" aria-live="polite"></p>
                     </div>
                 </div>
             </form>
         </div>
-        <p class="email-verification__desc">By registering, you agree to the Privacy and Data Use Policy.</p>
-    </section>
 
+        <p class="desc primary primary--middle">By registering, you agree to the Privacy and Data Use Policy.</p>
+    </main>
+    <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            /* EMAIL CODE */
             const form = document.querySelector('.form');
-            const codeField = form.querySelector('.form__code-field');
-            const codeSpans = Array.from(codeField.querySelectorAll('.form__code'));
-            const errorText = form.querySelector('.form__desc');
-            const submitBtn = form.querySelector('.btn.form');
-            const expectedCode = (form.dataset.expectedCode || '123456').replace(/\D/g, '');
+            const expectedCode = (form?.dataset.expectedCode || '').replace(/\D/g, ''); // демо: "123456"
 
-            const hiddenInput = document.createElement('input');
-            hiddenInput.type = 'text';
-            hiddenInput.inputMode = 'numeric';
-            hiddenInput.autocomplete = 'one-time-code';
-            hiddenInput.maxLength = codeSpans.length;
-            hiddenInput.style.position = 'absolute';
-            hiddenInput.style.opacity = '0';
-            hiddenInput.style.pointerEvents = 'none';
-            hiddenInput.style.width = '0';
-            hiddenInput.style.height = '0';
-            codeField.appendChild(hiddenInput);
+            const codeField = form.querySelector('.form__code-field');
+            const input = form.querySelector('#email-code.real-input');
+            const boxes = Array.from(codeField.querySelectorAll('.form__code'));
+            const err = document.getElementById('code-error');
+
+            const submitBtn = form.querySelector('.form__btn');
+            const resendBtn = form.querySelector('.form__link.resend');
+            const resendTimer = form.querySelector('.form__resend-field > span[aria-hidden="true"]');
+
+            function onlyDigits(v) { return (v || '').replace(/\D/g, ''); }
+
+            function setError(msg) {
+                if (msg) err.textContent = msg;
+                err.classList.remove('hide');
+                input.setAttribute('aria-invalid', 'true');
+                boxes.forEach(b => b.classList.add('error'));
+            }
+            function clearError() {
+                err.classList.add('hide');
+                input.setAttribute('aria-invalid', 'false');
+                boxes.forEach(b => b.classList.remove('error'));
+            }
+            function setSubmitEnabled(on) {
+                submitBtn.disabled = !on;
+                submitBtn.classList.toggle('disabled', !on);
+            }
 
             function render() {
-                const val = hiddenInput.value.replace(/\D/g, '').slice(0, codeSpans.length);
-                hiddenInput.value = val;
+                const val = onlyDigits(input.value).slice(0, boxes.length);
+                input.value = val;
 
-                codeSpans.forEach((s, i) => {
-                    s.textContent = val[i] || '';
-                    s.classList.toggle('filled', Boolean(val[i]));
+                boxes.forEach((b, i) => {
+                    b.textContent = val[i] || '';
+                    b.classList.toggle('filled', Boolean(val[i]));
                 });
 
-                if (val.length < codeSpans.length) {
-                    hideError();
-                    setEnabled(false);
+                if (val.length < boxes.length) {
+                    clearError();
+                    setSubmitEnabled(false);
                     return;
                 }
-
-                if (val === expectedCode) {
-                    hideError();
-                    setEnabled(true);
+                if (expectedCode && val !== expectedCode) {
+                    setError('The code you entered is not valid');
+                    setSubmitEnabled(false);
                 } else {
-                    showError('The code you entered is not valid');
-                    setEnabled(false);
+                    clearError();
+                    setSubmitEnabled(true);
                 }
             }
 
-            function showError(message) {
-                if (errorText) {
-                    if (message) errorText.textContent = message;
-                    errorText.classList.remove('hide');
-                }
-                codeSpans.forEach(s => s.classList.add('error'));
-            }
+            codeField.addEventListener('click', () => input.focus());
+            input.addEventListener('input', render);
 
-            function hideError() {
-                if (errorText) errorText.classList.add('hide');
-                codeSpans.forEach(s => s.classList.remove('error'));
-            }
-
-            function setEnabled(ok) {
-                submitBtn.classList.toggle('disabled', !ok);
-            }
-
-            codeField.addEventListener('click', () => hiddenInput.focus());
-
-            hiddenInput.addEventListener('input', render);
-
-            codeField.addEventListener('keydown', (e) => {
-                if (e.key === 'Backspace') {
-                    hiddenInput.value = hiddenInput.value.slice(0, -1);
-                    render();
+            form.addEventListener('submit', (e) => {
+                const val = onlyDigits(input.value);
+                if (val.length !== boxes.length) {
                     e.preventDefault();
+                    setError('Please enter the 6-digit code.');
+                    setSubmitEnabled(false);
+                    input.focus();
+                    return;
+                }
+                if (expectedCode && val !== expectedCode) {
+                    e.preventDefault();
+                    setError('The code you entered is not valid');
+                    setSubmitEnabled(false);
+                    input.select();
+                    return;
                 }
             });
 
-            hiddenInput.focus();
+            /* RESEND */
+            let cooldown = 0, timerId = null;
+
+            function updateTimer() {
+                if (cooldown > 0) {
+                    resendBtn.disabled = true;
+                    resendBtn.classList.add('disabled');
+                    resendTimer.textContent = `in ${cooldown}s`;
+                    resendTimer.classList.remove('hide');
+                } else {
+                    resendBtn.disabled = false;
+                    resendBtn.classList.remove('disabled');
+                    resendTimer.classList.add('hide');
+                }
+            }
+            function startCooldown(sec) {
+                cooldown = sec;
+                updateTimer();
+                if (timerId) clearInterval(timerId);
+                timerId = setInterval(() => {
+                    cooldown -= 1;
+                    updateTimer();
+                    if (cooldown <= 0) { clearInterval(timerId); timerId = null; }
+                }, 1000);
+            }
+
+            resendBtn.addEventListener('click', () => {
+                startCooldown(30);
+            });
+
+            /* INIT */
+            document.getElementById('main')?.focus();
+            input.focus();
             render();
+            updateTimer();
         });
     </script>
+
 </body>
 
 </html>
