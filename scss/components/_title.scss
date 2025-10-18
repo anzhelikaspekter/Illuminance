@@ -18,7 +18,7 @@
 
 @mixin title-secondary {
     font-size: calc(20px + (24 - 24) * ((100vw - 320px) / (1440 - 320)));
-    font-weight: 500;
+    font-weight: 600;
 }
 
 @mixin title-thirdly {

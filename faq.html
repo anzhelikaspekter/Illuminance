@@ -17,7 +17,7 @@
             <!-- Menu -->
             <a href="menu.html" class="header__menu header__menu--dark">
                 <span class="icon menu menu--dark" aria-hidden="true"></span>
-                <span class="desc primary primary--light" hidden>Menu</span>
+                <span class="desc primary primary--light visually-hidden">Menu</span>
             </a>
             <!-- Logo -->
             <a href="/">
@@ -29,21 +29,21 @@
                 <button class="header__lang header__lang--middle" type="button" aria-haspopup="menu"
                     aria-expanded="false" aria-controls="lang-menu">
                     <span class="icon en" aria-hidden="true"></span>
-                    <span class="desc primary primary--light" hidden>Language</span>
+                    <span class="desc primary primary--light visually-hidden">Language</span>
                 </button>
                 <ul id="lang-menu" class="header__lang-menu" role="menu" hidden>
                     <li role="none">
                         <button role="menuitemradio" class="header__lang header__lang--middle" type="button"
                             data-lang="en" aria-checked="true" tabindex="0">
                             <span class="icon en" aria-hidden="true"></span>
-                            <span class="desc primary primary--light" hidden>English</span>
+                            <span class="desc primary primary--light visually-hidden">English</span>
                         </button>
                     </li>
                     <li role="none">
                         <button role="menuitemradio" class="header__lang header__lang--middle" type="button"
                             data-lang="uk" aria-checked="false" tabindex="-1">
                             <span class="icon uk" aria-hidden="true"></span>
-                            <span class="desc primary primary--light" hidden>Українська</span>
+                            <span class="desc primary primary--light visually-hidden">Українська</span>
                         </button>
                     </li>
                 </ul>
@@ -60,7 +60,7 @@
                 provide control, guidance and oversight.</p>
         </section>
         <section class="section faq" aria-labelledby="faq-title">
-            <h2 class="title primary primary--middle" id="faq-title" hidden>Frequently Asked Questions</h2>
+            <h2 class="title primary primary--middle visually-hidden" id="faq-title">Frequently Asked Questions</h2>
             <ul class="faq__list">
                 <li class="faq__item">
                     <h3 class="faq__heading">
@@ -166,7 +166,7 @@
                                 <a href="#" class="footer__link desc secondary secondary--middle">Brand</a>
                             </li>
                             <li class="footer__item--inner">
-                                <a href="faq.html" class="footer__link desc secondary secondary--middle">FAQ</a>
+                                <a href="faq.html" class="footer__link desc secondary secondary--middle" aria-current="page">FAQ</a>
                             </li>
                             <li class="footer__item--inner">
                                 <a href="#" class="footer__link desc secondary secondary--middle">Help &amp; Support</a>
@@ -210,7 +210,7 @@
                                 <a href="#" class="footer__link desc secondary secondary--middle">Privacy Policy</a>
                             </li>
                             <li class="footer__item--inner">
-                                <a href="#" class="footer__link desc secondary secondary--middle">Terms of Use</a>
+                                <a href="user-terms.html" class="footer__link desc secondary secondary--middle">Terms of Use</a>
                             </li>
                             <li class="footer__item--inner">
                                 <a href="#" class="footer__link desc secondary secondary--middle">Contact</a>
