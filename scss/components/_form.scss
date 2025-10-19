@@ -1,8 +1,11 @@
 :root {
     --form-label-color: rgba(255, 255, 255, 1);
     --form-input-color: rgba(255, 253, 254, 1);
+    --form-input-dark-color: rgba(50, 73, 120, 1);
     --form-input-bg-color: rgba(255, 253, 254, 0.05);
+    --form-input-bg-dark-color: rgba(50, 73, 120, 0.05);
     --form-input-placeholder-color: rgba(255, 253, 254, 0.3);
+    --form-input-placeholder-dark-color: rgba(50, 73, 120, 0.3);
 
     --form-btn-bg-color: rgba(50, 73, 120, 1);
     --form-btn-color: rgba(255, 253, 254, 1);
@@ -126,6 +129,13 @@
             background: var(--form-input-error-bg-color);
             color: var(--form-input-error-color);
         }
+        &--dark {
+            color: var(--form-input-dark-color);
+            background-color: var(--form-input-bg-dark-color);
+            &::placeholder {
+                color: var(--form-input-placeholder-dark-color);
+            }
+        }
     }
     &__field {
         width: 100%;
@@ -187,12 +197,11 @@ input.real-input {
     text-decoration: none;
 }
 
-input {
+input, input.form__input--dark {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -200,9 +209,25 @@ input:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0 0 var(--form-input-bg-color) inset !important;
     -webkit-text-fill-color: var(--form-input-color) !important;
     caret-color: var(--form-input-color);
-    transition: background-color 9999s ease-out, color 9999s ease-out;
+    transition:
+        background-color 9999s ease-out,
+        color 9999s ease-out;
+}
+input.form__input--dark:-webkit-autofill,
+input.form__input--dark:-webkit-autofill:hover,
+input.form__input--dark:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 0 var(--form-input-bg-dark-color) inset !important;
+    -webkit-text-fill-color: var(--form-input-dark-color-color) !important;
+    caret-color: var(--form-input-dark-color);
+    transition:
+        background-color 9999s ease-out,
+        color 9999s ease-out;
 }
 input:-moz-autofill {
     background-color: var(--form-input-bg-color) !important;
     color: var(--form-input-color) !important;
+}
+input.form__input--dark:-moz-autofill {
+    background-color: var(--form-input-bg-dark-color) !important;
+    color: var(--form-input-dark-color) !important;
 }

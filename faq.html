@@ -17,33 +17,33 @@
             <!-- Menu -->
             <a href="menu.html" class="header__menu header__menu--dark">
                 <span class="icon menu menu--dark" aria-hidden="true"></span>
-                <span class="desc primary primary--light visually-hidden">Menu</span>
+                <span class="desc primary primary--dark visually-hidden">Menu</span>
             </a>
             <!-- Logo -->
-            <a href="/">
+            <a href="index.html">
                 <img src="img/logo_black.svg" width="208" height="24" alt="Illuminance" class="logo">
             </a>
 
             <!-- Lang Menu -->
             <div class="header__lang-wrap">
-                <button class="header__lang header__lang--middle" type="button" aria-haspopup="menu"
+                <button class="header__lang header__lang--dark" type="button" aria-haspopup="menu"
                     aria-expanded="false" aria-controls="lang-menu">
                     <span class="icon en" aria-hidden="true"></span>
-                    <span class="desc primary primary--light visually-hidden">Language</span>
+                    <span class="desc primary primary--dark visually-hidden">Language</span>
                 </button>
                 <ul id="lang-menu" class="header__lang-menu" role="menu" hidden>
                     <li role="none">
-                        <button role="menuitemradio" class="header__lang header__lang--middle" type="button"
+                        <button role="menuitemradio" class="header__lang header__lang--dark" type="button"
                             data-lang="en" aria-checked="true" tabindex="0">
                             <span class="icon en" aria-hidden="true"></span>
-                            <span class="desc primary primary--light visually-hidden">English</span>
+                            <span class="desc primary primary--dark visually-hidden">English</span>
                         </button>
                     </li>
                     <li role="none">
-                        <button role="menuitemradio" class="header__lang header__lang--middle" type="button"
+                        <button role="menuitemradio" class="header__lang header__lang--dark" type="button"
                             data-lang="uk" aria-checked="false" tabindex="-1">
                             <span class="icon uk" aria-hidden="true"></span>
-                            <span class="desc primary primary--light visually-hidden">Українська</span>
+                            <span class="desc primary primary--dark visually-hidden">Українська</span>
                         </button>
                     </li>
                 </ul>
@@ -71,7 +71,7 @@
                         </button>
                     </h3>
                     <div id="faq-panel-1" class="faq__panel hide" role="region" aria-labelledby="faq-button-1" hidden>
-                        <p class="desc primary primary--dark">The financial partners in InvestEU are responsible for the
+                        <p class="desc secondary secondary--middle">The financial partners in InvestEU are responsible for the
                             financing and investment operations under the InvestEU Fund since their governing bodies
                             take the final decision on the financing. The Investment Committee, composed of independent
                             external experts, approves the use of the EU guarantee under the InvestEU Fund to support
@@ -89,7 +89,7 @@
                         </button>
                     </h3>
                     <div id="faq-panel-2" class="faq__panel hide" role="region" aria-labelledby="faq-button-2" hidden>
-                        <p class="desc primary primary--dark">??</p>
+                        <p class="desc secondary secondary--middle">??</p>
                     </div>
                 </li>
                 <li class="faq__item">
@@ -102,7 +102,7 @@
                         </button>
                     </h3>
                     <div id="faq-panel-3" class="faq__panel hide" role="region" aria-labelledby="faq-button-3" hidden>
-                        <p class="desc primary primary--dark">??</p>
+                        <p class="desc secondary secondary--middle">??</p>
                     </div>
                 </li>
                 <li class="faq__item">
@@ -115,7 +115,7 @@
                         </button>
                     </h3>
                     <div id="faq-panel-4" class="faq__panel hide" role="region" aria-labelledby="faq-button-4" hidden>
-                        <p class="desc primary primary--dark">??</p>
+                        <p class="desc secondary secondary--middle">??</p>
                     </div>
                 </li>
             </ul>
@@ -126,7 +126,7 @@
         <div class="footer__wrap">
             <div class="footer__info">
                 <div class="footer__info-wrap">
-                    <a href="/">
+                    <a href="index.html">
                         <img src="img/logo_black.svg" width="208" height="24" alt="Illuminance" class="logo">
                     </a>
                     <p class="desc primary primary--dark">Illuminance.com provides information and resources about the
@@ -207,13 +207,13 @@
                         <h3 class="title secondary secondary--dark">Company</h3>
                         <ul class="footer__list--inner">
                             <li class="footer__item--inner">
-                                <a href="#" class="footer__link desc secondary secondary--middle">Privacy Policy</a>
+                                <a href="privacy-policy.html" class="footer__link desc secondary secondary--middle">Privacy Policy</a>
                             </li>
                             <li class="footer__item--inner">
                                 <a href="user-terms.html" class="footer__link desc secondary secondary--middle">Terms of Use</a>
                             </li>
                             <li class="footer__item--inner">
-                                <a href="#" class="footer__link desc secondary secondary--middle">Contact</a>
+                                <a href="contact.html" class="footer__link desc secondary secondary--middle">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -221,10 +221,31 @@
             </ul>
         </div>
     </footer>
-
     <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.header__menu');
+
+            links.forEach(link => {
+                const icon = link.querySelector('.icon.menu');
+                if (!icon) return;
+
+                const LIGHT = 'menu--light';
+                const DARK = 'menu--dark';
+
+                const toLight = () => { icon.classList.remove(DARK); icon.classList.add(LIGHT); };
+                const toDark = () => { icon.classList.remove(LIGHT); icon.classList.add(DARK); };
+
+                link.addEventListener('mouseenter', toLight);
+                link.addEventListener('mouseleave', toDark);
+
+                link.addEventListener('focus', toLight);
+                link.addEventListener('blur', toDark);
+
+                link.addEventListener('touchstart', toLight, { passive: true });
+                link.addEventListener('touchend', toDark, { passive: true });
+                link.addEventListener('touchcancel', toDark, { passive: true });
+            });
             /* LANGUAGE MENU */
             const root = document.documentElement;
             const langBtn = document.querySelector('.header__lang');

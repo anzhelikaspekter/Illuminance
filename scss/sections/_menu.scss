@@ -30,10 +30,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 30px;
+        gap: 24px;
     }
     &__link {
-        font-size: calc(28px + (38 - 28) * ((100vw - 320px) / (1440 - 320)));
+        font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1440 - 320)));
         font-weight: 400;
         color: var(--menu-nav-list-item-color);
         text-decoration: none;

@@ -2,6 +2,7 @@
     --registration-bg: rgba(12, 17, 28, 0.8);
 
     --hero-light-bg-color: url(../img/bg-main-dark.svg) no-repeat center / cover, rgba(255, 255, 255, 0.35);
+    --hero-dark-bg-color: url(../img/bg-main-light.svg) no-repeat center / cover, rgba(50, 73, 120, 1);
 }
 
 .section {
@@ -148,7 +149,18 @@
         /* Overlay */
         background: var(--registration-bg);
         backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
         overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                url(../img/bg-right-up.svg) no-repeat top right,
+                url(../img/bg-left-down.svg) no-repeat bottom left;
+            background-size: auto;
+            z-index: -1;
+        }
     }
     &.header {
         width: 100vw;
@@ -165,12 +177,16 @@
         &--light {
             background: var(--hero-light-bg-color);
         }
+        &--dark {
+            background: var(--hero-dark-bg-color);
+        }
     }
     &.faq {
         width: 100%;
         padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
         padding-left: calc(16px + (144 - 16) * ((100vw - 320px) / (1440 - 320)));
         padding-right: calc(16px + (144 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding-bottom: 0;
     }
     &.user-terms {
         width: 100%;
@@ -180,6 +196,24 @@
         padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
         padding-left: calc(16px + (144 - 16) * ((100vw - 320px) / (1440 - 320)));
         padding-right: calc(16px + (144 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding-bottom: 0;
+    }
+    &.privacy-policy {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding-left: calc(16px + (144 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding-right: calc(16px + (144 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding-bottom: 0;
+    }
+    &.contact {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        position: relative;
     }
     &.footer {
         width: 100vw;
@@ -188,6 +222,5 @@
         justify-content: space-between;
         gap: 20px;
         padding: calc(16px + (54 - 16) * ((100vw - 320px) / (1440 - 320)));
-        padding-top: 0;
     }
 }

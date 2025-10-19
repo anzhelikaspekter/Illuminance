@@ -1,7 +1,8 @@
 :root {
-    --header-btn-border-color: rgba(255, 255, 255, 0.12);
-    --header-btn-border-active-color: rgba(52, 52, 51, 1);
-    --header-btn-bg-active-color: rgba(52, 52, 51, 1);
+    --header-btn-border-light-color: rgba(255, 255, 255, 0.12);
+    --header-btn-border-dark-color: rgba(50, 73, 120, 1);
+    --header-btn-bg-light-color: rgba(255, 255, 255, 1);
+    --header-btn-bg-dark-color: rgba(50, 73, 120, 1);
 }
 
 .header {
@@ -25,31 +26,25 @@
         padding: 4px;
         border-radius: 50%;
         &--light {
-            border: 1px solid var(--header-btn-border-color);
+            border: 1px solid var(--header-btn-border-light-color);
             &:hover {
-                border: 1px solid var(--header-btn-border-active-color);
-                background: var(--header-btn-bg-active-color);
+                border: 1px solid var(--header-btn-border-light-color);
+                background: var(--header-btn-bg-light-color);
             }
             &.active {
-                border: 1px solid var(--header-btn-border-active-color);
-                background: var(--header-btn-bg-active-color);
+                border: 1px solid var(--header-btn-border-light-color);
+                background: var(--header-btn-bg-light-color);
             }
         }
         &--dark {
-            border: 1px solid var(--header-btn-border-active-color);
+            border: 1px solid var(--header-btn-border-dark-color);
             &:hover {
-                border: 1px solid var(--header-btn-border-active-color);
-                background: var(--header-btn-bg-active-color);
-                & .icon.menu--dark {
-                    background: var(--icon-menu-light);
-                }
+                border: 1px solid var(--header-btn-border-dark-color);
+                background: var(--header-btn-bg-dark-color);
             }
             &.active {
-                border: 1px solid var(--header-btn-border-active-color);
-                background: var(--header-btn-bg-active-color);
-                & .icon.menu--dark {
-                    background: var(--icon-menu-light);
-                }
+                border: 1px solid var(--header-btn-border-dark-color);
+                background: var(--header-btn-bg-dark-color);
             }
         }
     }
@@ -71,18 +66,26 @@
         padding: 4px;
         border-radius: 50%;
         &--light {
-            border: 1px solid var(--header-btn-border-color);
+            border: 1px solid var(--header-btn-border-light-color);
+            &:hover {
+                border: 1px solid var(--header-btn-border-light-color);
+                background: var(--header-btn-bg-light-color);
+            }
+            &.active {
+                border: 1px solid var(--header-btn-border-light-color);
+                background: var(--header-btn-bg-light-color);
+            }
         }
         &--dark {
-            border: 1px solid var(--header-btn-border-active-color);
-        }
-        &:hover {
-            border: 1px solid var(--header-btn-border-active-color);
-            background: var(--header-btn-bg-active-color);
-        }
-        &.active {
-            border: 1px solid var(--header-btn-border-active-color);
-            background: var(--header-btn-bg-active-color);
+            border: 1px solid var(--header-btn-border-dark-color);
+            &:hover {
+                border: 1px solid var(--header-btn-border-dark-color);
+                background: var(--header-btn-bg-dark-color);
+            }
+            &.active {
+                border: 1px solid var(--header-btn-border-dark-color);
+                background: var(--header-btn-bg-dark-color);
+            }
         }
     }
     &__lang-menu {
