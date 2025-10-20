@@ -24,6 +24,13 @@
         justify-content: space-between;
         gap: 24px;
     }
+    &__news {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        gap: 24px;
+    }
     &__title-field {
         display: flex;
         flex-direction: column;

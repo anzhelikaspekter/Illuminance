@@ -1,17 +1,35 @@
 :root {
-    --tooltip-bg-color: rgba(255, 255, 255, 1);
-    --tooltip-title-color: rgba(0, 0, 0, 1);
+    --tooltip-bg-light-color: rgba(255, 255, 255, 1);
+    --tooltip-bg-dark-color: rgba(255, 255, 255, 0.08);
+
+    --tooltip-border-light-color: rgba(255, 255, 255, 0.3);
+    --tooltip-border-dark-color: rgba(164, 172, 170, 0.3);
+
+    --tooltip-title-light-color: rgba(255, 255, 255, 1);
+    --tooltip-title-dark-color: rgba(0, 0, 0, 1);
 }
 
 .tooltip {
+    width: max-content;
     padding: 5px 8px;
     border-radius: 6px;
-    background: var(--tooltip-bg-color);
+    &--light {
+        background: var(--tooltip-bg-light-color);
+    }
+    &--dark {
+        background: var(--tooltip-bg-dark-color);
+        border: 1px solid var(--tooltip-border-dark-color);
+    }
     &__title {
         font-size: 12px;
         font-weight: 400;
         letter-spacing: 0.5px;
-        color: var(--tooltip-title-color);
         text-transform: uppercase;
+        &--light {
+            color: var(--tooltip-title-light-color);
+        }
+        &--dark {
+            color: var(--tooltip-title-dark-color);
+        }
     }
 }

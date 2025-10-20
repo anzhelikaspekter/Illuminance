@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Stay updated with the latest news and insights from Illuminance — company updates, product releases, and industry trends in one place.">
+    <title>News</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="section header" role="banner">
+        <nav class="header__nav" aria-label="Primary">
+            <!-- Menu -->
+            <a href="menu.html" class="header__menu header__menu--light">
+                <span class="icon menu menu--light" aria-hidden="true"></span>
+                <span class="desc primary primary--light visually-hidden">Menu</span>
+            </a>
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="img/logo.svg" width="208" height="24" alt="Illuminance" class="logo">
+            </a>
+
+            <!-- Lang Menu -->
+            <div class="header__lang-wrap">
+                <button class="header__lang header__lang--light" type="button" aria-haspopup="menu"
+                    aria-expanded="false" aria-controls="lang-menu">
+                    <span class="icon en" aria-hidden="true"></span>
+                    <span class="desc primary primary--light visually-hidden">Language</span>
+                </button>
+                <ul id="lang-menu" class="header__lang-menu" role="menu" hidden>
+                    <li role="none">
+                        <button role="menuitemradio" class="header__lang header__lang--light" type="button"
+                            data-lang="en" aria-checked="true" tabindex="0">
+                            <span class="icon en" aria-hidden="true"></span>
+                            <span class="desc primary primary--light visually-hidden">English</span>
+                        </button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitemradio" class="header__lang header__lang--light" type="button"
+                            data-lang="uk" aria-checked="false" tabindex="-1">
+                            <span class="icon uk" aria-hidden="true"></span>
+                            <span class="desc primary primary--light visually-hidden">Українська</span>
+                        </button>
+                    </li>
+                </ul>
+                <output id="lang-status" class="visually-hidden" aria-live="polite"></output>
+            </div>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Page title outside of slides -->
+        <h1 class="title primary primary--light visually-hidden">News</h1>
+
+        <section class="section hero hero__news hero--dark">
+            <div class="section slider" aria-label="Featured articles">
+                <div class="slider" role="region" aria-roledescription="carousel" aria-label="Featured news carousel">
+                    <div class="slider__inner" role="list">
+                        <!-- Slide 1 -->
+                        <article class="slider__item active" id="slide-1" role="group" aria-roledescription="slide"
+                            aria-label="1 of 5">
+                            <div class="slider__field">
+                                <div class="slider__title-field">
+                                    <p class="tooltip tooltip--dark tooltip__title tooltip__title--light">The blog</p>
+                                    <h2 class="title primary primary--light">Helios Launches Local Health Benefits
+                                        powered
+                                        by Kota Embed</h2>
+                                    <time class="desc secondary secondary--light" datetime="2025-05-22">May 22,
+                                        2025</time>
+                                </div>
+                                <a href="#" class="btn secondary">Read article</a>
+                            </div>
+                            <div class="slider__field">
+                                <img src="img/img_1.webp" width="500" height="300"
+                                    alt="Illustration for Helios launch of local health benefits powered by Kota Embed"
+                                    class="slider__img">
+                            </div>
+                        </article>
+                        <!-- Slide 2 -->
+                        <article class="slider__item" id="slide-2" role="group" aria-roledescription="slide"
+                            aria-label="2 of 5" hidden>
+                            <div class="slider__field">
+                                <div class="slider__title-field">
+                                    <p class="tooltip tooltip--dark tooltip__title tooltip__title--light">The blog</p>
+                                    <h2 class="title primary primary--light">Helios Launches Local Health Benefits
+                                        powered
+                                        by Kota Embed</h2>
+                                    <p class="desc secondary secondary--light">
+                                        <time datetime="2025-05-22">May 22, 2025</time>
+                                    </p>
+                                </div>
+                                <a href="#" class="btn secondary">Read article</a>
+                            </div>
+                            <div class="slider__field">
+                                <img src="img/img_1.webp" width="500" height="300"
+                                    alt="Illustration for Helios launch of local health benefits powered by Kota Embed"
+                                    class="slider__img">
+                            </div>
+                        </article>
+                        <!-- Slide 3 -->
+                        <article class="slider__item" id="slide-3" role="group" aria-roledescription="slide"
+                            aria-label="3 of 5" hidden>
+                            <div class="slider__field">
+                                <div class="slider__title-field">
+                                    <p class="tooltip tooltip--dark tooltip__title tooltip__title--light">The blog</p>
+                                    <h2 class="title primary primary--light">Helios Launches Local Health Benefits
+                                        powered
+                                        by Kota Embed</h2>
+                                    <p class="desc secondary secondary--light">
+                                        <time datetime="2025-05-22">May 22, 2025</time>
+                                    </p>
+                                </div>
+                                <a href="#" class="btn secondary">Read article</a>
+                            </div>
+                            <div class="slider__field">
+                                <img src="img/img_1.webp" width="500" height="300"
+                                    alt="Illustration for Helios launch of local health benefits powered by Kota Embed"
+                                    class="slider__img">
+                            </div>
+                        </article>
+                        <!-- Slide 4 -->
+                        <article class="slider__item" id="slide-4" role="group" aria-roledescription="slide"
+                            aria-label="4 of 5" hidden>
+                            <div class="slider__field">
+                                <div class="slider__title-field">
+                                    <p class="tooltip tooltip--dark tooltip__title tooltip__title--light">The blog</p>
+                                    <h2 class="title primary primary--light">Helios Launches Local Health Benefits
+                                        powered
+                                        by Kota Embed</h2>
+                                    <p class="desc secondary secondary--light">
+                                        <time datetime="2025-05-22">May 22, 2025</time>
+                                    </p>
+                                </div>
+                                <a href="#" class="btn secondary">Read article</a>
+                            </div>
+                            <div class="slider__field">
+                                <img src="img/img_1.webp" width="500" height="300"
+                                    alt="Illustration for Helios launch of local health benefits powered by Kota Embed"
+                                    class="slider__img">
+                            </div>
+                        </article>
+                        <!-- Slide 5 -->
+                        <article class="slider__item" id="slide-5" role="group" aria-roledescription="slide"
+                            aria-label="5 of 5" hidden>
+                            <div class="slider__field">
+                                <div class="slider__title-field">
+                                    <p class="tooltip tooltip--dark tooltip__title tooltip__title--light">The blog</p>
+                                    <h2 class="title primary primary--light">Helios Launches Local Health Benefits
+                                        powered
+                                        by Kota Embed</h2>
+                                    <p class="desc secondary secondary--light">
+                                        <time datetime="2025-05-22">May 22, 2025</time>
+                                    </p>
+                                </div>
+                                <a href="#" class="btn secondary">Read article</a>
+                            </div>
+                            <div class="slider__field">
+                                <img src="img/img_1.webp" width="500" height="300"
+                                    alt="Illustration for Helios launch of local health benefits powered by Kota Embed"
+                                    class="slider__img">
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="slider__control" role="group" aria-label="Slide navigation">
+                    <button class="slider__btn slider__btn--light active" type="button" aria-label="Go to slide 1"
+                        aria-controls="slide-1" aria-pressed="true"></button>
+                    <button class="slider__btn slider__btn--light" type="button" aria-label="Go to slide 2"
+                        aria-controls="slide-2" aria-pressed="false"></button>
+                    <button class="slider__btn slider__btn--light" type="button" aria-label="Go to slide 3"
+                        aria-controls="slide-3" aria-pressed="false"></button>
+                    <button class="slider__btn slider__btn--light" type="button" aria-label="Go to slide 4"
+                        aria-controls="slide-4" aria-pressed="false"></button>
+                    <button class="slider__btn slider__btn--light" type="button" aria-label="Go to slide 5"
+                        aria-controls="slide-5" aria-pressed="false"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section news" aria-labelledby="news-heading">
+            <div class="news__wrap">
+                <h2 class="title secondary secondary--dark">Latest stories</h2>
+                <div class="news__grid" id="news-list" role="list" aria-live="polite">
+                    <!-- Card 1 -->
+                    <article class="card" role="listitem">
+                        <a href="#" class="card__link">
+                            <figure class="card__wrap">
+                                <img class="card__img" width="300" height="200" src="img/card-img.webp"
+                                    alt="Capital Preservation — article cover" loading="lazy">
+                                <figcaption class="card__meta tooltip tooltip--light">
+                                    <time datetime="2022-09-03" class="tooltip__title tooltip__title--dark">
+                                        September 3, 2022
+                                    </time>
+                                </figcaption>
+                            </figure>
+                            <div class="card__wrap">
+                                <h3 class="title thirdly thirdly--dark">Capital Preservation</h3>
+                                <p class="desc secondary secondary--middle">
+                                    Assets are distributed across multiple pools with strict risk limits,
+                                    minimizing potential losses.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card" role="listitem">
+                        <a href="#" class="card__link">
+                            <figure class="card__wrap">
+                                <img class="card__img" width="300" height="200" src="img/card-img.webp"
+                                    alt="Capital Preservation — article cover" loading="lazy">
+                                <figcaption class="card__meta tooltip tooltip--light">
+                                    <time datetime="2022-09-03" class="tooltip__title tooltip__title--dark">
+                                        September 3, 2022
+                                    </time>
+                                </figcaption>
+                            </figure>
+                            <div class="card__wrap">
+                                <h3 class="title thirdly thirdly--dark">Capital Preservation</h3>
+                                <p class="desc secondary secondary--middle">
+                                    Assets are distributed across multiple pools with strict risk limits,
+                                    minimizing potential losses.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card" role="listitem">
+                        <a href="#" class="card__link">
+                            <figure class="card__wrap">
+                                <img class="card__img" width="300" height="200" src="img/card-img.webp"
+                                    alt="Capital Preservation — article cover" loading="lazy">
+                                <figcaption class="card__meta tooltip tooltip--light">
+                                    <time datetime="2022-09-03" class="tooltip__title tooltip__title--dark">
+                                        September 3, 2022
+                                    </time>
+                                </figcaption>
+                            </figure>
+                            <div class="card__wrap">
+                                <h3 class="title thirdly thirdly--dark">Capital Preservation</h3>
+                                <p class="desc secondary secondary--middle">
+                                    Assets are distributed across multiple pools with strict risk limits,
+                                    minimizing potential losses.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <button class="btn secondary" id="load-more" type="button" aria-controls="news-list"
+                    aria-label="Load more stories">Load more</button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="section footer">
+        <div class="footer__wrap">
+            <div class="footer__info">
+                <div class="footer__info-wrap">
+                    <a href="index.html">
+                        <img src="img/logo_black.svg" width="208" height="24" alt="Illuminance" class="logo">
+                    </a>
+                    <p class="desc primary primary--dark">Illuminance.com provides information and resources about the
+                        fundamentals of
+                        the
+                        decentralised non-custodial liquidity protocol called the Aave Protocol, comprised.</p>
+                </div>
+                <!-- Social -->
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="#" class="social__link" aria-label="Twitter">
+                            <span class="icon twitter" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link" aria-label="Facebook">
+                            <span class="icon facebook" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link" aria-label="YouTube">
+                            <span class="icon youtube" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Nav -->
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <nav class="footer__nav" aria-label="Resources">
+                        <h3 class="title secondary secondary--dark">Resources</h3>
+                        <ul class="footer__list--inner">
+                            <li class="footer__item--inner">
+                                <a href="news.html" class="footer__link desc secondary secondary--middle"
+                                    aria-current="page">Blog</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Brand</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="faq.html" class="footer__link desc secondary secondary--middle">FAQ</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Help &amp; Support</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Governance</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="footer__item">
+                    <nav class="footer__nav" aria-label="Developers">
+                        <h3 class="title secondary secondary--dark">Developers</h3>
+                        <ul class="footer__list--inner">
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Build</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Case Studies</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Documentation</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Technical Paper</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Security</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Bug Bounty</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="footer__item">
+                    <nav class="footer__nav" aria-label="Company">
+                        <h3 class="title secondary secondary--dark">Company</h3>
+                        <ul class="footer__list--inner">
+                            <li class="footer__item--inner">
+                                <a href="privacy-policy.html"
+                                    class="footer__link desc secondary secondary--middle">Privacy Policy</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="user-terms.html" class="footer__link desc secondary secondary--middle">Terms of
+                                    Use</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="contact.html" class="footer__link desc secondary secondary--middle">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.header__menu');
+
+            links.forEach(link => {
+                const icon = link.querySelector('.icon.menu');
+                if (!icon) return;
+
+                const LIGHT = 'menu--light';
+                const DARK = 'menu--dark';
+
+                const toDark = () => { icon.classList.remove(LIGHT); icon.classList.add(DARK); };
+                const toLight = () => { icon.classList.remove(DARK); icon.classList.add(LIGHT); };
+
+                link.addEventListener('mouseenter', toDark);
+                link.addEventListener('mouseleave', toLight);
+
+                link.addEventListener('focus', toDark);
+                link.addEventListener('blur', toLight);
+
+                link.addEventListener('touchstart', toDark, { passive: true });
+                link.addEventListener('touchend', toLight, { passive: true });
+                link.addEventListener('touchcancel', toLight, { passive: true });
+            });
+            /* LANGUAGE MENU */
+            const root = document.documentElement;
+            const langBtn = document.querySelector('.header__lang');
+            const langMenu = document.getElementById('lang-menu');
+            const langItems = Array.from(langMenu?.querySelectorAll('[role="menuitemradio"]') || []);
+            const live = document.getElementById('lang-status');
+
+            const LS_KEY = 'siteLang';
+            const URL_PARAM = 'lang';
+
+            function getDefaultLang() {
+                const urlLang = URL_PARAM ? new URLSearchParams(location.search).get(URL_PARAM) : null;
+                const lsLang = localStorage.getItem(LS_KEY);
+                return (urlLang || lsLang || root.lang || 'en').toLowerCase();
+            }
+
+            function syncChecked(targetLang) {
+                langItems.forEach(btn => {
+                    const isActive = btn.dataset.lang.toLowerCase() === targetLang.toLowerCase();
+                    btn.setAttribute('aria-checked', String(isActive));
+                    btn.tabIndex = isActive ? 0 : -1;
+
+                    if (isActive) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+
+            function announce(text) {
+                if (live) live.value = live.textContent = text;
+            }
+
+            function setLang(langCode, { persist = true, updateUrl = true } = {}) {
+                const code = langCode.toLowerCase();
+                document.documentElement.lang = code;
+                syncChecked(code);
+                announce(`Language: ${code}`);
+
+                const triggerIcon = document.querySelector('.header__lang > .icon');
+
+                if (triggerIcon) {
+                    triggerIcon.className = `icon ${code}`;
+                }
+
+                if (persist) localStorage.setItem('siteLang', code);
+
+                if (URL_PARAM && updateUrl) {
+                    const sp = new URLSearchParams(location.search);
+                    sp.set(URL_PARAM, code);
+                    const newUrl = `${location.pathname}?${sp.toString()}${location.hash}`;
+                    history.replaceState(null, '', newUrl);
+                }
+            }
+
+            function openLangMenu() {
+                langBtn.setAttribute('aria-expanded', 'true');
+                langMenu.hidden = false;
+                const current = langMenu.querySelector('[role="menuitemradio"][aria-checked="true"]') || langItems[0];
+                current?.focus();
+            }
+
+            function closeLangMenu() {
+                langBtn.setAttribute('aria-expanded', 'false');
+                langMenu.hidden = true;
+                langBtn.focus();
+            }
+
+            function toggleLangMenu() {
+                const expanded = langBtn.getAttribute('aria-expanded') === 'true';
+                expanded ? closeLangMenu() : openLangMenu();
+            }
+
+            function moveLangFocus(current, dir) {
+                if (!current) return;
+                const idx = langItems.indexOf(current);
+                if (idx < 0) return;
+                let nextIdx = idx + dir;
+                if (nextIdx < 0) nextIdx = langItems.length - 1;
+                if (nextIdx >= langItems.length) nextIdx = 0;
+                langItems[nextIdx].focus();
+            }
+
+            const initial = (new URLSearchParams(location.search).get('lang')
+                || localStorage.getItem('siteLang')
+                || document.documentElement.lang
+                || 'en').toLowerCase();
+            setLang(initial, { persist: false, updateUrl: false });
+
+            langBtn?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleLangMenu();
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!langMenu.hidden && !e.target.closest('#lang-menu') && e.target !== langBtn) {
+                    closeLangMenu();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!langMenu.hidden && e.key === 'Escape') {
+                    e.preventDefault();
+                    closeLangMenu();
+                }
+            });
+
+            langItems.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const lang = btn.dataset.lang;
+                    setLang(lang);
+                    closeLangMenu();
+                });
+
+                btn.addEventListener('keydown', (e) => {
+                    const key = e.key;
+                    if (key === 'ArrowDown') {
+                        e.preventDefault();
+                        moveLangFocus(e.currentTarget, +1);
+                    } else if (key === 'ArrowUp') {
+                        e.preventDefault();
+                        moveLangFocus(e.currentTarget, -1);
+                    } else if (key === 'Home') {
+                        e.preventDefault();
+                        langItems[0].focus();
+                    } else if (key === 'End') {
+                        e.preventDefault();
+                        langItems[langItems.length - 1].focus();
+                    } else if (key === 'Enter' || key === ' ') {
+                        e.preventDefault();
+                        const lang = e.currentTarget.dataset.lang;
+                        setLang(lang);
+                        closeLangMenu();
+                    } else if (key === 'Tab') {
+                        closeLangMenu();
+                    }
+                });
+            });
+
+            /* ===== Accessible carousel: dots + slides ===== */
+            const slides = Array.from(document.querySelectorAll('.slider__item'));
+            const dots = Array.from(document.querySelectorAll('.slider__control .slider__btn'));
+            const slider = document.querySelector('.slider');
+            const total = slides.length;
+
+            let current = slides.findIndex(s => s.classList.contains('active'));
+            if (current < 0) current = 0;
+            slides.forEach((s, i) => {
+                const active = i === current;
+                s.classList.toggle('active', active);
+                s.toggleAttribute('hidden', !active);
+                s.setAttribute('aria-roledescription', 'slide');
+                s.setAttribute('role', 'group');
+                s.setAttribute('aria-label', `${i + 1} of ${total}`);
+            });
+            dots.forEach((d, i) => {
+                const active = i === current;
+                d.classList.toggle('active', active);
+                d.setAttribute('type', 'button');
+                d.setAttribute('aria-pressed', String(active));
+                const slide = slides[i];
+                if (slide.id) d.setAttribute('aria-controls', slide.id);
+            });
+
+            /* === animated setSlide with wrap-around direction === */
+            const DURATION = 300;
+            let animLock = false;
+
+            function setSlide(targetIndex, { focusDot = false } = {}) {
+                if (!slides.length) return;
+                const next = ((targetIndex % total) + total) % total; // кольцо
+                if (next === current || animLock) return;
+
+                const old = current;
+                const oldSlide = slides[old];
+                const newSlide = slides[next];
+
+                const forward = (next - old + total) % total;
+                const backward = (old - next + total) % total;
+                const direction = forward <= backward ? 'next' : 'prev';
+
+                dots.forEach((d, idx) => {
+                    const active = idx === next;
+                    d.classList.toggle('active', active);
+                    d.setAttribute('aria-pressed', String(active));
+                });
+
+                slides.forEach(s => s.classList.remove('slide-in', 'slide-out', 'next', 'prev'));
+                oldSlide.hidden = false;
+                newSlide.hidden = false;
+
+                animLock = true;
+
+                requestAnimationFrame(() => {
+                    oldSlide.classList.add('slide-out', direction);
+                    newSlide.classList.add('slide-in', direction);
+                });
+
+                setTimeout(() => {
+                    slides.forEach((s, idx) => {
+                        const isActive = idx === next;
+                        s.classList.toggle('active', isActive);
+                        s.toggleAttribute('hidden', !isActive);
+                        s.classList.remove('slide-in', 'slide-out', 'next', 'prev');
+                        s.setAttribute('aria-label', `${idx + 1} of ${total}`);
+                    });
+
+                    current = next;
+                    if (focusDot) dots[current]?.focus();
+                    animLock = false;
+                }, DURATION);
+            }
+
+            function nextSlide() { setSlide(current + 1); }
+            function prevSlide() { setSlide(current - 1); }
+
+            // 2) dots: click + keyboard nav
+            dots.forEach((btn, idx) => {
+                btn.addEventListener('click', () => setSlide(idx));
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') { e.preventDefault(); nextSlide(); dots[current]?.focus(); }
+                    else if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); dots[current]?.focus(); }
+                    else if (e.key === 'Home') { e.preventDefault(); setSlide(0, { focusDot: true }); }
+                    else if (e.key === 'End') { e.preventDefault(); setSlide(total - 1, { focusDot: true }); }
+                });
+            });
+
+            // 3) keyboard arrows
+            document.addEventListener('keydown', (e) => {
+                const withinSlider = e.target.closest?.('.slider, .slider__control');
+                if (!withinSlider) return;
+                if (e.key === 'ArrowRight') { e.preventDefault(); nextSlide(); }
+                if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+            });
+
+            // 4) touch swipe
+            let touchX = null, touchTime = 0;
+            const SWIPE_PX = 40;
+            slider?.addEventListener('touchstart', (e) => {
+                touchX = e.changedTouches[0].clientX;
+                touchTime = Date.now();
+            }, { passive: true });
+            slider?.addEventListener('touchend', (e) => {
+                if (touchX == null) return;
+                const dx = e.changedTouches[0].clientX - touchX;
+                const dt = Date.now() - touchTime;
+                const threshold = Math.max(28, SWIPE_PX - Math.min(20, Math.floor(dt / 20)));
+                if (dx <= -threshold) nextSlide();
+                else if (dx >= threshold) prevSlide();
+                touchX = null;
+            }, { passive: true });
+
+            // 5) autoplay
+            const AUTOPLAY_MS = 5000; // интервал автолистывания
+            let timer = null;
+            function startAuto() {
+                if (!AUTOPLAY_MS) return;
+                stopAuto();
+                timer = setInterval(nextSlide, AUTOPLAY_MS);
+            }
+            function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
+
+            const hoverables = [slider, document.querySelector('.slider__control')].filter(Boolean);
+            hoverables.forEach(el => {
+                el.addEventListener('mouseenter', stopAuto);
+                el.addEventListener('mouseleave', startAuto);
+                el.addEventListener('focusin', stopAuto);
+                el.addEventListener('focusout', startAuto);
+            });
+
+            startAuto();
+
+            // * Card Grid Preload *//
+            const grid = document.querySelector('.news__grid');
+            const loadBtn = document.getElementById('load-more');
+
+            const INITIAL_COUNT = 9;
+            const LOAD_STEP = 3;
+
+            const DATA = Array.isArray(window.NEWS_DATA) ? window.NEWS_DATA : null;
+
+            function createCard(item) {
+                const art = document.createElement('article');
+                art.className = 'card';
+                art.setAttribute('role', 'listitem');
+
+                const link = document.createElement('a');
+                link.className = 'card__link';
+                link.href = item.href || '#';
+                if (item.ariaLabel) link.setAttribute('aria-label', item.ariaLabel);
+
+                // figure
+                const fig = document.createElement('figure');
+                fig.className = 'card__wrap';
+
+                const img = document.createElement('img');
+                img.className = 'card__img';
+                img.width = 300;
+                img.height = 200;
+                img.loading = 'lazy';
+                img.src = item.img || 'img/card-img.webp';
+                img.alt = item.alt || `${item.title} — article cover`;
+
+                const fc = document.createElement('figcaption');
+                fc.className = 'card__meta tooltip tooltip--light';
+
+                const time = document.createElement('time');
+                time.className = 'tooltip__title tooltip__title--dark';
+                time.setAttribute('datetime', item.datetime || '2022-09-03');
+                time.textContent = item.dateText || 'September 3, 2022';
+
+                fc.appendChild(time);
+                fig.appendChild(img);
+                fig.appendChild(fc);
+
+                const wrap = document.createElement('div');
+                wrap.className = 'card__wrap';
+
+                const h3 = document.createElement('h3');
+                h3.className = 'title thirdly thirdly--dark';
+                h3.textContent = item.title || 'Story';
+
+                const p = document.createElement('p');
+                p.className = 'desc secondary secondary--middle';
+                p.textContent = item.excerpt || 'Description';
+
+                wrap.appendChild(h3);
+                wrap.appendChild(p);
+
+                link.appendChild(fig);
+                link.appendChild(wrap);
+                art.appendChild(link);
+
+                art.classList.add('fade-in');
+                setTimeout(() => art.classList.remove('fade-in'), 300);
+
+                return art;
+            }
+
+            let templateCards = [];
+            if (!DATA) {
+                templateCards = Array.from(grid.querySelectorAll('.card')).slice(0, 3);
+            }
+
+            let rendered = grid.querySelectorAll('.card').length;
+            let dataIndex = 0;
+            let generatedIndex = 0;
+
+            grid.setAttribute('role', 'list');
+            grid.setAttribute('aria-live', 'polite');
+
+            function getNextItem() {
+                if (DATA) {
+                    if (dataIndex >= DATA.length) return null;
+                    return DATA[dataIndex++];
+                } else {
+                    const t = templateCards[generatedIndex % templateCards.length];
+                    const linkEl = t.querySelector('a.card__link');
+                    const titleEl = t.querySelector('h3');
+                    const descEl = t.querySelector('.desc.secondary.secondary--middle');
+                    const imgEl = t.querySelector('img');
+                    const timeEl = t.querySelector('time');
+
+                    const nth = generatedIndex + 1;
+
+                    const base = new Date(timeEl?.getAttribute('datetime') || '2022-09-03');
+                    const dt = new Date(base.getTime() + nth * 86400000);
+                    const yyyy = dt.getFullYear();
+                    const mm = String(dt.getMonth() + 1).padStart(2, '0');
+                    const dd = String(dt.getDate()).padStart(2, '0');
+                    const dateText = dt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+                    const item = {
+                        title: (titleEl?.textContent?.trim() || 'Story'),
+                        excerpt: (descEl?.textContent?.trim() || 'Description'),
+                        img: imgEl?.getAttribute('src') || 'img/card-img.webp',
+                        alt: (imgEl?.getAttribute('alt') || 'Cover') + ` (${nth})`,
+                        datetime: `${yyyy}-${mm}-${dd}`,
+                        dateText,
+                        href: linkEl?.getAttribute('href') || '#'
+                    };
+                    generatedIndex++;
+                    return item;
+                }
+            }
+
+            function renderMore(count) {
+                let appended = 0;
+                for (let i = 0; i < count; i++) {
+                    const item = getNextItem();
+                    if (!item) break;
+                    grid.appendChild(createCard(item));
+                    rendered++;
+                    appended++;
+                }
+                if (DATA && dataIndex >= DATA.length) {
+                    loadBtn.hidden = true;
+                }
+                return appended;
+            }
+
+            if (rendered < INITIAL_COUNT) {
+                renderMore(INITIAL_COUNT - rendered);
+            }
+
+            loadBtn?.addEventListener('click', () => {
+                renderMore(LOAD_STEP);
+            });
+        });
+    </script>
+</body>
+
+</html>

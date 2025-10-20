@@ -1,6 +1,18 @@
 :root {
-    --btn-google-bg-color: rgba(255, 253, 254, .05);
-    --btn-google-border-color: rgba(255, 253, 254, .1);
+    --btn-primary-bg-color: rgba(50, 73, 120, 1);
+    --btn-primary-active-bg-color: rgba(40, 58, 96, 1);
+    --btn-primary-border-color: rgba(0, 0, 0, 0.2);
+    --btn-primary-active-border-color: rgba(0, 0, 0, 0.3);
+    --btn-primary-color: rgba(255, 253, 254, 1);
+
+    --btn-secondary-bg-color: rgba(255, 253, 254, 0.05);
+    --btn-secondary-active-bg-color: rgba(255, 253, 254, 0.1);
+    --btn-secondary-border-color: rgba(0, 0, 0, 0.08);
+    --btn-secondary-active-border-color: rgba(0, 0, 0, 0.2);
+    --btn-secondary-color: rgba(0, 0, 0, 1);
+
+    --btn-google-bg-color: rgba(255, 253, 254, 0.05);
+    --btn-google-border-color: rgba(255, 253, 254, 0.1);
     --btn-google-color: rgba(255, 253, 254, 1);
 }
 
@@ -15,7 +27,9 @@
     background: transparent;
     color: transparent;
     text-decoration: none;
-    box-shadow: inset 1.5px 1.5px 1px rgba(255, 255, 255, 0.09), inset -1.5px -1.5px 1px rgba(0, 0, 0, 0.2);
+    box-shadow:
+        inset 1.5px 1.5px 1px rgba(255, 255, 255, 0.09),
+        inset -1.5px -1.5px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -27,5 +41,23 @@
         border: 1px solid var(--btn-google-border-color);
         color: var(--btn-google-color);
         box-shadow: none;
+    }
+    &.primary {
+        background: var(--btn-primary-bg-color);
+        border: 1px solid var(--btn-primary-border-color);
+        color: var(--btn-primary-color);
+        &:hover {
+            background: var(--btn-primary-active-bg-color);
+            border: 1px solid var(--btn-primary-active-border-color);
+        }
+    }
+    &.secondary {
+        background: var(--btn-secondary-bg-color);
+        border: 1px solid var(--btn-secondary-border-color);
+        color: var(--btn-secondary-color);
+        &:hover {
+            background: var(--btn-secondary-active-bg-color);
+            border: 1px solid var(--btn-secondary-active-border-color);
+        }
     }
 }
