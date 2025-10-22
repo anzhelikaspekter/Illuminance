@@ -14,6 +14,52 @@
     --icon-twitter: url(./../../img/icons/prime_twitter.svg) no-repeat center / contain;
     --icon-facebook: url(./../../img/icons/ic_baseline-facebook.svg) no-repeat center / contain;
     --icon-youtube: url(./../../img/icons/mdi_youtube.svg) no-repeat center / contain;
+    --icon-representative-frst: url(./../../img/icons/representative-frst.svg) no-repeat center / contain;
+    --icon-representative-scnd: url(./../../img/icons/representative-scnd.svg) no-repeat center / contain;
+    --icon-representative-thrd: url(./../../img/icons/representative-thrd.svg) no-repeat center / contain;
+    --icon-representative-frth: url(./../../img/icons/representative-frth.svg) no-repeat center / contain;
+    --icon-representative-ffth: url(./../../img/icons/representative-ffth.svg) no-repeat center / contain;
+    --icon-representative-sxth: url(./../../img/icons/representative-sxth.svg) no-repeat center / contain;
+    --icon-representative-svnth: url(./../../img/icons/representative-svnth.svg) no-repeat center / contain;
+    --icon-representative-eghth-light: url(./../../img/icons/representative-eghth-light.svg) no-repeat center / contain;
+    --icon-representative-eghth-dark: url(./../../img/icons/representative-eghth-dark.svg) no-repeat center / contain;
+    --icon-representative-nnth-light: url(./../../img/icons/representative-nnth-light.svg) no-repeat center / contain;
+    --icon-representative-nnth-dark: url(./../../img/icons/representative-nnth-dark.svg) no-repeat center / contain;
+    --icon-program-frst-one: url(./../../img/icons/program_frst-one.svg) no-repeat center / contain;
+    --icon-program-frst-two: url(./../../img/icons/program_frst-two.svg) no-repeat center / contain;
+    --icon-program-frst-three: url(./../../img/icons/program_frst-three.svg) no-repeat center / contain;
+    --icon-program-frst-four: url(./../../img/icons/program_frst-four.svg) no-repeat center / contain;
+    --icon-program-frst-five: url(./../../img/icons/program_frst-five.svg) no-repeat center / contain;
+    --icon-program-scnd-one: url(./../../img/icons/program_scnd-one.svg) no-repeat center / contain;
+    --icon-program-scnd-two: url(./../../img/icons/program_scnd-two.svg) no-repeat center / contain;
+    --icon-program-scnd-three: url(./../../img/icons/program_scnd-three.svg) no-repeat center / contain;
+    --icon-program-thrd-one: url(./../../img/icons/program_thrd-one.svg) no-repeat center / contain;
+    --icon-program-thrd-two: url(./../../img/icons/program_thrd-two.svg) no-repeat center / contain;
+    --icon-program-thrd-three: url(./../../img/icons/program_thrd-three.svg) no-repeat center / contain;
+    --icon-program-thrd-four: url(./../../img/icons/program_thrd-four.svg) no-repeat center / contain;
+    --icon-program-thrd-five: url(./../../img/icons/program_thrd-five.svg) no-repeat center / contain;
+    --icon-program-thrd-six: url(./../../img/icons/program_thrd-six.svg) no-repeat center / contain;
+    --icon-program-frth-one: url(./../../img/icons/program_frth-one.svg) no-repeat center / contain;
+    --icon-program-frth-two: url(./../../img/icons/program_frth-two.svg) no-repeat center / contain;
+    --icon-program-frth-three: url(./../../img/icons/program_frth-three.svg) no-repeat center / contain;
+    --icon-program-frth-four: url(./../../img/icons/program_frth-four.svg) no-repeat center / contain;
+    --icon-program-frth-five: url(./../../img/icons/program_frth-five.svg) no-repeat center / contain;
+    --icon-program-frth-six: url(./../../img/icons/program_frth-six.svg) no-repeat center / contain;
+    --icon-program-ffth-one: url(./../../img/icons/program_ffth-one.svg) no-repeat center / contain;
+    --icon-program-ffth-two: url(./../../img/icons/program_ffth-two.svg) no-repeat center / contain;
+    --icon-program-ffth-three: url(./../../img/icons/program_ffth-three.svg) no-repeat center / contain;
+    --icon-program-ffth-four: url(./../../img/icons/program_ffth-four.svg) no-repeat center / contain;
+    --icon-program-ffth-five: url(./../../img/icons/program_ffth-five.svg) no-repeat center / contain;
+    --icon-program-sxth-one: url(./../../img/icons/program_sxth-one.svg) no-repeat center / contain;
+    --icon-program-sxth-two: url(./../../img/icons/program_sxth-two.svg) no-repeat center / contain;
+    --icon-program-sxth-three: url(./../../img/icons/program_sxth-three.svg) no-repeat center / contain;
+    --icon-program-sxth-four: url(./../../img/icons/program_sxth-four.svg) no-repeat center / contain;
+    --icon-program-sxth-five: url(./../../img/icons/program_sxth-five.svg) no-repeat center / contain;
+    --icon-program-sxth-six: url(./../../img/icons/program_sxth-six.svg) no-repeat center / contain;
+    --icon-program-svnth-one: url(./../../img/icons/program_svnth-one.svg) no-repeat center / contain;
+    --icon-program-svnth-two: url(./../../img/icons/program_svnth-two.svg) no-repeat center / contain;
+    --icon-program-svnth-three: url(./../../img/icons/program_svnth-three.svg) no-repeat center / contain;
+    --icon-program-svnth-four: url(./../../img/icons/program_svnth-four.svg) no-repeat center / contain;
 }
 
 .icon {
@@ -90,5 +136,163 @@
     }
     &.plus {
         background: var(--icon-plus);
+    }
+    &.representative-frst {
+        width: 28px;
+        max-width: 28px;
+        height: 28px;
+        max-height: 28px;
+        background: var(--icon-representative-frst);
+    }
+    &.representative-scnd {
+        width: 28px;
+        max-width: 28px;
+        height: 28px;
+        max-height: 28px;
+        background: var(--icon-representative-scnd);
+    }
+    &.representative-thrd {
+        width: 28px;
+        max-width: 28px;
+        height: 28px;
+        max-height: 28px;
+        background: var(--icon-representative-thrd);
+    }
+    &.representative-frth {
+        width: 28px;
+        max-width: 28px;
+        height: 28px;
+        max-height: 28px;
+        background: var(--icon-representative-frth);
+    }
+    &.representative-ffth {
+        background: var(--icon-representative-ffth);
+    }
+    &.representative-sxth {
+        background: var(--icon-representative-sxth);
+    }
+    &.representative-svnth {
+        background: var(--icon-representative-svnth);
+    }
+    &.representative-eghth {
+        &.light {
+            background: var(--icon-representative-eghth-light);
+        }
+        &.dark {
+            background: var(--icon-representative-eghth-dark);
+        }
+    }
+    &.representative-nnth {
+        &.light {
+            background: var(--icon-representative-nnth-light);
+        }
+        &.dark {
+            background: var(--icon-representative-nnth-dark);
+        }
+    }
+    &.program-frst-one {
+        background: var(--icon-program-frst-one);
+    }
+    &.program-frst-two {
+        background: var(--icon-program-frst-two);
+    }
+    &.program-frst-three {
+        background: var(--icon-program-frst-three);
+    }
+    &.program-frst-four {
+        background: var(--icon-program-frst-four);
+    }
+    &.program-frst-five {
+        background: var(--icon-program-frst-five);
+    }
+    &.program-scnd-one {
+        background: var(--icon-program-scnd-one);
+    }
+    &.program-scnd-two {
+        background: var(--icon-program-scnd-two);
+    }
+    &.program-scnd-three {
+        background: var(--icon-program-scnd-three);
+    }
+    &.program-thrd-one {
+        background: var(--icon-program-thrd-one);
+    }
+    &.program-thrd-two {
+        background: var(--icon-program-thrd-two);
+    }
+    &.program-thrd-three {
+        background: var(--icon-program-thrd-three);
+    }
+    &.program-thrd-four {
+        background: var(--icon-program-thrd-four);
+    }
+    &.program-thrd-five {
+        background: var(--icon-program-thrd-five);
+    }
+    &.program-thrd-six {
+        background: var(--icon-program-thrd-six);
+    }
+    &.program-frth-one {
+        background: var(--icon-program-frth-one);
+    }
+    &.program-frth-two {
+        background: var(--icon-program-frth-two);
+    }
+    &.program-frth-three {
+        background: var(--icon-program-frth-three);
+    }
+    &.program-frth-four {
+        background: var(--icon-program-frth-four);
+    }
+    &.program-frth-five {
+        background: var(--icon-program-frth-five);
+    }
+    &.program-frth-six {
+        background: var(--icon-program-frth-six);
+    }
+    &.program-ffth-one {
+        background: var(--icon-program-ffth-one);
+    }
+    &.program-ffth-two {
+        background: var(--icon-program-ffth-two);
+    }
+    &.program-ffth-three {
+        background: var(--icon-program-ffth-three);
+    }
+    &.program-ffth-four {
+        background: var(--icon-program-ffth-four);
+    }
+    &.program-ffth-five {
+        background: var(--icon-program-ffth-five);
+    }
+    &.program-sxth-one {
+        background: var(--icon-program-sxth-one);
+    }
+    &.program-sxth-two {
+        background: var(--icon-program-sxth-two);
+    }
+    &.program-sxth-three {
+        background: var(--icon-program-sxth-three);
+    }
+    &.program-sxth-four {
+        background: var(--icon-program-sxth-four);
+    }
+    &.program-sxth-five {
+        background: var(--icon-program-sxth-five);
+    }
+    &.program-sxth-six {
+        background: var(--icon-program-sxth-six);
+    }
+    &.program-svnth-one {
+        background: var(--icon-program-svnth-one);
+    }
+    &.program-svnth-two {
+        background: var(--icon-program-svnth-two);
+    }
+    &.program-svnth-three {
+        background: var(--icon-program-svnth-three);
+    }
+    &.program-svnth-four {
+        background: var(--icon-program-svnth-four);
     }
 }

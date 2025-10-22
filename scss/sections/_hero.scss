@@ -31,6 +31,13 @@
         justify-content: space-between;
         gap: 24px;
     }
+    &__representative {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 40px;
+    }
     &__title-field {
         display: flex;
         flex-direction: column;

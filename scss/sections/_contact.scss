@@ -19,6 +19,8 @@
         padding: calc(16px + (20 - 16) * ((100vw - 320px) / (1440 - 320)));
         border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
         background: var(--contact-item-bg-color);
+        backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
     }
     &__field {
         display: flex;

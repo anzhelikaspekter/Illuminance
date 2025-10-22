@@ -26,8 +26,8 @@
 
             <!-- Lang Menu -->
             <div class="header__lang-wrap">
-                <button class="header__lang header__lang--dark" type="button" aria-haspopup="menu"
-                    aria-expanded="false" aria-controls="lang-menu">
+                <button class="header__lang header__lang--dark" type="button" aria-haspopup="menu" aria-expanded="false"
+                    aria-controls="lang-menu">
                     <span class="icon en" aria-hidden="true"></span>
                     <span class="desc primary primary--dark visually-hidden">Language</span>
                 </button>
@@ -71,7 +71,8 @@
                         </button>
                     </h3>
                     <div id="faq-panel-1" class="faq__panel hide" role="region" aria-labelledby="faq-button-1" hidden>
-                        <p class="desc secondary secondary--middle">The financial partners in InvestEU are responsible for the
+                        <p class="desc secondary primary--dark">The financial partners in InvestEU are responsible for
+                            the
                             financing and investment operations under the InvestEU Fund since their governing bodies
                             take the final decision on the financing. The Investment Committee, composed of independent
                             external experts, approves the use of the EU guarantee under the InvestEU Fund to support
@@ -89,7 +90,7 @@
                         </button>
                     </h3>
                     <div id="faq-panel-2" class="faq__panel hide" role="region" aria-labelledby="faq-button-2" hidden>
-                        <p class="desc secondary secondary--middle">??</p>
+                        <p class="desc secondary primary--dark">??</p>
                     </div>
                 </li>
                 <li class="faq__item">
@@ -102,7 +103,7 @@
                         </button>
                     </h3>
                     <div id="faq-panel-3" class="faq__panel hide" role="region" aria-labelledby="faq-button-3" hidden>
-                        <p class="desc secondary secondary--middle">??</p>
+                        <p class="desc secondary primary--dark">??</p>
                     </div>
                 </li>
                 <li class="faq__item">
@@ -115,7 +116,7 @@
                         </button>
                     </h3>
                     <div id="faq-panel-4" class="faq__panel hide" role="region" aria-labelledby="faq-button-4" hidden>
-                        <p class="desc secondary secondary--middle">??</p>
+                        <p class="desc secondary primary--dark">??</p>
                     </div>
                 </li>
             </ul>
@@ -166,7 +167,8 @@
                                 <a href="#" class="footer__link desc secondary secondary--middle">Brand</a>
                             </li>
                             <li class="footer__item--inner">
-                                <a href="faq.html" class="footer__link desc secondary secondary--middle" aria-current="page">FAQ</a>
+                                <a href="faq.html" class="footer__link desc secondary secondary--middle"
+                                    aria-current="page">FAQ</a>
                             </li>
                             <li class="footer__item--inner">
                                 <a href="#" class="footer__link desc secondary secondary--middle">Help &amp; Support</a>
@@ -207,10 +209,12 @@
                         <h3 class="title secondary secondary--dark">Company</h3>
                         <ul class="footer__list--inner">
                             <li class="footer__item--inner">
-                                <a href="privacy-policy.html" class="footer__link desc secondary secondary--middle">Privacy Policy</a>
+                                <a href="privacy-policy.html"
+                                    class="footer__link desc secondary secondary--middle">Privacy Policy</a>
                             </li>
                             <li class="footer__item--inner">
-                                <a href="user-terms.html" class="footer__link desc secondary secondary--middle">Terms of Use</a>
+                                <a href="user-terms.html" class="footer__link desc secondary secondary--middle">Terms of
+                                    Use</a>
                             </li>
                             <li class="footer__item--inner">
                                 <a href="contact.html" class="footer__link desc secondary secondary--middle">Contact</a>
@@ -391,30 +395,47 @@
             /* FAQ ACCORDION */
             const faqItems = document.querySelectorAll('.faq__item');
 
-            function closeFaq(btn, panel, headingEl) {
+            function closeFaq(btn, panel) {
                 btn.setAttribute('aria-expanded', 'false');
-                btn.classList.add('plus');
-                btn.classList.remove('close', 'close--dark');
-                if (headingEl) {
-                    headingEl.classList.remove('thirdly--dark');
-                    headingEl.classList.add('thirdly--middle');
+
+                const icon = btn.querySelector('.icon');
+                if (icon) {
+                    icon.classList.remove('close', 'close--dark');
+                    icon.classList.add('plus');
                 }
+
+                const titleSpan = btn.querySelector('.title');
+                if (titleSpan) {
+                    titleSpan.classList.remove('primary--dark');
+                    titleSpan.classList.remove('thirdly--dark');
+                    titleSpan.classList.add('thirdly--middle');
+                }
+
                 panel.hidden = true;
                 panel.classList.add('hide');
+
                 const item = panel.closest('.faq__item');
                 if (item) item.classList.remove('is-open');
             }
 
-            function openFaq(btn, panel, headingEl) {
+            function openFaq(btn, panel) {
                 btn.setAttribute('aria-expanded', 'true');
-                btn.classList.remove('plus');
-                btn.classList.add('close', 'close--dark');
-                if (headingEl) {
-                    headingEl.classList.remove('thirdly--middle');
-                    headingEl.classList.add('thirdly--dark');
+
+                const icon = btn.querySelector('.icon');
+                if (icon) {
+                    icon.classList.remove('plus');
+                    icon.classList.add('close', 'close--dark');
                 }
+
+                const titleSpan = btn.querySelector('.title');
+                if (titleSpan) {
+                    titleSpan.classList.remove('thirdly--middle');
+                    titleSpan.classList.add('primary--dark');
+                }
+
                 panel.hidden = false;
                 panel.classList.remove('hide');
+
                 const item = panel.closest('.faq__item');
                 if (item) item.classList.add('is-open');
             }
@@ -422,25 +443,25 @@
             faqItems.forEach((item, idx) => {
                 const btn = item.querySelector('.faq__button');
                 const panel = item.querySelector('.faq__panel');
-                const headingEl = item.querySelector('.faq__heading');
 
-                if (btn && panel) {
-                    if (!btn.id) btn.id = `faq-button-${idx + 1}`;
-                    if (!panel.id) panel.id = `faq-panel-${idx + 1}`;
-                    btn.setAttribute('aria-controls', panel.id);
-                    panel.setAttribute('aria-labelledby', btn.id);
+                if (!btn || !panel) return;
 
-                    btn.addEventListener('click', () => {
-                        const expanded = btn.getAttribute('aria-expanded') === 'true';
-                        faqItems.forEach(other => {
-                            const ob = other.querySelector('.faq__button');
-                            const op = other.querySelector('.faq__panel');
-                            const oh = other.querySelector('.faq__heading');
-                            if (ob && op && ob !== btn) closeFaq(ob, op, oh);
-                        });
-                        expanded ? closeFaq(btn, panel, headingEl) : openFaq(btn, panel, headingEl);
+                if (!btn.id) btn.id = `faq-button-${idx + 1}`;
+                if (!panel.id) panel.id = `faq-panel-${idx + 1}`;
+                btn.setAttribute('aria-controls', panel.id);
+                panel.setAttribute('aria-labelledby', btn.id);
+
+                btn.addEventListener('click', () => {
+                    const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+                    faqItems.forEach(other => {
+                        const ob = other.querySelector('.faq__button');
+                        const op = other.querySelector('.faq__panel');
+                        if (ob && op && ob !== btn) closeFaq(ob, op);
                     });
-                }
+
+                    expanded ? closeFaq(btn, panel) : openFaq(btn, panel);
+                });
             });
         });
     </script>
