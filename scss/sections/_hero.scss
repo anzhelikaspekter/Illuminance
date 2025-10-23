@@ -38,6 +38,12 @@
         align-items: flex-end;
         gap: 40px;
     }
+    &__strategy {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
     &__title-field {
         display: flex;
         flex-direction: column;

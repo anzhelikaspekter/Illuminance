@@ -1,8 +1,8 @@
 :root {
     --registration-bg: rgba(12, 17, 28, 0.8);
 
-    --hero-light-bg-color: url(../img/bg-main-dark.svg) no-repeat center / 150%, rgba(255, 255, 255, 0.35);
-    --hero-dark-bg-color: url(../img/bg-main-light.svg) no-repeat center / 150%, rgba(50, 73, 120, 1);
+    --hero-light-bg-color: url(../img/bg-main-dark.svg) no-repeat center / 130%, rgba(255, 255, 255, 0.35);
+    --hero-dark-bg-color: url(../img/bg-main-light.svg) no-repeat center / 130%, rgba(50, 73, 120, 1);
 }
 
 .section {
@@ -237,6 +237,35 @@
         gap: 24px;
         padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
         padding-bottom: 0;
+    }
+    &.strategy {
+        &--about {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
+        }
+        &--example {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+            background: var(--hero-dark-bg-color);
+            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        }
+        &--join {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
+            padding-bottom: 0;
+        }
     }
     &.footer {
         width: 100vw;

@@ -60,6 +60,26 @@
     --icon-program-svnth-two: url(./../../img/icons/program_svnth-two.svg) no-repeat center / contain;
     --icon-program-svnth-three: url(./../../img/icons/program_svnth-three.svg) no-repeat center / contain;
     --icon-program-svnth-four: url(./../../img/icons/program_svnth-four.svg) no-repeat center / contain;
+
+    --icon-strategy-frst-one: url(./../../img/icons/strategy_frst-one.svg) no-repeat center / contain;
+    --icon-strategy-frst-two: url(./../../img/icons/strategy_frst-two.svg) no-repeat center / contain;
+    --icon-strategy-frst-three: url(./../../img/icons/strategy_frst-three.svg) no-repeat center / contain;
+    --icon-strategy-frst-four: url(./../../img/icons/strategy_frst-four.svg) no-repeat center / contain;
+    --icon-strategy-scnd-one: url(./../../img/icons/strategy_scnd-one.svg) no-repeat center / contain;
+    --icon-strategy-scnd-two: url(./../../img/icons/strategy_scnd-two.svg) no-repeat center / contain;
+    --icon-strategy-scnd-three: url(./../../img/icons/strategy_scnd-three.svg) no-repeat center / contain;
+    --icon-strategy-scnd-four: url(./../../img/icons/strategy_scnd-four.svg) no-repeat center / contain;
+    --icon-strategy-scnd-five: url(./../../img/icons/strategy_scnd-five.svg) no-repeat center / contain;
+    --icon-strategy-scnd-six: url(./../../img/icons/strategy_scnd-six.svg) no-repeat center / contain;
+    --icon-strategy-thrd-one: url(./../../img/icons/strategy_thrd-one.svg) no-repeat center / contain;
+    --icon-strategy-thrd-two: url(./../../img/icons/strategy_thrd-two.svg) no-repeat center / contain;
+    --icon-strategy-thrd-three: url(./../../img/icons/strategy_thrd-three.svg) no-repeat center / contain;
+    --icon-strategy-thrd-four: url(./../../img/icons/strategy_thrd-four.svg) no-repeat center / contain;
+    --icon-strategy-thrd-five: url(./../../img/icons/strategy_thrd-five.svg) no-repeat center / contain;
+    --icon-strategy-frth-light: url(./../../img/icons/representative-eghth-light.svg) no-repeat center / contain;
+    --icon-strategy-frth-dark: url(./../../img/icons/representative-eghth-dark.svg) no-repeat center / contain;
+    --icon-strategy-ffth-light: url(./../../img/icons/representative-nnth-light.svg) no-repeat center / contain;
+    --icon-strategy-ffth-dark: url(./../../img/icons/representative-nnth-dark.svg) no-repeat center / contain;
 }
 
 .icon {
@@ -294,5 +314,102 @@
     }
     &.program-svnth-four {
         background: var(--icon-program-svnth-four);
+    }
+    &.strategy-frst-one {
+        background: var(--icon-strategy-frst-one);
+    }
+    &.strategy-frst-two {
+        background: var(--icon-strategy-frst-two);
+    }
+    &.strategy-frst-three {
+        background: var(--icon-strategy-frst-three);
+    }
+    &.strategy-frst-four {
+        background: var(--icon-strategy-frst-four);
+    }
+    &.strategy-scnd-one {
+        background: var(--icon-strategy-scnd-one);
+    }
+    &.strategy-scnd-two {
+        background: var(--icon-strategy-scnd-two);
+    }
+    &.strategy-scnd-three {
+        background: var(--icon-strategy-scnd-three);
+    }
+    &.strategy-scnd-four {
+        background: var(--icon-strategy-scnd-four);
+    }
+    &.strategy-scnd-five {
+        background: var(--icon-strategy-scnd-five);
+    }
+    &.strategy-scnd-six {
+        background: var(--icon-strategy-scnd-six);
+    }
+    &.strategy-thrd-one {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--icon-strategy-thrd-one) rgba(205, 217, 241, 1);
+        background-size: 20px;
+        border-radius: 8px;
+    }
+    &.strategy-thrd-two {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--icon-strategy-thrd-two) rgba(205, 217, 241, 1);
+        background-size: 20px;
+        border-radius: 8px;
+    }
+    &.strategy-thrd-three {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--icon-strategy-thrd-three) rgba(205, 217, 241, 1);
+        background-size: 20px;
+        border-radius: 8px;
+    }
+    &.strategy-thrd-four {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--icon-strategy-thrd-four) rgba(205, 217, 241, 1);
+        background-size: 20px;
+        border-radius: 8px;
+    }
+    &.strategy-thrd-five {
+        background: var(--icon-strategy-thrd-five);
+    }
+    &.strategy-frth {
+        &.light {
+            background: var(--icon-strategy-frth-light);
+        }
+        &.dark {
+            background: var(--icon-strategy-frth-dark);
+        }
+    }
+    &.strategy-ffth {
+        &.light {
+            background: var(--icon-strategy-ffth-light);
+        }
+        &.dark {
+            background: var(--icon-strategy-ffth-dark);
+        }
     }
 }

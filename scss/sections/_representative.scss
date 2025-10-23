@@ -7,14 +7,14 @@
 
     --representative-choice-bg-color: rgba(225, 232, 247, 0.5);
     --representative-item-choice-light-bg-color:
-        url(../img/bg-main-dark.svg) no-repeat center / cover, rgba(255, 255, 255, 0.4);
+        url(../img/bg-main-dark.svg) no-repeat center / 105%, rgba(255, 255, 255, 0.4);
     --representative-item-choice-dark-bg-color:
-        url(../img/bg-main-light.svg) no-repeat center / cover, rgba(50, 73, 120, 1);
+        url(../img/bg-main-light.svg) no-repeat center / 105%, rgba(50, 73, 120, 1);
 
     --representative-program-item-light-bg-color:
-        url(../img/bg-main-light.svg) no-repeat center / cover, rgba(225, 232, 247, 0.5);
+        url(../img/bg-main-dark.svg) no-repeat center / 110%, rgba(225, 232, 247, 0.5);
     --representative-program-item-dark-bg-color:
-        url(../img/bg-main-light.svg) no-repeat center / cover, rgba(50, 73, 120, 1);
+        url(../img/bg-main-light.svg) no-repeat center / 110%, rgba(50, 73, 120, 1);
     --representative-program-card-light-bg-color: rgba(221, 230, 245, 1);
 }
 
@@ -274,7 +274,7 @@
         }
         &:hover {
             background: var(--representative-program-item-dark-bg-color);
-            & > .title {
+            & > .title > span {
                 color: var(--title-primary-light-color);
             }
         }
