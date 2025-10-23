@@ -80,6 +80,17 @@
     --icon-strategy-frth-dark: url(./../../img/icons/representative-eghth-dark.svg) no-repeat center / contain;
     --icon-strategy-ffth-light: url(./../../img/icons/representative-nnth-light.svg) no-repeat center / contain;
     --icon-strategy-ffth-dark: url(./../../img/icons/representative-nnth-dark.svg) no-repeat center / contain;
+    --icon-about-frst: url(./../../img/icons/about_frst.svg) no-repeat center / contain;
+    --icon-about-scnd-one: url(./../../img/icons/about_scnd-one.svg) no-repeat center / contain;
+    --icon-about-scnd-two: url(./../../img/icons/about_scnd-two.svg) no-repeat center / contain;
+    --icon-about-scnd-three: url(./../../img/icons/about_scnd-three.svg) no-repeat center / contain;
+    --icon-about-scnd-four: url(./../../img/icons/about_scnd-four.svg) no-repeat center / contain;
+    --icon-about-scnd-five: url(./../../img/icons/about_scnd-five.svg) no-repeat center / contain;
+    --icon-about-thrd-one: url(./../../img/icons/about_thrd-one.svg) no-repeat center / contain;
+    --icon-about-thrd-two: url(./../../img/icons/about_thrd-two.svg) no-repeat center / contain;
+    --icon-about-frth-one: url(./../../img/icons/about_frth-one.svg) no-repeat center / contain;
+    --icon-about-frth-two: url(./../../img/icons/about_frth-two.svg) no-repeat center / contain;
+    --icon-about-frth-three: url(./../../img/icons/about_frth-three.svg) no-repeat center / contain;
 }
 
 .icon {
@@ -411,5 +422,38 @@
         &.dark {
             background: var(--icon-strategy-ffth-dark);
         }
+    }
+    &.about-frst {
+        background: var(--icon-about-frst);
+    }
+    &.about-scnd-one {
+        background: var(--icon-about-scnd-one);
+    }
+    &.about-scnd-two {
+        background: var(--icon-about-scnd-two);
+    }
+    &.about-scnd-three {
+        background: var(--icon-about-scnd-three);
+    }
+    &.about-scnd-four {
+        background: var(--icon-about-scnd-four);
+    }
+    &.about-scnd-five {
+        background: var(--icon-about-scnd-five);
+    }
+    &.about-thrd-one {
+        background: var(--icon-about-thrd-one);
+    }
+    &.about-thrd-two {
+        background: var(--icon-about-thrd-two);
+    }
+    &.about-frth-one {
+        background: var(--icon-about-frth-one);
+    }
+    &.about-frth-two {
+        background: var(--icon-about-frth-two);
+    }
+    &.about-frth-three {
+        background: var(--icon-about-frth-three);
     }
 }

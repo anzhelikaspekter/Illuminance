@@ -267,6 +267,14 @@
             padding-bottom: 0;
         }
     }
+    &.about {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 40px;
+        padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
+    }
     &.footer {
         width: 100vw;
         display: flex;
