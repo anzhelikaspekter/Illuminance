@@ -91,6 +91,11 @@
     --icon-about-frth-one: url(./../../img/icons/about_frth-one.svg) no-repeat center / contain;
     --icon-about-frth-two: url(./../../img/icons/about_frth-two.svg) no-repeat center / contain;
     --icon-about-frth-three: url(./../../img/icons/about_frth-three.svg) no-repeat center / contain;
+    --icon-philanthropy-frst: url(./../../img/icons/philanthropy_frst.svg) no-repeat center / contain;
+    --icon-philanthropy-scnd-one: url(./../../img/icons/philanthropy_scnd-one.svg) no-repeat center / contain;
+    --icon-philanthropy-scnd-two: url(./../../img/icons/philanthropy_scnd-two.svg) no-repeat center / contain;
+    --icon-philanthropy-scnd-three: url(./../../img/icons/philanthropy_scnd-three.svg) no-repeat center / contain;
+    --icon-philanthropy-thrd: url(./../../img/icons/philanthropy_thrd.svg) no-repeat center / contain;
 }
 
 .icon {
@@ -455,5 +460,20 @@
     }
     &.about-frth-three {
         background: var(--icon-about-frth-three);
+    }
+    &.philanthropy-frst {
+        background: var(--icon-philanthropy-frst);
+    }
+    &.philanthropy-scnd-one {
+        background: var(--icon-philanthropy-scnd-one);
+    }
+    &.philanthropy-scnd-two {
+        background: var(--icon-philanthropy-scnd-two);
+    }
+    &.philanthropy-scnd-three {
+        background: var(--icon-philanthropy-scnd-three);
+    }
+    &.philanthropy-thrd {
+        background: var(--icon-philanthropy-thrd);
     }
 }
