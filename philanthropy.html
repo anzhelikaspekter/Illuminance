@@ -100,7 +100,7 @@
                         <p class="desc primary primary--middle">Supporting Families</p>
                     </li>
                 </ul>
-                <div class="about__title-field">
+                <div class="philanthropy__title-field">
                     <h3 class="title thirdly primary--light">Digital Future — Education and Technology for Tomorrow</h3>
                     <p class="desc primary primary--light">We invest in children, because they are the ones who shape
                         the world of tomorrow.</p>
@@ -125,7 +125,7 @@
                         <p class="desc primary primary--middle">Supporting Families</p>
                     </li>
                 </ul>
-                <div class="about__title-field">
+                <div class="philanthropy__title-field">
                     <h3 class="title thirdly primary--light">Children of Light — Supporting Talent</h3>
                     <p class="desc primary primary--light">We believe that every talent is a source of light.</p>
                     <p class="desc primary primary--light">The <strong>Children of Light</strong> program offers grants
@@ -153,7 +153,7 @@
                         <p class="desc primary primary--middle">Supporting Families</p>
                     </li>
                 </ul>
-                <div class="about__title-field">
+                <div class="philanthropy__title-field">
                     <h3 class="title thirdly primary--light">Illuminance Humanity — Aid in Times of Crisis</h3>
                     <p class="desc primary primary--light">The world is vulnerable to unpredictable disasters and
                         crises.</p>
@@ -364,18 +364,18 @@
                 const LIGHT = 'menu--light';
                 const DARK = 'menu--dark';
 
-                const toLight = () => { icon.classList.remove(DARK); icon.classList.add(LIGHT); };
                 const toDark = () => { icon.classList.remove(LIGHT); icon.classList.add(DARK); };
+                const toLight = () => { icon.classList.remove(DARK); icon.classList.add(LIGHT); };
 
-                link.addEventListener('mouseenter', toLight);
-                link.addEventListener('mouseleave', toDark);
+                link.addEventListener('mouseenter', toDark);
+                link.addEventListener('mouseleave', toLight);
 
-                link.addEventListener('focus', toLight);
-                link.addEventListener('blur', toDark);
+                link.addEventListener('focus', toDark);
+                link.addEventListener('blur', toLight);
 
-                link.addEventListener('touchstart', toLight, { passive: true });
-                link.addEventListener('touchend', toDark, { passive: true });
-                link.addEventListener('touchcancel', toDark, { passive: true });
+                link.addEventListener('touchstart', toDark, { passive: true });
+                link.addEventListener('touchend', toLight, { passive: true });
+                link.addEventListener('touchcancel', toLight, { passive: true });
             });
             /* LANGUAGE MENU */
             const root = document.documentElement;

@@ -96,6 +96,26 @@
     --icon-philanthropy-scnd-two: url(./../../img/icons/philanthropy_scnd-two.svg) no-repeat center / contain;
     --icon-philanthropy-scnd-three: url(./../../img/icons/philanthropy_scnd-three.svg) no-repeat center / contain;
     --icon-philanthropy-thrd: url(./../../img/icons/philanthropy_thrd.svg) no-repeat center / contain;
+    --icon-partners-frst-one: url(./../../img/icons/partners_frst-one.svg) no-repeat center / contain;
+    --icon-partners-frst-two: url(./../../img/icons/partners_frst-two.svg) no-repeat center / contain;
+    --icon-partners-frst-three: url(./../../img/icons/partners_frst-three.svg) no-repeat center / contain;
+    --icon-partners-scnd-one: url(./../../img/icons/partners_scnd-one.svg) no-repeat center / contain;
+    --icon-partners-scnd-two: url(./../../img/icons/partners_scnd-two.svg) no-repeat center / contain;
+    --icon-partners-scnd-three: url(./../../img/icons/partners_scnd-three.svg) no-repeat center / contain;
+    --icon-partners-scnd-four: url(./../../img/icons/partners_scnd-four.svg) no-repeat center / contain;
+    --icon-partners-frth-one: url(./../../img/icons/partners_frth-one.svg) no-repeat center / contain;
+    --icon-partners-frth-two: url(./../../img/icons/partners_frth-two.svg) no-repeat center / contain;
+    --icon-partners-frth-three: url(./../../img/icons/partners_frth-three.svg) no-repeat center / contain;
+    --icon-partners-frth-four: url(./../../img/icons/partners_frth-four.svg) no-repeat center / contain;
+    --icon-partners-frth-five: url(./../../img/icons/partners_frth-five.svg) no-repeat center / contain;
+    --icon-partners-ffth-one: url(./../../img/icons/partners_ffth-one.svg) no-repeat center / contain;
+    --icon-partners-ffth-two: url(./../../img/icons/partners_ffth-two.svg) no-repeat center / contain;
+    --icon-partners-ffth-three: url(./../../img/icons/partners_ffth-three.svg) no-repeat center / contain;
+    --icon-partners-ffth-four: url(./../../img/icons/partners_ffth-four.svg) no-repeat center / contain;
+    --icon-partners-ffth-five: url(./../../img/icons/partners_ffth-five.svg) no-repeat center / contain;
+    --icon-partners-sxth-one: url(./../../img/icons/partners_sxth-one.svg) no-repeat center / contain;
+    --icon-partners-sxth-two: url(./../../img/icons/partners_sxth-two.svg) no-repeat center / contain;
+    --icon-partners-sxth-three: url(./../../img/icons/partners_sxth-three.svg) no-repeat center / contain;
 }
 
 .icon {
@@ -475,5 +495,65 @@
     }
     &.philanthropy-thrd {
         background: var(--icon-philanthropy-thrd);
+    }
+    &.partners-frst-one {
+        background: var(--icon-partners-frst-one);
+    }
+    &.partners-frst-two {
+        background: var(--icon-partners-frst-two);
+    }
+    &.partners-frst-three {
+        background: var(--icon-partners-frst-three);
+    }
+    &.partners-scnd-one {
+        background: var(--icon-partners-scnd-one);
+    }
+    &.partners-scnd-two {
+        background: var(--icon-partners-scnd-two);
+    }
+    &.partners-scnd-three {
+        background: var(--icon-partners-scnd-three);
+    }
+    &.partners-scnd-four {
+        background: var(--icon-partners-scnd-four);
+    }
+    &.partners-frth-one {
+        background: var(--icon-partners-frth-one);
+    }
+    &.partners-frth-two {
+        background: var(--icon-partners-frth-two);
+    }
+    &.partners-frth-three {
+        background: var(--icon-partners-frth-three);
+    }
+    &.partners-frth-four {
+        background: var(--icon-partners-frth-four);
+    }
+    &.partners-frth-five {
+        background: var(--icon-partners-frth-five);
+    }
+    &.partners-ffth-one {
+        background: var(--icon-partners-ffth-one);
+    }
+    &.partners-ffth-two {
+        background: var(--icon-partners-ffth-two);
+    }
+    &.partners-ffth-three {
+        background: var(--icon-partners-ffth-three);
+    }
+    &.partners-ffth-four {
+        background: var(--icon-partners-ffth-four);
+    }
+    &.partners-ffth-five {
+        background: var(--icon-partners-ffth-five);
+    }
+    &.partners-sxth-one {
+        background: var(--icon-partners-sxth-one);
+    }
+    &.partners-sxth-two {
+        background: var(--icon-partners-sxth-two);
+    }
+    &.partners-sxth-three {
+        background: var(--icon-partners-sxth-three);
     }
 }
