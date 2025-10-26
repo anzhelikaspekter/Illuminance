@@ -4445,11 +4445,17 @@ input.form__input--dark:-moz-autofill {
   align-items: stretch;
   gap: 40px;
 }
+@media (max-width: 767.9px) {
+  .partners__img-card-field {
+    flex-wrap: wrap;
+  }
+}
 .partners__img-card {
   width: 100%;
   height: 100%;
   min-height: 600px;
   max-height: 600px;
+  flex: 1 1 calc(50% - 40px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -4459,11 +4465,12 @@ input.form__input--dark:-moz-autofill {
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 1023.9px) {
+@media (max-width: 767.9px) {
   .partners__img-card {
-    height: 100%;
+    flex: 1 1 100%;
+    height: auto;
     min-height: 600px;
-    max-height: 100%;
+    max-height: auto;
   }
 }
 .partners__img-card:first-child {
