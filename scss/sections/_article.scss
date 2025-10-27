@@ -1,0 +1,176 @@
+:root {
+    --article-social-bg-color: rgba(50, 73, 120, 0.1);
+    --article-hr-color: rgba(227, 232, 237, 1);
+    --article-aside-border-color: rgba(189, 203, 229, 1);
+    --article-aside-border-active-color: rgba(50, 73, 120, 1);
+    --article-quote-bg-color: rgba(255, 255, 255, 0.25);
+}
+
+.article {
+    &__title-field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        &.row {
+            flex-direction: row;
+        }
+        & > .desc,
+        & > .title {
+            text-align: left;
+        }
+        &.center {
+            align-items: center;
+            & > .desc {
+                max-width: 65vw;
+                text-align: center;
+            }
+            & > .title {
+                max-width: 65vw;
+                text-align: center;
+            }
+        }
+        & > .quote {
+            padding: 12px 16px;
+            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            background: var(--article-quote-bg-color);
+        }
+    }
+    &__news-grid {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+        overflow: hidden;
+        overflow-x: auto;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        & .card {
+            flex: 0 0 calc((100% - (16px * 2)) / 3);
+            scroll-snap-align: start;
+            @media (min-width: 768px) and (max-width: 1023.9px) {
+                flex: 0 0 calc((100% - 16px) / 2);
+            }
+            @media (max-width: 767.9px) {
+                flex: 0 0 100%;
+            }
+        }
+    }
+    &__breadcrumbs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    &__breadcrumbs-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        & > a {
+            text-wrap: nowrap;
+            text-decoration: none;
+        }
+    }
+    &.start {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__img {
+        width: 100%;
+        max-width: 50vw;
+        height: auto;
+        object-fit: cover;
+        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        @media (min-width: 768px) {
+            max-width: 75%;
+            min-height: 300px;
+            height: 30vw;
+            margin-top: -150px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 767.9px) {
+            max-width: 100%;
+            height: 300px;
+            margin-top: -150px;
+        }
+    }
+    &__wrap {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    &__field {
+        flex: 0 1 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @media (max-width: 1023.9px) {
+            flex: 1 1 100%;
+        }
+    }
+    &__aside {
+        flex: 0 1 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        @media (max-width: 1023.9px) {
+            display: none;
+        }
+    }
+    & hr {
+        width: 100%;
+        height: 1px;
+        background: var(--article-hr-color);
+        border: none;
+    }
+    &__social-list {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    &__social-item {
+        width: 35px;
+        max-width: 35px;
+        height: 35px;
+        max-height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--article-social-bg-color);
+        border-radius: 50%;
+    }
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__post-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    &__post-item {
+        border-left: 3px solid var(--article-aside-border-color);
+        border-radius: 2px;
+        padding: 12px 16px;
+        & a {
+            text-decoration: none;
+        }
+        &.active {
+            border-left: 4px solid var(--article-aside-border-active-color);
+            & a {
+                color: var(--desc-primary-dark-color);
+            }
+        }
+    }
+    &__text-field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}

@@ -75,6 +75,20 @@
         flex-direction: column;
         gap: 40px;
     }
+    &__article {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 150px !important;
+        position: relative;
+    }
+    &__node {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
     &__title-field {
         display: flex;
         flex-direction: column;

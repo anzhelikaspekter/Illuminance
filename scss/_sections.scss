@@ -166,6 +166,7 @@
         width: 100vw;
         position: absolute;
         top: 0;
+        z-index: 9999;
     }
     &.hero {
         width: 100%;
@@ -292,6 +293,22 @@
         padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
     }
     &.main {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 40px;
+        padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
+    }
+    &.article {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 40px;
+        padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
+    }
+    &.node {
         width: 100%;
         display: flex;
         flex-wrap: wrap;

@@ -127,6 +127,11 @@
     --icon-main-thrd: url(./../../img/icons/main_thrd.svg) no-repeat center / contain;
     --icon-main-eghth-one: url(./../../img/icons/main_eghth-one.svg) no-repeat center / contain;
     --icon-main-eghth-two: url(./../../img/icons/main_eghth-two.svg) no-repeat center / contain;
+    --icon-article-frst: url(./../../img/icons/article_frst.svg) no-repeat center / 8px;
+    --icon-twitter-dark: url(./../../img/icons/twitter-dark.svg) no-repeat center / contain;
+    --icon-facebook-dark: url(./../../img/icons/facebook-dark.svg) no-repeat center / contain;
+    --icon-linkedin-dark: url(./../../img/icons/linkedin-dark.svg) no-repeat center / contain;
+    --icon-youtube-dark: url(./../../img/icons/youtube-dark.svg) no-repeat center / contain;
 }
 
 .icon {
@@ -599,5 +604,20 @@
     }
     &.main-eghth-two {
         background: var(--icon-main-eghth-two);
+    }
+    &.article-frst {
+        background: var(--icon-article-frst);
+    }
+    &.twitter-dark {
+        background: var(--icon-twitter-dark);
+    }
+    &.facebook-dark {
+        background: var(--icon-facebook-dark);
+    }
+    &.linkedin-dark {
+        background: var(--icon-linkedin-dark);
+    }
+    &.youtube-dark {
+        background: var(--icon-youtube-dark);
     }
 }

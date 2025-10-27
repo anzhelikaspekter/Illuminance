@@ -295,6 +295,7 @@ html {
   width: 100vw;
   position: absolute;
   top: 0;
+  z-index: 9999;
 }
 .section.hero {
   width: 100%;
@@ -419,6 +420,22 @@ html {
   padding: calc(16px + 32 * (100vw - 320px) / 1120);
 }
 .section.main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 40px;
+  padding: calc(16px + 32 * (100vw - 320px) / 1120);
+}
+.section.article {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 40px;
+  padding: calc(16px + 32 * (100vw - 320px) / 1120);
+}
+.section.node {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -715,6 +732,11 @@ html {
   --icon-main-thrd: url(./../../img/icons/main_thrd.svg) no-repeat center / contain;
   --icon-main-eghth-one: url(./../../img/icons/main_eghth-one.svg) no-repeat center / contain;
   --icon-main-eghth-two: url(./../../img/icons/main_eghth-two.svg) no-repeat center / contain;
+  --icon-article-frst: url(./../../img/icons/article_frst.svg) no-repeat center / 8px;
+  --icon-twitter-dark: url(./../../img/icons/twitter-dark.svg) no-repeat center / contain;
+  --icon-facebook-dark: url(./../../img/icons/facebook-dark.svg) no-repeat center / contain;
+  --icon-linkedin-dark: url(./../../img/icons/linkedin-dark.svg) no-repeat center / contain;
+  --icon-youtube-dark: url(./../../img/icons/youtube-dark.svg) no-repeat center / contain;
 }
 
 .icon {
@@ -1177,6 +1199,21 @@ html {
 }
 .icon.main-eghth-two {
   background: var(--icon-main-eghth-two);
+}
+.icon.article-frst {
+  background: var(--icon-article-frst);
+}
+.icon.twitter-dark {
+  background: var(--icon-twitter-dark);
+}
+.icon.facebook-dark {
+  background: var(--icon-facebook-dark);
+}
+.icon.linkedin-dark {
+  background: var(--icon-linkedin-dark);
+}
+.icon.youtube-dark {
+  background: var(--icon-youtube-dark);
 }
 
 .logo {
@@ -2257,6 +2294,20 @@ input.form__input--dark:-moz-autofill {
   }
 }
 .hero__main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.hero__article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 150px !important;
+  position: relative;
+}
+.hero__node {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -5132,6 +5183,193 @@ input.form__input--dark:-moz-autofill {
   .main__news-grid .card {
     flex: 0 0 100%;
   }
+}
+
+:root {
+  --article-social-bg-color: rgba(50, 73, 120, 0.1);
+  --article-hr-color: rgba(227, 232, 237, 1);
+  --article-aside-border-color: rgba(189, 203, 229, 1);
+  --article-aside-border-active-color: rgba(50, 73, 120, 1);
+  --article-quote-bg-color: rgba(255, 255, 255, 0.25);
+}
+
+.article__title-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.article__title-field.row {
+  flex-direction: row;
+}
+.article__title-field > .desc, .article__title-field > .title {
+  text-align: left;
+}
+.article__title-field.center {
+  align-items: center;
+}
+.article__title-field.center > .desc {
+  max-width: 65vw;
+  text-align: center;
+}
+.article__title-field.center > .title {
+  max-width: 65vw;
+  text-align: center;
+}
+.article__title-field > .quote {
+  padding: 12px 16px;
+  border-radius: calc(12px + 12 * (100vw - 320px) / 1120);
+  background: var(--article-quote-bg-color);
+}
+.article__news-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.article__news-grid .card {
+  flex: 0 0 calc((100% - 32px) / 3);
+  scroll-snap-align: start;
+}
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  .article__news-grid .card {
+    flex: 0 0 calc((100% - 16px) / 2);
+  }
+}
+@media (max-width: 767.9px) {
+  .article__news-grid .card {
+    flex: 0 0 100%;
+  }
+}
+.article__breadcrumbs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.article__breadcrumbs-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.article__breadcrumbs-item > a {
+  text-wrap: nowrap;
+  text-decoration: none;
+}
+.article.start {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.article__img {
+  width: 100%;
+  max-width: 50vw;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: calc(12px + 12 * (100vw - 320px) / 1120);
+}
+@media (min-width: 768px) {
+  .article__img {
+    max-width: 75%;
+    min-height: 300px;
+    height: 30vw;
+    margin-top: -150px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 767.9px) {
+  .article__img {
+    max-width: 100%;
+    height: 300px;
+    margin-top: -150px;
+  }
+}
+.article__wrap {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.article__field {
+  flex: 0 1 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 1023.9px) {
+  .article__field {
+    flex: 1 1 100%;
+  }
+}
+.article__aside {
+  flex: 0 1 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 1023.9px) {
+  .article__aside {
+    display: none;
+  }
+}
+.article hr {
+  width: 100%;
+  height: 1px;
+  background: var(--article-hr-color);
+  border: none;
+}
+.article__social-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.article__social-item {
+  width: 35px;
+  max-width: 35px;
+  height: 35px;
+  max-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--article-social-bg-color);
+  border-radius: 50%;
+}
+.article__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.article__post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.article__post-item {
+  border-left: 3px solid var(--article-aside-border-color);
+  border-radius: 2px;
+  padding: 12px 16px;
+}
+.article__post-item a {
+  text-decoration: none;
+}
+.article__post-item.active {
+  border-left: 4px solid var(--article-aside-border-active-color);
+}
+.article__post-item.active a {
+  color: var(--desc-primary-dark-color);
+}
+.article__text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 :root {
