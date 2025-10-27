@@ -108,6 +108,10 @@
     --icon-partners-frth-three: url(./../../img/icons/partners_frth-three.svg) no-repeat center / contain;
     --icon-partners-frth-four: url(./../../img/icons/partners_frth-four.svg) no-repeat center / contain;
     --icon-partners-frth-five: url(./../../img/icons/partners_frth-five.svg) no-repeat center / contain;
+    --icon-partners-frth-six: url(./../../img/icons/partners_frth-six.svg) no-repeat center / contain;
+    --icon-partners-frth-seven: url(./../../img/icons/partners_frth-seven.svg) no-repeat center / contain;
+    --icon-partners-frth-eight: url(./../../img/icons/partners_frth-eight.svg) no-repeat center / contain;
+    --icon-partners-frth-nine: url(./../../img/icons/partners_frth-nine.svg) no-repeat center / contain;
     --icon-partners-ffth-one: url(./../../img/icons/partners_ffth-one.svg) no-repeat center / contain;
     --icon-partners-ffth-two: url(./../../img/icons/partners_ffth-two.svg) no-repeat center / contain;
     --icon-partners-ffth-three: url(./../../img/icons/partners_ffth-three.svg) no-repeat center / contain;
@@ -116,6 +120,13 @@
     --icon-partners-sxth-one: url(./../../img/icons/partners_sxth-one.svg) no-repeat center / contain;
     --icon-partners-sxth-two: url(./../../img/icons/partners_sxth-two.svg) no-repeat center / contain;
     --icon-partners-sxth-three: url(./../../img/icons/partners_sxth-three.svg) no-repeat center / contain;
+    --icon-main-frst-one: url(./../../img/icons/main_frst-one.svg) no-repeat center / contain;
+    --icon-main-frst-two: url(./../../img/icons/main_frst-two.svg) no-repeat center / 16px;
+    --icon-main-scnd-one: url(./../../img/icons/main_scnd-one.svg) no-repeat center / contain;
+    --icon-main-scnd-two: url(./../../img/icons/main_scnd-two.svg) no-repeat center / contain;
+    --icon-main-thrd: url(./../../img/icons/main_thrd.svg) no-repeat center / contain;
+    --icon-main-eghth-one: url(./../../img/icons/main_eghth-one.svg) no-repeat center / contain;
+    --icon-main-eghth-two: url(./../../img/icons/main_eghth-two.svg) no-repeat center / contain;
 }
 
 .icon {
@@ -532,6 +543,18 @@
     &.partners-frth-five {
         background: var(--icon-partners-frth-five);
     }
+    &.partners-frth-six {
+        background: var(--icon-partners-frth-six);
+    }
+    &.partners-frth-seven {
+        background: var(--icon-partners-frth-seven);
+    }
+    &.partners-frth-eight {
+        background: var(--icon-partners-frth-eight);
+    }
+    &.partners-frth-nine {
+        background: var(--icon-partners-frth-nine);
+    }
     &.partners-ffth-one {
         background: var(--icon-partners-ffth-one);
     }
@@ -555,5 +578,26 @@
     }
     &.partners-sxth-three {
         background: var(--icon-partners-sxth-three);
+    }
+    &.main-frst-one {
+        background: var(--icon-main-frst-one);
+    }
+    &.main-frst-two {
+        background: var(--icon-main-frst-two);
+    }
+    &.main-scnd-one {
+        background: var(--icon-main-scnd-one);
+    }
+    &.main-scnd-two {
+        background: var(--icon-main-scnd-two);
+    }
+    &.main-thrd {
+        background: var(--icon-main-thrd);
+    }
+    &.main-eghth-one {
+        background: var(--icon-main-eghth-one);
+    }
+    &.main-eghth-two {
+        background: var(--icon-main-eghth-two);
     }
 }

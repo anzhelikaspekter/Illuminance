@@ -1,6 +1,6 @@
 :root {
     --card-bg-light-color: url(../../img/bg-card-dark.svg) no-repeat center, rgba(255, 255, 255, 0.45);
-    --card-bg-dark-color: url(../../img/bg-card.svg) no-repeat center, rgba(255, 255, 255, 0.06);
+    --card-bg-dark-color: url(../../img/bg-card.svg) no-repeat top right, rgba(255, 255, 255, 0.06);
 }
 
 .card {
@@ -44,6 +44,9 @@
         opacity: 0;
         transform: translateY(10px);
         animation: fadeUp 0.3s ease-out forwards;
+    }
+    &.light {
+         background: var(--card-bg-light-color);
     }
 }
 
