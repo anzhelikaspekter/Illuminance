@@ -6,6 +6,15 @@
 }
 
 .menu {
+    &__close {
+        & > .icon {
+            width: 72px;
+            max-width: 72px;
+            height: 72px;
+            max-height: 72px;
+            object-fit: contain;
+        }
+    }
     &__header {
         width: 100%;
         display: flex;
