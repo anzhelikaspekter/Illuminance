@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <base href="https://anzhelikaspekter.github.io/Illuminance/">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -142,7 +141,8 @@
                     <img src="img/img_27.webp" width="250" height="250" alt="" class="main__about-img">
                     <p class="desc primary primary--dark"><strong>Investment Solutions</strong> — digital deposits,
                         trading pools, and diversified portfolios.</p>
-                    <a href="" class="main__about-link"><span class="desc primary primary--dark">Learn more</span> <img src="img/icons/main_scnd-two.svg" width="20" height="20" alt="learn more" class="icon"></a>
+                    <a href="" class="main__about-link"><span class="desc primary primary--dark">Learn more</span> <img
+                            src="img/icons/main_scnd-two.svg" width="20" height="20" alt="learn more" class="icon"></a>
                 </li>
                 <li class="main__about-item">
                     <img src="img/img_28.webp" width="250" height="250" alt="" class="main__about-img">
@@ -155,7 +155,8 @@
                     <img src="img/img_29.webp" width="250" height="250" alt="" class="main__about-img">
                     <p class="desc primary primary--dark"><strong>Educational Platform</strong> — Illuminance Academy,
                         focused on AI and trading education.</p>
-                    <a href="" class="main__about-link"><span class="desc primary primary--dark">Learn more</span> <img src="img/icons/main_scnd-two.svg" width="20" height="20" alt="learn more" class="icon"></a>
+                    <a href="" class="main__about-link"><span class="desc primary primary--dark">Learn more</span> <img
+                            src="img/icons/main_scnd-two.svg" width="20" height="20" alt="learn more" class="icon"></a>
                 </li>
             </ul>
             <div class="main__about-field">
@@ -171,7 +172,8 @@
                     <p class="desc primary primary--middle">Total Balance</p>
                     <p class="title secondary primary--light">$ 1,577,322.69</p>
                     <p class="desc primary primary--light"><span class="desc primary green">+$23.88</span> <span
-                            class="desc primary primary--middle">•</span> 0.49% (24h) <img src="img/icons/main_thrd.svg" width="20" height="20" alt="learn more" class="icon"></p>
+                            class="desc primary primary--middle">•</span> 0.49% (24h) <img src="img/icons/main_thrd.svg"
+                            width="20" height="20" alt="learn more" class="icon"></p>
                     <h2 class="title thirdly primary--light">Our primary goal is to preserve your capital and then
                         systematically grow it.</h2>
                 </div>
@@ -978,6 +980,13 @@
 
             activate(0);
         });
+    </script>
+    <script>
+        if (window.location.hostname.includes('github.io')) {
+            const base = document.createElement('base');
+            base.href = 'https://anzhelikaspekter.github.io/Illuminance/';
+            document.head.appendChild(base);
+        }
     </script>
 </body>
 
