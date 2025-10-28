@@ -16,33 +16,32 @@
         <nav class="header__nav" aria-label="Primary">
             <!-- Menu -->
             <a href="menu.html" class="header__menu header__menu--light">
-                <span class="icon menu menu--light" aria-hidden="true"></span>
-                <span class="desc primary primary--light visually-hidden">Menu</span>
+                <img src="img/icons/menu.svg" width="20" height="20" alt="Menu" class="icon">
+                <span class="desc primary primary--dark visually-hidden">Menu</span>
             </a>
             <!-- Logo -->
             <a href="index.html">
                 <img src="img/logo.svg" width="208" height="24" alt="Illuminance" class="logo">
             </a>
-
             <!-- Lang Menu -->
             <div class="header__lang-wrap">
                 <button class="header__lang header__lang--light" type="button" aria-haspopup="menu"
                     aria-expanded="false" aria-controls="lang-menu">
-                    <span class="icon en" aria-hidden="true"></span>
+                    <img src="img/en.svg" width="20" height="20" alt="English" class="icon">
                     <span class="desc primary primary--light visually-hidden">Language</span>
                 </button>
                 <ul id="lang-menu" class="header__lang-menu" role="menu" hidden>
                     <li role="none">
                         <button role="menuitemradio" class="header__lang header__lang--light" type="button"
                             data-lang="en" aria-checked="true" tabindex="0">
-                            <span class="icon en" aria-hidden="true"></span>
+                            <img src="img/en.svg" width="20" height="20" alt="English" class="icon">
                             <span class="desc primary primary--light visually-hidden">English</span>
                         </button>
                     </li>
                     <li role="none">
                         <button role="menuitemradio" class="header__lang header__lang--light" type="button"
                             data-lang="uk" aria-checked="false" tabindex="-1">
-                            <span class="icon uk" aria-hidden="true"></span>
+                            <img src="img/ua.svg" width="20" height="20" alt="Українська" class="icon">
                             <span class="desc primary primary--light visually-hidden">Українська</span>
                         </button>
                     </li>
@@ -320,15 +319,21 @@
                     <ul class="modal__list">
                         <li class="modal__item">
                             <span class="icon partners-svnth-one" aria-hidden="true"></span>
-                            <p class="desc primary secondary--dark"><strong>The company allocates</strong> margin funds for the deposit, granting partners access to capital without the need for personal investment.</p>
+                            <p class="desc primary secondary--dark"><strong>The company allocates</strong> margin funds
+                                for the deposit, granting partners access to capital without the need for personal
+                                investment.</p>
                         </li>
                         <li class="modal__item">
                             <span class="icon partners-svnth-two" aria-hidden="true"></span>
-                            <p class="desc primary secondary--dark"><strong>Profit is earned</strong> only through the active attraction of new partner investments, which gradually replace the margin funds with real assets.</p>
+                            <p class="desc primary secondary--dark"><strong>Profit is earned</strong> only through the
+                                active attraction of new partner investments, which gradually replace the margin funds
+                                with real assets.</p>
                         </li>
                         <li class="modal__item">
                             <span class="icon partners-svnth-three" aria-hidden="true"></span>
-                            <p class="desc primary secondary--dark"><strong>This mechanism ensures</strong> that returns grow proportionally to the partner’s activity, combining the use of leveraged capital with the expansion of their investment network.</p>
+                            <p class="desc primary secondary--dark"><strong>This mechanism ensures</strong> that returns
+                                grow proportionally to the partner’s activity, combining the use of leveraged capital
+                                with the expansion of their investment network.</p>
                         </li>
                     </ul>
                 </div>
@@ -548,169 +553,171 @@
     </footer>
     <!-- Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('.header__menu');
+        /* === MENU ICON HOVER EFFECT === */
+        const menuLinks = document.querySelectorAll('.header__menu');
 
-            links.forEach(link => {
-                const icon = link.querySelector('.icon.menu');
-                if (!icon) return;
+        menuLinks.forEach(link => {
+            const icon = link.querySelector('.icon');
+            if (!icon) return;
 
-                const LIGHT = 'menu--light';
-                const DARK = 'menu--dark';
+            const defaultSrc = icon.getAttribute('src');
+            const darkSrc = defaultSrc.replace('menu.svg', 'menu_dark.svg');
 
-                const toDark = () => { icon.classList.remove(LIGHT); icon.classList.add(DARK); };
-                const toLight = () => { icon.classList.remove(DARK); icon.classList.add(LIGHT); };
+            const toDark = () => icon.setAttribute('src', darkSrc);
+            const toLight = () => icon.setAttribute('src', defaultSrc);
 
-                link.addEventListener('mouseenter', toDark);
-                link.addEventListener('mouseleave', toLight);
+            link.addEventListener('mouseenter', toDark);
+            link.addEventListener('mouseleave', toLight);
+            link.addEventListener('focus', toDark);
+            link.addEventListener('blur', toLight);
+            link.addEventListener('touchstart', toDark, { passive: true });
+            link.addEventListener('touchend', toLight, { passive: true });
+            link.addEventListener('touchcancel', toLight, { passive: true });
+        });
 
-                link.addEventListener('focus', toDark);
-                link.addEventListener('blur', toLight);
 
-                link.addEventListener('touchstart', toDark, { passive: true });
-                link.addEventListener('touchend', toLight, { passive: true });
-                link.addEventListener('touchcancel', toLight, { passive: true });
-            });
-            /* LANGUAGE MENU */
-            const root = document.documentElement;
-            const langBtn = document.querySelector('.header__lang');
-            const langMenu = document.getElementById('lang-menu');
-            const langItems = Array.from(langMenu?.querySelectorAll('[role="menuitemradio"]') || []);
-            const live = document.getElementById('lang-status');
+        /* === LANGUAGE MENU === */
+        const root = document.documentElement;
+        const langBtn = document.querySelector('.header__lang');
+        const langMenu = document.getElementById('lang-menu');
+        const langItems = Array.from(langMenu?.querySelectorAll('[role="menuitemradio"]') || []);
+        const live = document.getElementById('lang-status');
 
-            const LS_KEY = 'siteLang';
-            const URL_PARAM = 'lang';
+        const LS_KEY = 'siteLang';
+        const URL_PARAM = 'lang';
 
-            function getDefaultLang() {
-                const urlLang = URL_PARAM ? new URLSearchParams(location.search).get(URL_PARAM) : null;
-                const lsLang = localStorage.getItem(LS_KEY);
-                return (urlLang || lsLang || root.lang || 'en').toLowerCase();
-            }
+        function getDefaultLang() {
+            const urlLang = URL_PARAM ? new URLSearchParams(location.search).get(URL_PARAM) : null;
+            const lsLang = localStorage.getItem(LS_KEY);
+            return (urlLang || lsLang || root.lang || 'en').toLowerCase();
+        }
 
-            function syncChecked(targetLang) {
-                langItems.forEach(btn => {
-                    const isActive = btn.dataset.lang.toLowerCase() === targetLang.toLowerCase();
-                    btn.setAttribute('aria-checked', String(isActive));
-                    btn.tabIndex = isActive ? 0 : -1;
-
-                    if (isActive) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
-                    }
-                });
-            }
-
-            function announce(text) {
-                if (live) live.value = live.textContent = text;
-            }
-
-            function setLang(langCode, { persist = true, updateUrl = true } = {}) {
-                const code = langCode.toLowerCase();
-                document.documentElement.lang = code;
-                syncChecked(code);
-                announce(`Language: ${code}`);
-
-                const triggerIcon = document.querySelector('.header__lang > .icon');
-
-                if (triggerIcon) {
-                    triggerIcon.className = `icon ${code}`;
-                }
-
-                if (persist) localStorage.setItem('siteLang', code);
-
-                if (URL_PARAM && updateUrl) {
-                    const sp = new URLSearchParams(location.search);
-                    sp.set(URL_PARAM, code);
-                    const newUrl = `${location.pathname}?${sp.toString()}${location.hash}`;
-                    history.replaceState(null, '', newUrl);
-                }
-            }
-
-            function openLangMenu() {
-                langBtn.setAttribute('aria-expanded', 'true');
-                langMenu.hidden = false;
-                const current = langMenu.querySelector('[role="menuitemradio"][aria-checked="true"]') || langItems[0];
-                current?.focus();
-            }
-
-            function closeLangMenu() {
-                langBtn.setAttribute('aria-expanded', 'false');
-                langMenu.hidden = true;
-                langBtn.focus();
-            }
-
-            function toggleLangMenu() {
-                const expanded = langBtn.getAttribute('aria-expanded') === 'true';
-                expanded ? closeLangMenu() : openLangMenu();
-            }
-
-            function moveLangFocus(current, dir) {
-                if (!current) return;
-                const idx = langItems.indexOf(current);
-                if (idx < 0) return;
-                let nextIdx = idx + dir;
-                if (nextIdx < 0) nextIdx = langItems.length - 1;
-                if (nextIdx >= langItems.length) nextIdx = 0;
-                langItems[nextIdx].focus();
-            }
-
-            const initial = (new URLSearchParams(location.search).get('lang')
-                || localStorage.getItem('siteLang')
-                || document.documentElement.lang
-                || 'en').toLowerCase();
-            setLang(initial, { persist: false, updateUrl: false });
-
-            langBtn?.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleLangMenu();
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!langMenu.hidden && !e.target.closest('#lang-menu') && e.target !== langBtn) {
-                    closeLangMenu();
-                }
-            });
-
-            document.addEventListener('keydown', (e) => {
-                if (!langMenu.hidden && e.key === 'Escape') {
-                    e.preventDefault();
-                    closeLangMenu();
-                }
-            });
-
+        function syncChecked(targetLang) {
             langItems.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const lang = btn.dataset.lang;
+                const isActive = btn.dataset.lang.toLowerCase() === targetLang.toLowerCase();
+                btn.setAttribute('aria-checked', String(isActive));
+                btn.tabIndex = isActive ? 0 : -1;
+
+                if (isActive) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+        }
+
+        function announce(text) {
+            if (live) live.value = live.textContent = text;
+        }
+
+        function setLang(langCode, { persist = true, updateUrl = true } = {}) {
+            const code = langCode.toLowerCase();
+            document.documentElement.lang = code;
+            syncChecked(code);
+            announce(`Language: ${code}`);
+
+            const triggerIcon = langBtn.querySelector('.icon');
+            if (triggerIcon) {
+                const currentSrc = triggerIcon.getAttribute('src');
+                let newSrc = currentSrc;
+
+                if (code === 'en') newSrc = currentSrc.replace('ua.svg', 'en.svg');
+                else if (code === 'uk') newSrc = currentSrc.replace('en.svg', 'ua.svg');
+
+                triggerIcon.setAttribute('src', newSrc);
+                triggerIcon.setAttribute('alt', code === 'en' ? 'English' : 'Українська');
+            }
+
+            if (persist) localStorage.setItem(LS_KEY, code);
+
+            if (URL_PARAM && updateUrl) {
+                const sp = new URLSearchParams(location.search);
+                sp.set(URL_PARAM, code);
+                const newUrl = `${location.pathname}?${sp.toString()}${location.hash}`;
+                history.replaceState(null, '', newUrl);
+            }
+        }
+
+        function openLangMenu() {
+            langBtn.setAttribute('aria-expanded', 'true');
+            langMenu.hidden = false;
+            const current = langMenu.querySelector('[role="menuitemradio"][aria-checked="true"]') || langItems[0];
+            current?.focus();
+        }
+
+        function closeLangMenu() {
+            langBtn.setAttribute('aria-expanded', 'false');
+            langMenu.hidden = true;
+            langBtn.focus();
+        }
+
+        function toggleLangMenu() {
+            const expanded = langBtn.getAttribute('aria-expanded') === 'true';
+            expanded ? closeLangMenu() : openLangMenu();
+        }
+
+        function moveLangFocus(current, dir) {
+            if (!current) return;
+            const idx = langItems.indexOf(current);
+            if (idx < 0) return;
+            let nextIdx = idx + dir;
+            if (nextIdx < 0) nextIdx = langItems.length - 1;
+            if (nextIdx >= langItems.length) nextIdx = 0;
+            langItems[nextIdx].focus();
+        }
+
+        const initial = getDefaultLang();
+        setLang(initial, { persist: false, updateUrl: false });
+
+        langBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleLangMenu();
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!langMenu.hidden && !e.target.closest('#lang-menu') && e.target !== langBtn) {
+                closeLangMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!langMenu.hidden && e.key === 'Escape') {
+                e.preventDefault();
+                closeLangMenu();
+            }
+        });
+
+        langItems.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                setLang(lang);
+                closeLangMenu();
+            });
+
+            btn.addEventListener('keydown', (e) => {
+                const key = e.key;
+                if (key === 'ArrowDown') {
+                    e.preventDefault();
+                    moveLangFocus(e.currentTarget, +1);
+                } else if (key === 'ArrowUp') {
+                    e.preventDefault();
+                    moveLangFocus(e.currentTarget, -1);
+                } else if (key === 'Home') {
+                    e.preventDefault();
+                    langItems[0].focus();
+                } else if (key === 'End') {
+                    e.preventDefault();
+                    langItems[langItems.length - 1].focus();
+                } else if (key === 'Enter' || key === ' ') {
+                    e.preventDefault();
+                    const lang = e.currentTarget.dataset.lang;
                     setLang(lang);
                     closeLangMenu();
-                });
-
-                btn.addEventListener('keydown', (e) => {
-                    const key = e.key;
-                    if (key === 'ArrowDown') {
-                        e.preventDefault();
-                        moveLangFocus(e.currentTarget, +1);
-                    } else if (key === 'ArrowUp') {
-                        e.preventDefault();
-                        moveLangFocus(e.currentTarget, -1);
-                    } else if (key === 'Home') {
-                        e.preventDefault();
-                        langItems[0].focus();
-                    } else if (key === 'End') {
-                        e.preventDefault();
-                        langItems[langItems.length - 1].focus();
-                    } else if (key === 'Enter' || key === ' ') {
-                        e.preventDefault();
-                        const lang = e.currentTarget.dataset.lang;
-                        setLang(lang);
-                        closeLangMenu();
-                    } else if (key === 'Tab') {
-                        closeLangMenu();
-                    }
-                });
+                } else if (key === 'Tab') {
+                    closeLangMenu();
+                }
             });
-
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
             /* More Btn */
             const btn = document.querySelector('.partners__btn-more');
             const text = document.querySelector('.desc.hidden');
