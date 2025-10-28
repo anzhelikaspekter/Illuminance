@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Node</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="section header" role="banner">
+        <nav class="header__nav" aria-label="Primary">
+            <!-- Menu -->
+            <a href="menu.html" class="header__menu header__menu--light">
+                <span class="icon menu menu--light" aria-hidden="true"></span>
+                <span class="desc primary primary--dark visually-hidden">Menu</span>
+            </a>
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="img/logo.svg" width="208" height="24" alt="Illuminance" class="logo">
+            </a>
+
+            <!-- Lang Menu -->
+            <div class="header__lang-wrap">
+                <button class="header__lang header__lang--light" type="button" aria-haspopup="menu"
+                    aria-expanded="false" aria-controls="lang-menu">
+                    <span class="icon en" aria-hidden="true"></span>
+                    <span class="desc primary primary--light visually-hidden">Language</span>
+                </button>
+                <ul id="lang-menu" class="header__lang-menu" role="menu" hidden>
+                    <li role="none">
+                        <button role="menuitemradio" class="header__lang header__lang--light" type="button"
+                            data-lang="en" aria-checked="true" tabindex="0">
+                            <span class="icon en" aria-hidden="true"></span>
+                            <span class="desc primary primary--light visually-hidden">English</span>
+                        </button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitemradio" class="header__lang header__lang--light" type="button"
+                            data-lang="uk" aria-checked="false" tabindex="-1">
+                            <span class="icon uk" aria-hidden="true"></span>
+                            <span class="desc primary primary--light visually-hidden">Українська</span>
+                        </button>
+                    </li>
+                </ul>
+                <output id="lang-status" class="visually-hidden" aria-live="polite"></output>
+            </div>
+        </nav>
+    </header>
+    <!-- node -->
+    <main class="content">
+        <!-- Hero -->
+        <section class="section hero hero__node hero--dark">
+            <div class="node__title-field">
+                <div class="tooltip tooltip--dark">
+                    <p class="tooltip__title tooltip__title--light">Protect first, then grow</p>
+                </div>
+                <h1 class="title primary primary--light">Illuminance Node. Your personal trading server.</h1>
+                <h2 class="title primary primary--middle">No intermediaries. No clouds. No risk.</h2>
+            </div>
+            <div class="node__hero-img">
+                <img src="img/img_19.webp" width="600" height="300" alt="Illuminance – More Than Investments"
+                    class="node__img">
+                <img src="img/img_20.webp" width="600" height="300" alt="Illuminance – More Than Investments"
+                    class="node__img">
+                <img src="img/img_20.webp" width="600" height="300" alt="Illuminance – More Than Investments"
+                    class="node__img">
+            </div>
+        </section>
+        <!-- About -->
+        <section class="section node">
+            <ul class="node__about-list">
+                <li class="node__about-item">
+                    <div class="node__about-field">
+                        <div class="node__title-field">
+                            <h2 class="title secondary thirdly--dark">Why You Need Illuminance Node</h2>
+                            <p class="desc primary secondary--middle">Full control over your strategies and capital.
+                                <br> Your data belongs only to you.
+                            </p>
+                        </div>
+                        <p class="desc primary secondary--middle"><strong>Freedom from centralized platforms.</strong>
+                        </p>
+                    </div>
+                    <div class="node__about-field">
+                        <img src="img/img_35.webp" alt="" class="node__about-img">
+                    </div>
+                </li>
+                <li class="node__about-item">
+                    <h2 class="title secondary thirdly--dark">What You Get</h2>
+                    <ul class="node__about-list-get">
+                        <li class="node__about-item-get">
+                            <div class="node__about-icon">
+                                <span class="icon node-frst-one"></span>
+                            </div>
+                            <p class="desc primary secondary--dark"><strong>Complete anonymity</strong></p>
+                        </li>
+                        <li class="node__about-item-get">
+                            <div class="node__about-icon">
+                                <span class="icon node-frst-two"></span>
+                            </div>
+                            <p class="desc primary secondary--dark"><strong>Protection from hacks and leaks</strong></p>
+                        </li>
+                        <li class="node__about-item-get">
+                            <div class="node__about-icon">
+                                <span class="icon node-frst-three"></span>
+                            </div>
+                            <p class="desc primary secondary--dark"><strong>Autonomy and energy efficiency</strong></p>
+                        </li>
+                        <li class="node__about-item-get">
+                            <div class="node__about-icon">
+                                <span class="icon node-frst-four"></span>
+                            </div>
+                            <p class="desc primary secondary--dark"><strong>Backup and quick strategy rollback</strong>
+                            </p>
+                        </li>
+                        <li class="node__about-item-get">
+                            <div class="node__about-icon">
+                                <span class="icon node-frst-five"></span>
+                            </div>
+                            <p class="desc primary secondary--dark"><strong>Ability to connect with other nodes in a P2P
+                                    network</strong></p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!-- Key -->
+        <section class="section node key">
+            <div class="node__header">
+                <h2 class="title secondary primary--dark">Key Advantages</h2>
+                <div class="tooltip tooltip--dark">
+                    <p class="tooltip__title tooltip__title--dark">Transparent. Secure. Effective.</p>
+                </div>
+            </div>
+            <div class="node__choose">
+                <div class="node__choose-wrap">
+                    <ul class="node__choose-img-list hidden">
+                        <li class="node__choose-img-item active" id="choose-img-1">
+                            <img src="img/img_36.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                        <li class="node__choose-img-item" id="choose-img-2" hidden>
+                            <img src="img/img_35.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                        <li class="node__choose-img-item" id="choose-img-3" hidden>
+                            <img src="img/img_36.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                        <li class="node__choose-img-item" id="choose-img-4" hidden>
+                            <img src="img/img_35.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                        <li class="node__choose-img-item" id="choose-img-5" hidden>
+                            <img src="img/img_36.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                    </ul>
+                    <ul class="node__choose-list" id="choose-list">
+                        <!-- 1 -->
+                        <li class="node__choose-item active">
+                            <button type="button" class="node__choose-btn desc primary primary--dark"
+                                aria-controls="choose-img-1" aria-selected="true">
+                                <div class="node__icon">
+                                    <span class="icon node-scnd-one-dark"></span>
+                                </div>
+                                <div class="node__title-field small">
+                                    <h2 class="title thirdly primary--dark">Algorithmic Trading</h2>
+                                    <p class="desc primary secondary--middle">Run ready-made or custom strategies.
+                                        Backtesting, API integrations, and autopilot.</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="node__choose-img-item active" id="choose-left-img-1">
+                            <img src="img/img_36.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                        <!-- 2 -->
+                        <li class="node__choose-item">
+                            <button type="button" class="node__choose-btn desc primary primary--dark"
+                                aria-controls="choose-img-2" aria-selected="true">
+                                <div class="node__icon">
+                                    <span class="icon node-scnd-two-dark"></span>
+                                </div>
+                                <div class="node__title-field small">
+                                    <h2 class="title thirdly primary--dark">Local AI</h2>
+                                    <p class="desc primary secondary--middle">Market analysis and trading signals — all
+                                        processed locally. No cloud, no data leaks.</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="node__choose-img-item" id="choose-left-img-2" hidden>
+                            <img src="img/img_35.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                        <!-- 3 -->
+                        <li class="node__choose-item">
+                            <button type="button" class="node__choose-btn desc primary primary--dark"
+                                aria-controls="choose-img-3" aria-selected="true">
+                                <div class="node__icon">
+                                    <span class="icon node-scnd-three-dark"></span>
+                                </div>
+                                <div class="node__title-field small">
+                                    <h2 class="title thirdly primary--dark">Multi-Exchange Trading</h2>
+                                    <p class="desc primary secondary--middle">Encrypted wallet, local key storage,
+                                        built-in VPN and TOR.</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="node__choose-img-item" id="choose-left-img-3" hidden>
+                            <img src="img/img_36.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                        <!-- 4 -->
+                        <li class="node__choose-item">
+                            <button type="button" class="node__choose-btn desc primary primary--dark"
+                                aria-controls="choose-img-4" aria-selected="true">
+                                <div class="node__icon">
+                                    <span class="icon node-scnd-four-dark"></span>
+                                </div>
+                                <div class="node__title-field small">
+                                    <h2 class="title thirdly primary--dark">Privacy & Protection</h2>
+                                    <p class="desc primary secondary--middle">One server — all exchanges. Get the best
+                                        prices and liquidity in real time.</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="node__choose-img-item" id="choose-left-img-4" hidden>
+                            <img src="img/img_35.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                        <!-- 5 -->
+                        <li class="node__choose-item">
+                            <button type="button" class="node__choose-btn desc primary primary--dark"
+                                aria-controls="choose-img-4" aria-selected="true">
+                                <div class="node__icon">
+                                    <span class="icon node-scnd-five-dark"></span>
+                                </div>
+                                <div class="node__title-field small">
+                                    <h2 class="title thirdly primary--dark">Illuminance Network</h2>
+                                    <p class="desc primary secondary--middle">Every node is part of a decentralized
+                                        system. Data stays encrypted. Lost your device? Restore access via your personal
+                                        account.</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="node__choose-img-item" id="choose-left-img-5" hidden>
+                            <img src="img/img_36.webp" width="500" height="100" alt="" class="node__choose-img">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Ahead -->
+        <section class="section node">
+            <ul class="node__ahead-list">
+                <li class="node__ahead-item">
+                    <div class="node__title-field">
+                        <p class="desc primary secondary--light">lluminance Node is evolving:</p>
+                        <h2 class="title secondary primary--light">Looking Ahead</h2>
+                    </div>
+                    <ul class="node__ahead-inner-list">
+                        <li class="node__ahead-inner-item">
+                            <span class="icon node-thrd-two"></span>
+                            <p class="desc primary primary--light">Lightning / DeFi / DEX-трейдинг.</p>
+                        </li>
+                        <li class="node__ahead-inner-item">
+                            <span class="icon node-thrd-two"></span>
+                            <p class="desc primary primary--light">Integration with Ledger and Trezor</p>
+                        </li>
+                        <li class="node__ahead-inner-item">
+                            <span class="icon node-thrd-two"></span>
+                            <p class="desc primary primary--light">Mobile app coming soon</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="node__ahead-item">
+                    <ul class="node__ahead-inner-list">
+                        <li class="node__ahead-inner-item">
+                            <span class="icon node-thrd-one"></span>
+                            <p class="desc primary primary--dark">An exclusive version.</p>
+                        </li>
+                        <li class="node__ahead-inner-item">
+                            <span class="icon node-thrd-one"></span>
+                            <p class="desc primary primary--dark">Quantum mining and trading at home.</p>
+                        </li>
+                        <li class="node__ahead-inner-item">
+                            <span class="icon node-thrd-one"></span>
+                            <p class="desc primary primary--dark">Quantum computing in your living room.</p>
+                        </li>
+                    </ul>
+                    <div class="node__title-field">
+                        <p class="desc primary secondary--dark">lluminance Node is evolving:</p>
+                        <h2 class="title secondary primary--dark">Quantum Node (VIP)</h2>
+                    </div>
+                </li>
+                <li class="node__ahead-item">
+                    <div class="node__title-field row">
+                        <div class="about__icon light">
+                            <span class="icon about-frst"></span>
+                        </div>
+                        <div class="node__title-field">
+                            <h2 class="title thirdly primary--dark">Illuminance Node is not just a server.</h2>
+                            <p class="desc secondary primary--dark">It is your personal trader, a secure digital bunker,
+                                and part of a new financial ecosystem.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="section footer">
+        <div class="footer__wrap">
+            <div class="footer__info">
+                <div class="footer__info-wrap">
+                    <a href="index.html">
+                        <img src="img/logo_black.svg" width="208" height="24" alt="Illuminance" class="logo">
+                    </a>
+                    <p class="desc primary primary--dark">Illuminance.com provides information and resources about the
+                        fundamentals of
+                        the
+                        decentralised non-custodial liquidity protocol called the Aave Protocol, comprised.</p>
+                </div>
+                <!-- Social -->
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="#" class="social__link" aria-label="Twitter">
+                            <span class="icon twitter" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link" aria-label="Facebook">
+                            <span class="icon facebook" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link" aria-label="YouTube">
+                            <span class="icon youtube" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Nav -->
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <nav class="footer__nav" aria-label="Resources">
+                        <h3 class="title secondary secondary--dark">Resources</h3>
+                        <ul class="footer__list--inner">
+                            <li class="footer__item--inner">
+                                <a href="news.html" class="footer__link desc secondary secondary--middle">Blog</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Brand</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="faq.html" class="footer__link desc secondary secondary--middle">FAQ</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Help &amp; Support</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Governance</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="footer__item">
+                    <nav class="footer__nav" aria-label="Developers">
+                        <h3 class="title secondary secondary--dark">Developers</h3>
+                        <ul class="footer__list--inner">
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Build</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Case Studies</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Documentation</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Technical Paper</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Security</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Bug Bounty</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="footer__item">
+                    <nav class="footer__nav" aria-label="Company">
+                        <h3 class="title secondary secondary--dark">Company</h3>
+                        <ul class="footer__list--inner">
+                            <li class="footer__item--inner">
+                                <a href="privacy-policy.html"
+                                    class="footer__link desc secondary secondary--middle">Privacy Policy</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="user-terms.html" class="footer__link desc secondary secondary--middle">Terms of
+                                    Use</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="contact.html" class="footer__link desc secondary secondary--middle">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.header__menu');
+
+            links.forEach(link => {
+                const icon = link.querySelector('.icon.menu');
+                if (!icon) return;
+
+                const LIGHT = 'menu--light';
+                const DARK = 'menu--dark';
+
+                const toDark = () => { icon.classList.remove(LIGHT); icon.classList.add(DARK); };
+                const toLight = () => { icon.classList.remove(DARK); icon.classList.add(LIGHT); };
+
+                link.addEventListener('mouseenter', toDark);
+                link.addEventListener('mouseleave', toLight);
+
+                link.addEventListener('focus', toDark);
+                link.addEventListener('blur', toLight);
+
+                link.addEventListener('touchstart', toDark, { passive: true });
+                link.addEventListener('touchend', toLight, { passive: true });
+                link.addEventListener('touchcancel', toLight, { passive: true });
+            });
+            /* LANGUAGE MENU */
+            const root = document.documentElement;
+            const langBtn = document.querySelector('.header__lang');
+            const langMenu = document.getElementById('lang-menu');
+            const langItems = Array.from(langMenu?.querySelectorAll('[role="menuitemradio"]') || []);
+            const live = document.getElementById('lang-status');
+
+            const LS_KEY = 'siteLang';
+            const URL_PARAM = 'lang';
+
+            function getDefaultLang() {
+                const urlLang = URL_PARAM ? new URLSearchParams(location.search).get(URL_PARAM) : null;
+                const lsLang = localStorage.getItem(LS_KEY);
+                return (urlLang || lsLang || root.lang || 'en').toLowerCase();
+            }
+
+            function syncChecked(targetLang) {
+                langItems.forEach(btn => {
+                    const isActive = btn.dataset.lang.toLowerCase() === targetLang.toLowerCase();
+                    btn.setAttribute('aria-checked', String(isActive));
+                    btn.tabIndex = isActive ? 0 : -1;
+
+                    if (isActive) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+
+
+            function announce(text) {
+                if (live) live.value = live.textContent = text;
+            }
+
+            function setLang(langCode, { persist = true, updateUrl = true } = {}) {
+                const code = langCode.toLowerCase();
+                document.documentElement.lang = code;
+                syncChecked(code);
+                announce(`Language: ${code}`);
+
+                const triggerIcon = document.querySelector('.header__lang > .icon');
+
+                if (triggerIcon) {
+                    triggerIcon.className = `icon ${code}`;
+                }
+
+                if (persist) localStorage.setItem('siteLang', code);
+
+                if (URL_PARAM && updateUrl) {
+                    const sp = new URLSearchParams(location.search);
+                    sp.set(URL_PARAM, code);
+                    const newUrl = `${location.pathname}?${sp.toString()}${location.hash}`;
+                    history.replaceState(null, '', newUrl);
+                }
+            }
+
+            function openLangMenu() {
+                langBtn.setAttribute('aria-expanded', 'true');
+                langMenu.hidden = false;
+                const current = langMenu.querySelector('[role="menuitemradio"][aria-checked="true"]') || langItems[0];
+                current?.focus();
+            }
+
+            function closeLangMenu() {
+                langBtn.setAttribute('aria-expanded', 'false');
+                langMenu.hidden = true;
+                langBtn.focus();
+            }
+
+            function toggleLangMenu() {
+                const expanded = langBtn.getAttribute('aria-expanded') === 'true';
+                expanded ? closeLangMenu() : openLangMenu();
+            }
+
+            function moveLangFocus(current, dir) {
+                if (!current) return;
+                const idx = langItems.indexOf(current);
+                if (idx < 0) return;
+                let nextIdx = idx + dir;
+                if (nextIdx < 0) nextIdx = langItems.length - 1;
+                if (nextIdx >= langItems.length) nextIdx = 0;
+                langItems[nextIdx].focus();
+            }
+
+            const initial = (new URLSearchParams(location.search).get('lang')
+                || localStorage.getItem('siteLang')
+                || document.documentElement.lang
+                || 'en').toLowerCase();
+            setLang(initial, { persist: false, updateUrl: false });
+
+
+            langBtn?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleLangMenu();
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!langMenu.hidden && !e.target.closest('#lang-menu') && e.target !== langBtn) {
+                    closeLangMenu();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!langMenu.hidden && e.key === 'Escape') {
+                    e.preventDefault();
+                    closeLangMenu();
+                }
+            });
+
+            langItems.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const lang = btn.dataset.lang;
+                    setLang(lang);
+                    closeLangMenu();
+                });
+
+                btn.addEventListener('keydown', (e) => {
+                    const key = e.key;
+                    if (key === 'ArrowDown') {
+                        e.preventDefault();
+                        moveLangFocus(e.currentTarget, +1);
+                    } else if (key === 'ArrowUp') {
+                        e.preventDefault();
+                        moveLangFocus(e.currentTarget, -1);
+                    } else if (key === 'Home') {
+                        e.preventDefault();
+                        langItems[0].focus();
+                    } else if (key === 'End') {
+                        e.preventDefault();
+                        langItems[langItems.length - 1].focus();
+                    } else if (key === 'Enter' || key === ' ') {
+                        e.preventDefault();
+                        const lang = e.currentTarget.dataset.lang;
+                        setLang(lang);
+                        closeLangMenu();
+                    } else if (key === 'Tab') {
+                        closeLangMenu();
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = Array.from(document.querySelectorAll('.node__choose-list .node__choose-item'));
+            const leftImgs = Array.from(document.querySelectorAll('.node__choose-list .node__choose-img-item'));
+            const rightImgs = Array.from(document.querySelectorAll('.node__choose-img-list .node__choose-img-item'));
+            const mq = window.matchMedia('(min-width: 1024px)');
+            const DURATION = 5000;
+            let current = 0;
+            let timerId;
+
+            if (!items.length) return;
+
+            function hideAll(list) {
+                list.forEach(el => { el.classList.remove('active'); el.hidden = true; });
+            }
+
+            function getActiveSet() {
+                return mq.matches ? rightImgs : leftImgs;
+            }
+
+            function swapIcon(span, makeDark) {
+                if (!span) return;
+                const token = Array.from(span.classList).find(c => /-(dark|light)$/.test(c));
+                if (!token) return;
+                const base = token.replace(/-(dark|light)$/, '');
+                span.classList.remove(token);
+                span.classList.add(makeDark ? `${base}-dark` : `${base}-light`);
+            }
+
+            function restartProgressAnimation(li) {
+                li.classList.remove('active');
+                void li.offsetWidth;
+                li.classList.add('active');
+            }
+
+            function updateIcons(idx) {
+                items.forEach((li, i) => {
+                    const ico = li.querySelector('.node__icon');
+                    const span = ico ? ico.querySelector('.icon') : null;
+                    if (ico) ico.classList.toggle('active', i === idx);
+
+                    if (span) {
+                        const token = Array.from(span.classList).find(c => /-(dark|light)$/.test(c));
+                        if (token) {
+                            const base = token.replace(/-(dark|light)$/, '');
+                            span.classList.remove(token);
+                            // активный → light, неактивный → dark
+                            span.classList.add(i === idx ? `${base}-light` : `${base}-dark`);
+                        }
+                    }
+                });
+            }
+
+
+            function activate(i) {
+                current = i;
+
+                items.forEach((li, idx) => {
+                    const btn = li.querySelector('.node__choose-btn');
+                    li.classList.toggle('active', idx === i);
+                    if (btn) btn.setAttribute('aria-selected', idx === i ? 'true' : 'false');
+                });
+
+                hideAll(leftImgs);
+                hideAll(rightImgs);
+                const set = getActiveSet();
+                if (set[i]) { set[i].classList.add('active'); set[i].hidden = false; }
+
+                updateIcons(i);
+                restartProgressAnimation(items[i]);
+
+                clearTimeout(timerId);
+                timerId = setTimeout(() => next(), DURATION);
+            }
+
+            function next() {
+                const i = (current + 1) % items.length;
+                activate(i);
+            }
+
+            items.forEach((li, idx) => {
+                const btn = li.querySelector('.node__choose-btn');
+                if (!btn) return;
+                btn.addEventListener('click', () => activate(idx));
+                btn.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(idx); }
+                });
+            });
+
+            mq.addEventListener('change', () => activate(current));
+
+            activate(0);
+        });
+    </script>
+</body>
+
+</html>

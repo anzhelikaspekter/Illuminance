@@ -120,6 +120,9 @@
     --icon-partners-sxth-one: url(./../../img/icons/partners_sxth-one.svg) no-repeat center / contain;
     --icon-partners-sxth-two: url(./../../img/icons/partners_sxth-two.svg) no-repeat center / contain;
     --icon-partners-sxth-three: url(./../../img/icons/partners_sxth-three.svg) no-repeat center / contain;
+    --icon-partners-svnth-one: url(./../../img/icons/partners_svnth-one.svg) no-repeat center / contain;
+    --icon-partners-svnth-two: url(./../../img/icons/partners_svnth-two.svg) no-repeat center / contain;
+    --icon-partners-svnth-three: url(./../../img/icons/partners_svnth-three.svg) no-repeat center / contain;
     --icon-main-frst-one: url(./../../img/icons/main_frst-one.svg) no-repeat center / contain;
     --icon-main-frst-two: url(./../../img/icons/main_frst-two.svg) no-repeat center / 16px;
     --icon-main-scnd-one: url(./../../img/icons/main_scnd-one.svg) no-repeat center / contain;
@@ -132,6 +135,23 @@
     --icon-facebook-dark: url(./../../img/icons/facebook-dark.svg) no-repeat center / contain;
     --icon-linkedin-dark: url(./../../img/icons/linkedin-dark.svg) no-repeat center / contain;
     --icon-youtube-dark: url(./../../img/icons/youtube-dark.svg) no-repeat center / contain;
+    --icon-node-frst-one: url(./../../img/icons/node_frst-one.svg) no-repeat center / contain;
+    --icon-node-frst-two: url(./../../img/icons/node_frst-two.svg) no-repeat center / contain;
+    --icon-node-frst-three: url(./../../img/icons/node_frst-three.svg) no-repeat center / contain;
+    --icon-node-frst-four: url(./../../img/icons/node_frst-four.svg) no-repeat center / contain;
+    --icon-node-frst-five: url(./../../img/icons/node_frst-five.svg) no-repeat center / contain;
+    --icon-node-scnd-one-light: url(./../../img/icons/node_scnd-one-light.svg) no-repeat center / contain;
+    --icon-node-scnd-one-dark: url(./../../img/icons/node_scnd-one-dark.svg) no-repeat center / contain;
+    --icon-node-scnd-two-light: url(./../../img/icons/node_scnd-two-light.svg) no-repeat center / contain;
+    --icon-node-scnd-two-dark: url(./../../img/icons/node_scnd-two-dark.svg) no-repeat center / contain;
+    --icon-node-scnd-three-light: url(./../../img/icons/node_scnd-three-light.svg) no-repeat center / contain;
+    --icon-node-scnd-three-dark: url(./../../img/icons/node_scnd-three-dark.svg) no-repeat center / contain;
+    --icon-node-scnd-four-light: url(./../../img/icons/node_scnd-four-light.svg) no-repeat center / contain;
+    --icon-node-scnd-four-dark: url(./../../img/icons/node_scnd-four-dark.svg) no-repeat center / contain;
+    --icon-node-scnd-five-light: url(./../../img/icons/node_scnd-five-light.svg) no-repeat center / contain;
+    --icon-node-scnd-five-dark: url(./../../img/icons/node_scnd-five-dark.svg) no-repeat center / contain;
+    --icon-node-thrd-one: url(./../../img/icons/node_thrd-one.svg) no-repeat center / contain;
+    --icon-node-thrd-two: url(./../../img/icons/node_thrd-two.svg) no-repeat center / contain;
 }
 
 .icon {
@@ -584,6 +604,15 @@
     &.partners-sxth-three {
         background: var(--icon-partners-sxth-three);
     }
+    &.partners-svnth-one {
+        background: var(--icon-partners-svnth-one);
+    }
+    &.partners-svnth-two {
+        background: var(--icon-partners-svnth-two);
+    }
+    &.partners-svnth-three {
+        background: var(--icon-partners-svnth-three);
+    }
     &.main-frst-one {
         background: var(--icon-main-frst-one);
     }
@@ -619,5 +648,56 @@
     }
     &.youtube-dark {
         background: var(--icon-youtube-dark);
+    }
+    &.node-frst-one {
+        background: var(--icon-node-frst-one);
+    }
+    &.node-frst-two {
+        background: var(--icon-node-frst-two);
+    }
+    &.node-frst-three {
+        background: var(--icon-node-frst-three);
+    }
+    &.node-frst-four {
+        background: var(--icon-node-frst-four);
+    }
+    &.node-frst-five {
+        background: var(--icon-node-frst-five);
+    }
+    &.node-scnd-one-light {
+        background: var(--icon-node-scnd-one-light);
+    }
+    &.node-scnd-one-dark {
+        background: var(--icon-node-scnd-one-dark);
+    }
+    &.node-scnd-two-light {
+        background: var(--icon-node-scnd-two-light);
+    }
+    &.node-scnd-two-dark {
+        background: var(--icon-node-scnd-two-dark);
+    }
+    &.node-scnd-three-light {
+        background: var(--icon-node-scnd-three-light);
+    }
+    &.node-scnd-three-dark {
+        background: var(--icon-node-scnd-three-dark);
+    }
+    &.node-scnd-four-light {
+        background: var(--icon-node-scnd-four-light);
+    }
+    &.node-scnd-four-dark {
+        background: var(--icon-node-scnd-four-dark);
+    }
+    &.node-scnd-five-light {
+        background: var(--icon-node-scnd-five-light);
+    }
+    &.node-scnd-five-dark {
+        background: var(--icon-node-scnd-five-dark);
+    }
+    &.node-thrd-one {
+        background: var(--icon-node-thrd-one);
+    }
+    &.node-thrd-two {
+        background: var(--icon-node-thrd-two);
     }
 }

@@ -1,5 +1,6 @@
 :root {
     --title-primary-light-color: rgba(255, 255, 255, 1);
+    --title-primary-middle-color: rgba(255, 255, 255, 0.5);
     --title-primary-dark-color: rgba(0, 0, 0, 1);
 
     --title-secondary-light-color: rgba(255, 255, 255, 1);
@@ -34,6 +35,9 @@
         text-align: center;
         &--light {
             color: var(--title-primary-light-color);
+        }
+        &--middle {
+            color: var(--title-primary-middle-color);
         }
         &--dark {
             color: var(--title-primary-dark-color);
