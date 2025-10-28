@@ -277,6 +277,7 @@
         }
     }
     &__choose-btn {
+        width: 100%;
         display: block;
         padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
         padding-left: 0;
