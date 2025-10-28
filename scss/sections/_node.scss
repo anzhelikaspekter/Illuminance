@@ -371,6 +371,7 @@
         object-fit: cover;
         border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
         @media (max-width: 1023.9px) {
+            min-height: 400px;
             max-height: 400px;
         }
     }

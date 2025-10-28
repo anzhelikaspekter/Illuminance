@@ -5938,6 +5938,7 @@ input.form__input--dark:-moz-autofill {
 }
 @media (max-width: 1023.9px) {
   .node__choose-img {
+    min-height: 400px;
     max-height: 400px;
   }
 }
