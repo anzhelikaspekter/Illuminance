@@ -68,7 +68,7 @@
                     <div class="hero-video__top-controls">
                         <button type="button" class="hero-video__btn hero-video__btn--circle" data-action="toggle"
                             aria-controls="about-video" aria-pressed="false" aria-label="Play video">
-                            <span class="icon main-frst-one"></span>
+                            <img src="img/icons/main_frst-one.svg" alt="pause" class="icon">
                         </button>
                     </div>
 
@@ -88,8 +88,8 @@
                             <div class="hero-video__cta">
                                 <button type="button" class="hero-video__btn hero-video__btn--primary"
                                     data-action="toggle" aria-controls="about-video" aria-pressed="false"
-                                    aria-label="Watch video"> <span class="icon main-frst-two"></span><span
-                                        class="desc primary primary--light">Watch Video</span>
+                                    aria-label="Watch video"><img src="img/icons/main_frst-two.svg" alt="play"
+                                        class="icon"> <span class="desc primary primary--light">Watch Video</span>
                                 </button>
                             </div>
                         </div>
@@ -159,7 +159,7 @@
                 </li>
             </ul>
             <div class="main__about-field">
-                <div class="main__about-card">
+                <div class="main__about-card" style="background: url(img/img_30.webp) no-repeat center / cover;">
                     <div class="main__title-field">
                         <h2 class="title thirdly primary--light">Our Mission</h2>
                         <p class="desc primary primary--light">We are creating a next-generation economy based on
@@ -167,7 +167,8 @@
                             capital intelligent and growth sustainable.</p>
                     </div>
                 </div>
-                <div class="main__about-card">
+                <div class="main__about-card"
+                    style="background: url(img/schedule.svg) no-repeat center / cover, linear-gradient(180deg, rgba(50, 73, 120, 1) 0%, rgba(50, 73, 120, 0.7) 60%, rgba(50, 73, 120, 1) 70%);">
                     <p class="desc primary primary--middle">Total Balance</p>
                     <p class="title secondary primary--light">$ 1,577,322.69</p>
                     <p class="desc primary primary--light"><span class="desc primary green">+$23.88</span> <span
@@ -194,7 +195,8 @@
             <div class="main__strategy-field">
                 <h2 class="title thirdly primary--dark">Illuminance Three-Stage Strategy</h2>
                 <ul class="main__strategy-list">
-                    <li class="main__strategy-item">
+                    <li class="main__strategy-item"
+                        style="background: url(img/bg-card.svg) no-repeat top right / contain, rgba(50, 73, 120, 1);">
                         <span class="main__strategy-count desc primary secondary--dark">01</span>
                         <div class="main__title-field">
                             <h3 class="title secondary primary--light">Capital Preservation</h3>
@@ -202,7 +204,8 @@
                                 risk limits. AI models minimize losses and ensure portfolio stability.</p>
                         </div>
                     </li>
-                    <li class="main__strategy-item">
+                    <li class="main__strategy-item"
+                        style="background: url(img/bg-card.svg) no-repeat top right / contain, rgba(50, 73, 120, 1);">
                         <span class="main__strategy-count desc primary secondary--dark">02</span>
                         <div class="main__title-field">
                             <h3 class="title secondary primary--light">Reserve Formation</h3>
@@ -210,7 +213,8 @@
                                 pool, creating the foundation for increasing trading volumes./p>
                         </div>
                     </li>
-                    <li class="main__strategy-item">
+                    <li class="main__strategy-item"
+                        style="background: url(img/bg-card.svg) no-repeat top right / contain, rgba(50, 73, 120, 1);">
                         <span class="main__strategy-count desc primary secondary--dark">03</span>
                         <div class="main__title-field">
                             <h3 class="title secondary primary--light">Profit Growth</h3>
@@ -237,75 +241,87 @@
                     <ul class="main__choose-list" id="choose-list">
                         <!-- 1 -->
                         <li class="main__choose-item active">
-                            <button type="button" class="main__choose-btn desc primary primary--dark"
-                                aria-controls="choose-img-1" aria-selected="true">
-                                We unite classical financial markets with cutting-edge artificial intelligence and
-                                quantum computing technologies.
+                            <button type="button" class="main__choose-btn" aria-controls="choose-img-1"
+                                aria-selected="true">
+                                <p class="desc primary primary--dark">We unite classical financial markets with
+                                    cutting-edge artificial intelligence and
+                                    quantum computing technologies.</p>
                             </button>
                         </li>
                         <li class="main__choose-img-item active" id="choose-left-img-1">
-                            <img src="img/img_31.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_31.webp" width="500" height="100" alt="We unite classical financial markets with cutting-edge artificial intelligence and
+                                quantum computing technologies" class="main__choose-img">
                         </li>
                         <!-- 2 -->
                         <li class="main__choose-item">
-                            <button type="button" class="main__choose-btn desc primary primary--dark"
-                                aria-controls="choose-img-2" aria-selected="true">
-                                Our algorithms operate 24/7, delivering consistent
-                                efficiency across all stages of trading.
+                            <button type="button" class="main__choose-btn" aria-controls="choose-img-2"
+                                aria-selected="true">
+                                <p class="desc primary primary--dark">Our algorithms operate 24/7, delivering consistent
+                                    efficiency across all stages of trading.</p>
                             </button>
                         </li>
                         <li class="main__choose-img-item" id="choose-left-img-2" hidden>
-                            <img src="img/img_32.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_32.webp" width="500" height="100" alt="Our algorithms operate 24/7, delivering consistent
+                                efficiency across all stages of trading" class="main__choose-img">
                         </li>
                         <!-- 3 -->
                         <li class="main__choose-item">
-                            <button type="button" class="main__choose-btn desc primary primary--dark"
-                                aria-controls="choose-img-3" aria-selected="true">
-                                Capital is not just stored — it works through the
-                                Quantum Node system, generating constant turnover and profit.
+                            <button type="button" class="main__choose-btn" aria-controls="choose-img-3"
+                                aria-selected="true">
+                                <p class="desc primary primary--dark">Capital is not just stored — it works through the
+                                    Quantum Node system, generating constant turnover and profit.</p>
                             </button>
                         </li>
                         <li class="main__choose-img-item" id="choose-left-img-3" hidden>
-                            <img src="img/img_31.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_31.webp" width="500" height="100" alt="Capital is not just stored — it works through the
+                                Quantum Node system, generating constant turnover and profit" class="main__choose-img">
                         </li>
                         <!-- 4 -->
                         <li class="main__choose-item">
-                            <button type="button" class="main__choose-btn desc primary primary--dark"
-                                aria-controls="choose-img-4" aria-selected="true">
-                                Illuminance prioritizes capital protection first,
-                                followed by systematic and sustainable growth.
+                            <button type="button" class="main__choose-btn" aria-controls="choose-img-4"
+                                aria-selected="true">
+                                <p class="desc primary primary--dark">Illuminance prioritizes capital protection first,
+                                    followed by systematic and sustainable growth.</p>
                             </button>
                         </li>
                         <li class="main__choose-img-item" id="choose-left-img-4" hidden>
-                            <img src="img/img_32.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_32.webp" width="500" height="100" alt="Illuminance prioritizes capital protection first,
+                                followed by systematic and sustainable growth" class="main__choose-img">
                         </li>
                         <!-- 5 -->
                         <li class="main__choose-item">
-                            <button type="button" class="main__choose-btn desc primary primary--dark"
+                            <button type="button" class="main__choose-btn"
                                 aria-controls="choose-img-4" aria-selected="true">
-                                All activities are transparent: results, processes, and technologies are accessible to
-                                every partner in the ecosystem.
+                                <p class="desc primary primary--dark">All activities are transparent: results,
+                                    processes, and technologies are accessible to
+                                    every partner in the ecosystem.</p>
                             </button>
                         </li>
                         <li class="main__choose-img-item" id="choose-left-img-5" hidden>
-                            <img src="img/img_31.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_31.webp" width="500" height="100" alt="All activities are transparent: results, processes, and technologies are accessible to
+                                every partner in the ecosystem" class="main__choose-img">
                         </li>
                     </ul>
                     <ul class="main__choose-img-list hidden">
                         <li class="main__choose-img-item active" id="choose-img-1">
-                            <img src="img/img_31.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_31.webp" width="500" height="100" alt="We unite classical financial markets with cutting-edge artificial intelligence and
+                                quantum computing technologies" class="main__choose-img">
                         </li>
                         <li class="main__choose-img-item" id="choose-img-2" hidden>
-                            <img src="img/img_32.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_32.webp" width="500" height="100" alt="Our algorithms operate 24/7, delivering consistent
+                                efficiency across all stages of trading" class="main__choose-img">
                         </li>
                         <li class="main__choose-img-item" id="choose-img-3" hidden>
-                            <img src="img/img_31.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_31.webp" width="500" height="100" alt="Capital is not just stored — it works through the
+                                Quantum Node system, generating constant turnover and profit" class="main__choose-img">
                         </li>
                         <li class="main__choose-img-item" id="choose-img-4" hidden>
-                            <img src="img/img_32.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_32.webp" width="500" height="100" alt="Illuminance prioritizes capital protection first,
+                                followed by systematic and sustainable growth" class="main__choose-img">
                         </li>
                         <li class="main__choose-img-item" id="choose-img-5" hidden>
-                            <img src="img/img_31.webp" width="500" height="100" alt="" class="main__choose-img">
+                            <img src="img/img_31.webp" width="500" height="100" alt="All activities are transparent: results, processes, and technologies are accessible to
+                                every partner in the ecosystem" class="main__choose-img">
                         </li>
                     </ul>
                 </div>
@@ -335,20 +351,24 @@
                     ready-made strategies that work around the clock, ensure transparency and measurable results.</p>
             </div>
             <div class="strategy__choice">
-                <p class="desc primary primary--dark"><strong>Investors trust us for stability, innovation, and
+                <p class="desc primary primary--dark"><strong>Investors trust us for stability, innovation, and
                         long-term
                         collaboration:</strong></p>
                 <ul class="strategy__list-choice">
-                    <li class="strategy__item-choice">
-                        <span class="icon strategy-frth dark"></span>
+                    <li class="strategy__item-choice"
+                        style="background: url(img/bg-main-dark.svg) no-repeat center / cover, rgba(255, 255, 255, 0.4);">
+                        <img src="img/icons/strategy_frth-one-dark.svg" width="20" height="20"
+                            alt="Open an Investment Account" class="icon">
                         <div class="strategy__item-choice-field">
                             <h3 class="title thirdly primary--dark">Open an Investment Account</h3>
                             <p class="desc primary primary--dark">Open an account and access ready-made strategies that
                                 work 24/7 with transparent terms and measurable results</p>
                         </div>
                     </li>
-                    <li class="strategy__item-choice">
-                        <span class="icon strategy-ffth dark"></span>
+                    <li class="strategy__item-choice"
+                        style="background: url(img/bg-main-dark.svg) no-repeat center / cover, rgba(255, 255, 255, 0.4);">
+                        <img src="img/icons/strategy_frth-two-dark.svg" width="20" height="20"
+                            alt="Contact a Consultant" class="icon">
                         <div class="strategy__item-choice-field">
                             <h3 class="title thirdly primary--dark">Contact a Consultant</h3>
                             <p class="desc primary primary--dark">Get in touch with our consultant for personalized
@@ -371,11 +391,11 @@
                 <div class="main__news-btns">
                     <button type="button" class="main__news-btn main__news-btn--prev" id="prev"
                         aria-controls="news-list" aria-label="Previous news">
-                        <span class="icon main-eghth-one"></span>
+                        <img src="img/icons/main_eghth-one.svg" alt="Previous news" class="icon">
                     </button>
                     <button type="button" class="main__news-btn main__news-btn--next" id="next"
                         aria-controls="news-list" aria-label="Next news">
-                        <span class="icon main-eghth-two"></span>
+                        <img src="img/icons/main_eghth-two.svg" alt="Next news" class="icon">
                     </button>
                 </div>
             </div>
@@ -536,7 +556,8 @@
                     </li>
                     <li class="social__item">
                         <a href="#" class="social__link" aria-label="Facebook">
-                            <img src="img/icons/ic_baseline-facebook.svg" width="20" height="20" alt="Facebook" class="icon">
+                            <img src="img/icons/ic_baseline-facebook.svg" width="20" height="20" alt="Facebook"
+                                class="icon">
                         </a>
                     </li>
                     <li class="social__item">
@@ -783,44 +804,62 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            /* Change Card on Active */
-            const items = document.querySelectorAll('.strategy__item-choice');
-            if (!items.length) return;
+            /* === Change Strategy Card on Hover (Image + Background, fixed version) === */
+            (() => {
+                const items = document.querySelectorAll('.strategy__item-choice');
+                if (!items.length) return;
 
-            const paint = (li, isHover) => {
-                const icon = li.querySelector('.icon');
-                const title = li.querySelector('h3');
-                const desc = li.querySelector('p');
+                items.forEach(li => {
+                    const icon = li.querySelector('.icon');
+                    const bg = li.style.background;
 
-                li.classList.toggle('active', isHover);
+                    // Сохраняем исходные данные в data-атрибутах
+                    li.dataset.bgDark = bg;
+                    li.dataset.bgLight = bg
+                        .replace('bg-main-dark.svg', 'bg-main-light.svg')
+                        .replace('rgba(255, 255, 255, 0.4)', 'rgba(50, 73, 120, 1)');
 
-                if (icon) {
-                    icon.classList.toggle('light', isHover);
-                    icon.classList.toggle('dark', !isHover);
-                }
-                if (title) {
-                    title.classList.toggle('primary--light', isHover);
-                    title.classList.toggle('primary--dark', !isHover);
-                }
-                if (desc) {
-                    desc.classList.toggle('primary--light', isHover);
-                    desc.classList.toggle('primary--dark', !isHover);
-                }
-            };
+                    if (icon) {
+                        const src = icon.getAttribute('src');
+                        li.dataset.iconDark = src;
+                        li.dataset.iconLight = src.replace('-dark.svg', '-light.svg');
+                    }
+                });
 
-            items.forEach(li => {
-                li.addEventListener('mouseenter', () => paint(li, true));
-                li.addEventListener('mouseleave', () => paint(li, false));
-            });
+                const handleHover = (li, isHover) => {
+                    const icon = li.querySelector('.icon');
+                    const title = li.querySelector('h3');
+                    const desc = li.querySelector('p');
 
-            /* Video */
+                    li.style.background = isHover ? li.dataset.bgLight : li.dataset.bgDark;
+
+                    if (icon) {
+                        icon.setAttribute('src', isHover ? li.dataset.iconLight : li.dataset.iconDark);
+                    }
+
+                    if (title) {
+                        title.classList.toggle('primary--light', isHover);
+                        title.classList.toggle('primary--dark', !isHover);
+                    }
+                    if (desc) {
+                        desc.classList.toggle('primary--light', isHover);
+                        desc.classList.toggle('primary--dark', !isHover);
+                    }
+                };
+
+                items.forEach(li => {
+                    li.addEventListener('mouseenter', () => handleHover(li, true));
+                    li.addEventListener('mouseleave', () => handleHover(li, false));
+                });
+            })();
+
+            /* === Video Controls === */
             (() => {
                 const video = document.getElementById('about-video');
                 if (!video) return;
 
                 const frame = video.closest('.hero-video__frame');
                 const toggles = frame.querySelectorAll('[data-action="toggle"]');
-                const muteBtn = frame.querySelector('[data-action="mute"]');
 
                 function setState(playing) {
                     frame.dataset.state = playing ? 'playing' : 'paused';
@@ -829,25 +868,24 @@
                         btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
                         btn.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
 
-                        btn.innerHTML = playing
-                            ? '<span class="icon main-frst-one"></span>'
-                            : '<span class="icon main-frst-two"></span> <span>Watch Video</span>';
+                        const icon = btn.querySelector('.icon');
+                        const text = btn.querySelector('span');
 
-                        if (btn.classList.contains('hero-video__btn--circle')) {
-                            btn.innerHTML = playing
-                                ? '<span class="icon main-frst-one"></span>'
-                                : '<span class="icon main-frst-two"></span>';
+                        if (icon) {
+                            const currentSrc = icon.getAttribute('src');
+
+                            const newSrc = playing
+                                ? currentSrc.replace('main_frst-two.svg', 'main_frst-one.svg') // на pause
+                                : currentSrc.replace('main_frst-one.svg', 'main_frst-two.svg'); // на play
+
+                            icon.setAttribute('src', newSrc);
+                            icon.setAttribute('alt', playing ? 'Pause' : 'Play');
+                        }
+
+                        if (text) {
+                            text.textContent = playing ? 'Pause Video' : 'Watch Video';
                         }
                     });
-                }
-
-                function setMuted(muted) {
-                    video.muted = muted;
-                    if (muteBtn) {
-                        muteBtn.setAttribute('aria-pressed', muted ? 'true' : 'false');
-                        muteBtn.setAttribute('aria-label', muted ? 'Mute' : 'Unmute');
-                        muteBtn.textContent = muted ? '🔇' : '🔊';
-                    }
                 }
 
                 video.addEventListener('play', () => setState(true));
@@ -857,31 +895,34 @@
                 toggles.forEach(btn => {
                     btn.addEventListener('click', () => {
                         if (video.paused) {
-                            video.play().catch(() => {/* autoplay restrictions */ });
+                            video.play().catch(() => { /* autoplay restrictions */ });
                         } else {
                             video.pause();
                         }
                     });
                 });
 
-                if (muteBtn) {
-                    muteBtn.addEventListener('click', () => setMuted(!video.muted));
-                }
-
                 video.addEventListener('click', () => {
-                    if (video.paused) { video.play().catch(() => { }); } else { video.pause(); }
+                    if (video.paused) {
+                        video.play().catch(() => { });
+                    } else {
+                        video.pause();
+                    }
                 });
 
                 video.setAttribute('tabindex', '0');
-                video.addEventListener('keydown', (e) => {
+                video.addEventListener('keydown', e => {
                     if (e.code === 'Space' || e.key === 'Enter') {
                         e.preventDefault();
-                        if (video.paused) { video.play().catch(() => { }); } else { video.pause(); }
+                        if (video.paused) {
+                            video.play().catch(() => { });
+                        } else {
+                            video.pause();
+                        }
                     }
                 });
 
                 setState(false);
-                setMuted(true);
             })();
 
             /* Carousel News */

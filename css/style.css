@@ -4907,15 +4907,9 @@ input.form__input--dark:-moz-autofill {
 :root {
   --main-hero-item-bg-color: rgba(214, 223, 242, 0.25);
   --main-about-item-bg-odd: rgba(50, 73, 120, 1);
-  --main-about-item-bg-even: rgba(255, 255, 255, 0.8);
-  --main-about-img: url(../../img/img_30.webp) no-repeat center / cover;
-  --main-about-schedule-bg:
-      url(../img/bg-card-dark.svg) no-repeat top right / contain,
-      url(../img/schedule.svg) no-repeat 5% center / cover,
-      linear-gradient(180deg, rgba(50, 73, 120, 1) 0%, rgba(50, 73, 120, 0.7) 60%, rgba(50, 73, 120, 1) 70%);
-  --main-about-schedule-big: url(../img/schedule.svg) no-repeat center / cover;
+  --main-about-item-bg-even: rgba(255, 255, 255, 0.4);
+  --main-about-img: rgba(255, 255, 255, 0.4);
   --main-strategy-bg-color: rgba(255, 255, 255, 0.45);
-  --main-strategy-item-bg-color: url(../img/bg-card.svg) no-repeat top right / contain, rgba(50, 73, 120, 1);
   --main-strategy-count-bg-color: rgba(232, 238, 249, 1);
   --main-marketing-bg-color: rgba(255, 255, 255, 0.45);
   --main-news-btn-bg-color: rgba(255, 255, 255, 1);
@@ -4994,7 +4988,7 @@ input.form__input--dark:-moz-autofill {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: calc(16px + 8 * (100vw - 320px) / 1120);
+  padding: calc(16px + 0 * (100vw - 320px) / 1120);
   border-radius: calc(12px + 12 * (100vw - 320px) / 1120);
 }
 .main__about-item:nth-child(odd) {
@@ -5061,7 +5055,6 @@ input.form__input--dark:-moz-autofill {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: var(--main-about-schedule-bg);
 }
 .main__about-card:last-child > .desc {
   display: flex;
@@ -5124,7 +5117,6 @@ input.form__input--dark:-moz-autofill {
   gap: 40px;
   padding: calc(16px + 8 * (100vw - 320px) / 1120);
   border-radius: calc(12px + 12 * (100vw - 320px) / 1120);
-  background: var(--main-strategy-item-bg-color);
 }
 @media (min-width: 768px) and (max-width: 1023.9px) {
   .main__strategy-item {
@@ -5179,8 +5171,8 @@ input.form__input--dark:-moz-autofill {
   }
 }
 .main__choose-item {
-  background: var(--main-choose-item-bg-color);
   border-radius: calc(12px + 12 * (100vw - 320px) / 1120);
+  background: var(--main-choose-item-bg-color);
   transition: background 0.3s ease;
 }
 .main__choose-item .desc {
@@ -5190,9 +5182,11 @@ input.form__input--dark:-moz-autofill {
 .main__choose-item.active {
   background: var(--main-choose-item-bg-active-color);
 }
-.main__choose-item.active .desc {
+.main__choose-item.active p.desc {
+  height: -moz-max-content;
+  height: max-content;
   border-left: 2px solid var(--main-choose-item-bg-color);
-  color: var(--desc-primary-light-color);
+  color: var(--desc-primary-light-color) !important;
 }
 .main__choose-btn {
   width: 100%;

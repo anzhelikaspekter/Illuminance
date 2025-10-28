@@ -2,19 +2,12 @@
     --main-hero-item-bg-color: rgba(214, 223, 242, 0.25);
 
     --main-about-item-bg-odd: rgba(50, 73, 120, 1);
-    --main-about-item-bg-even: rgba(255, 255, 255, 0.8);
+    --main-about-item-bg-even: rgba(255, 255, 255, 0.4);
 
-    --main-about-img: url(../../img/img_30.webp) no-repeat center / cover;
-
-    --main-about-schedule-bg:
-        url(../img/bg-card-dark.svg) no-repeat top right / contain,
-        url(../img/schedule.svg) no-repeat 5% center / cover,
-        linear-gradient(180deg, rgba(50, 73, 120, 1) 0%, rgba(50, 73, 120, 0.7) 60%, rgba(50, 73, 120, 1) 70%);
-
-    --main-about-schedule-big: url(../img/schedule.svg) no-repeat center / cover;
+    --main-about-img: rgba(255, 255, 255, 0.4);
 
     --main-strategy-bg-color: rgba(255, 255, 255, 0.45);
-    --main-strategy-item-bg-color: url(../img/bg-card.svg) no-repeat top right / contain, rgba(50, 73, 120, 1);
+
     --main-strategy-count-bg-color: rgba(232, 238, 249, 1);
 
     --main-marketing-bg-color: rgba(255, 255, 255, 0.45);
@@ -94,7 +87,7 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding: calc(16px + (16 - 16) * ((100vw - 320px) / (1440 - 320)));
         border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
         &:nth-child(odd) {
             background: var(--main-about-item-bg-odd);
@@ -151,7 +144,6 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
-            background: var(--main-about-schedule-bg);
             & > .desc {
                 display: flex;
                 align-items: center;
@@ -211,7 +203,6 @@
         gap: 40px;
         padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
         border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
-        background: var(--main-strategy-item-bg-color);
         @media (min-width: 768px) and (max-width: 1023.9px) {
             flex: 1 1 calc(50% - 16px);
         }
@@ -259,8 +250,8 @@
         }
     }
     &__choose-item {
-        background: var(--main-choose-item-bg-color);
         border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        background: var(--main-choose-item-bg-color);
         transition: background 0.3s ease;
         & .desc {
             padding-left: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
@@ -270,9 +261,10 @@
         }
         &.active {
             background: var(--main-choose-item-bg-active-color);
-            & .desc {
+            & p.desc {
+                height: max-content;
                 border-left: 2px solid var(--main-choose-item-bg-color);
-                color: var(--desc-primary-light-color);
+                color: var(--desc-primary-light-color) !important;
             }
         }
     }
