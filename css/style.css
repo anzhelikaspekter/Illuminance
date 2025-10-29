@@ -5315,8 +5315,6 @@ input.form__input--dark:-moz-autofill {
   overflow: hidden;
   overflow-x: auto;
   scrollbar-width: none;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
 }
 .main__news-grid .card {
   flex: 0 0 calc((100% - 32px) / 3);
