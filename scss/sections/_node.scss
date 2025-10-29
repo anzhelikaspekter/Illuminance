@@ -1,15 +1,15 @@
 :root {
     --node-quote-bg-color: rgba(232, 238, 249, 0.5);
 
-    --node-card-light-bg-color: url(../img/bg-card-dark.svg) no-repeat center / 130%, rgba(255, 255, 255, 0.35);
-    --node-card-dark-bg-color: url(../img/bg-card.svg) no-repeat center / 130%, rgba(50, 73, 120, 1);
+    --node-card-light-bg-color: rgba(255, 255, 255, 0.35);
+    --node-card-dark-bg-color: rgba(50, 73, 120, 1);
 
-    --node-about-list-bg: url(../img/bg-main-dark.svg) no-repeat center / contain, rgba(232, 238, 249, 1);
+    --node-about-list-bg: rgba(232, 238, 249, 1);
 
     --node-about-icon-bg-color: rgba(50, 73, 120, 1);
-    --node-about-item-get-bg-color: url(../img/bg-card-dark.svg) no-repeat right / contain, rgba(255, 255, 255, 0.35);
+    --node-about-item-get-bg-color: rgba(255, 255, 255, 0.35);
 
-    --node-key-bg-color: url(../img/bg-card-left-dark.svg) no-repeat top left / contain, rgba(255, 255, 255, 0.4);
+    --node-key-bg-color: rgba(255, 255, 255, 0.4);
 
     --node-icon-bg-color: rgba(205, 217, 241, 1);
     --node-icon-bg-active-color: rgba(50, 73, 120, 1);
@@ -111,6 +111,7 @@
         gap: 0;
         background: var(--node-about-list-bg);
         border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        overflow: hidden;
     }
     &__about-item {
         padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
@@ -199,53 +200,6 @@
         padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
         position: relative;
         overflow: hidden;
-        &:nth-child(1) {
-            background: var(--node-card-dark-bg-color);
-            &::before {
-                content: "";
-                position: absolute;
-                top: 40%;
-                right: 0;
-                transform: translateY(-40%) translateX(7%);
-                width: 350px;
-                height: 350px;
-                background: url(../../img/img_33.svg) no-repeat center / contain;
-                @media (min-width: 560px) and (max-width: 1423.9px) {
-                    width: 350px;
-                    height: 350px;
-                }
-                @media (max-width: 559.9px) {
-                    width: 275px;
-                    height: 275px;
-                    top: 45%;
-                    transform: translateY(-50%) translateX(7%);
-                }
-            }
-        }
-        &:nth-child(2) {
-            background: var(--node-card-light-bg-color);
-            &::before {
-                content: "";
-                position: absolute;
-                top: 65%;
-                right: 0;
-                transform: translateY(-55%) translateX(7%);
-                width: 350px;
-                height: 350px;
-                background: url(../../img/img_34.svg) no-repeat center / contain;
-                z-index: 9;
-                @media (min-width: 560px) and (max-width: 1423.9px) {
-                    width: 300px;
-                    height: 300px;
-                    top: 65%;
-                }
-                @media (max-width: 559.9px) {
-                    width: 225px;
-                    height: 225px;
-                    top: 55%;
-                }
-            }
-        }
         &:nth-child(3) {
             background: var(--node-quote-bg-color);
             min-height: max-content;
@@ -253,6 +207,13 @@
         @media (max-width: 1023.9px) {
             flex: 1 1 100%;
         }
+    }
+    &__ahead-img {
+        position: absolute;
+        right: -20px;
+        width: 300px;
+        height: 300px;
+        object-fit: contain;
     }
     &__ahead-inner-list {
         display: flex;

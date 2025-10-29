@@ -65,7 +65,8 @@
                     <h3 class="faq__heading">
                         <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq-panel-1"
                             id="faq-button-1">
-                            <span class="icon plus" aria-hidden="true"></span>
+                            <img src="img/icons/plus.svg" width="20" height="20" alt="Open" class="icon"
+                                aria-hidden="true">
                             <span class="title thirdly thirdly--middle">Who chooses the InvestEU projects?</span>
                         </button>
                     </h3>
@@ -82,7 +83,8 @@
                     <h3 class="faq__heading">
                         <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq-panel-2"
                             id="faq-button-2">
-                            <span class="icon plus" aria-hidden="true"></span>
+                            <img src="img/icons/plus.svg" width="20" height="20" alt="Open" class="icon"
+                                aria-hidden="true">
                             <span class="title thirdly thirdly--middle">Why does EFSI cease to exist? Why not just
                                 create an
                                 EFSI 3.0?</span>
@@ -96,7 +98,8 @@
                     <h3 class="faq__heading">
                         <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq-panel-3"
                             id="faq-button-3">
-                            <span class="icon plus" aria-hidden="true"></span>
+                            <img src="img/icons/plus.svg" width="20" height="20" alt="Open" class="icon"
+                                aria-hidden="true">
                             <span class="title thirdly thirdly--middle">Can InvestEU financing be combined with EU
                                 grants?</span>
                         </button>
@@ -109,7 +112,8 @@
                     <h3 class="faq__heading">
                         <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq-panel-4"
                             id="faq-button-4">
-                            <span class="icon plus" aria-hidden="true"></span>
+                            <img src="img/icons/plus.svg" width="20" height="20" alt="Open" class="icon"
+                                aria-hidden="true">
                             <span class="title thirdly thirdly--middle">Who is accountable for the investments
                                 made?</span>
                         </button>
@@ -392,77 +396,71 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            /* FAQ ACCORDION */
-            const faqItems = document.querySelectorAll('.faq__item');
+            /* === FAQ Toggle Script (with icon src swap) === */
+            (() => {
+                const faqItems = document.querySelectorAll('.faq__item');
+                if (!faqItems.length) return;
 
-            function closeFaq(btn, panel) {
-                btn.setAttribute('aria-expanded', 'false');
+                function closeFaq(btn, panel) {
+                    btn.setAttribute('aria-expanded', 'false');
 
-                const icon = btn.querySelector('.icon');
-                if (icon) {
-                    icon.classList.remove('close', 'close--dark');
-                    icon.classList.add('plus');
+                    const icon = btn.querySelector('.icon');
+                    if (icon) {
+                        const currentSrc = icon.getAttribute('src');
+                        const newSrc = currentSrc.replace('close-dark.svg', 'plus.svg');
+                        icon.setAttribute('src', newSrc);
+                        icon.setAttribute('alt', 'Open');
+                    }
+
+                    panel.hidden = true;
+                    panel.classList.add('hide');
+
+                    const item = panel.closest('.faq__item');
+                    if (item) item.classList.remove('is-open');
                 }
 
-                const titleSpan = btn.querySelector('.title');
-                if (titleSpan) {
-                    titleSpan.classList.remove('primary--dark');
-                    titleSpan.classList.remove('thirdly--dark');
-                    titleSpan.classList.add('thirdly--middle');
+                function openFaq(btn, panel) {
+                    btn.setAttribute('aria-expanded', 'true');
+
+                    const icon = btn.querySelector('.icon');
+                    if (icon) {
+                        const currentSrc = icon.getAttribute('src');
+                        const newSrc = currentSrc.replace('plus.svg', 'close-dark.svg');
+                        icon.setAttribute('src', newSrc);
+                        icon.setAttribute('alt', 'Close');
+                    }
+
+                    panel.hidden = false;
+                    panel.classList.remove('hide');
+
+                    const item = panel.closest('.faq__item');
+                    if (item) item.classList.add('is-open');
                 }
 
-                panel.hidden = true;
-                panel.classList.add('hide');
+                faqItems.forEach((item, idx) => {
+                    const btn = item.querySelector('.faq__button');
+                    const panel = item.querySelector('.faq__panel');
 
-                const item = panel.closest('.faq__item');
-                if (item) item.classList.remove('is-open');
-            }
+                    if (!btn || !panel) return;
 
-            function openFaq(btn, panel) {
-                btn.setAttribute('aria-expanded', 'true');
+                    if (!btn.id) btn.id = `faq-button-${idx + 1}`;
+                    if (!panel.id) panel.id = `faq-panel-${idx + 1}`;
+                    btn.setAttribute('aria-controls', panel.id);
+                    panel.setAttribute('aria-labelledby', btn.id);
 
-                const icon = btn.querySelector('.icon');
-                if (icon) {
-                    icon.classList.remove('plus');
-                    icon.classList.add('close', 'close--dark');
-                }
+                    btn.addEventListener('click', () => {
+                        const expanded = btn.getAttribute('aria-expanded') === 'true';
 
-                const titleSpan = btn.querySelector('.title');
-                if (titleSpan) {
-                    titleSpan.classList.remove('thirdly--middle');
-                    titleSpan.classList.add('primary--dark');
-                }
+                        faqItems.forEach(other => {
+                            const ob = other.querySelector('.faq__button');
+                            const op = other.querySelector('.faq__panel');
+                            if (ob && op && ob !== btn) closeFaq(ob, op);
+                        });
 
-                panel.hidden = false;
-                panel.classList.remove('hide');
-
-                const item = panel.closest('.faq__item');
-                if (item) item.classList.add('is-open');
-            }
-
-            faqItems.forEach((item, idx) => {
-                const btn = item.querySelector('.faq__button');
-                const panel = item.querySelector('.faq__panel');
-
-                if (!btn || !panel) return;
-
-                if (!btn.id) btn.id = `faq-button-${idx + 1}`;
-                if (!panel.id) panel.id = `faq-panel-${idx + 1}`;
-                btn.setAttribute('aria-controls', panel.id);
-                panel.setAttribute('aria-labelledby', btn.id);
-
-                btn.addEventListener('click', () => {
-                    const expanded = btn.getAttribute('aria-expanded') === 'true';
-
-                    faqItems.forEach(other => {
-                        const ob = other.querySelector('.faq__button');
-                        const op = other.querySelector('.faq__panel');
-                        if (ob && op && ob !== btn) closeFaq(ob, op);
+                        expanded ? closeFaq(btn, panel) : openFaq(btn, panel);
                     });
-
-                    expanded ? closeFaq(btn, panel) : openFaq(btn, panel);
                 });
-            });
+            })();
         });
     </script>
 </body>

@@ -3,7 +3,7 @@
     --philanthropy-item-bg-color: rgba(232, 238, 249, 1);
     --philanthropy-tooltip-bg-color: rgba(50, 73, 120, 1);
     --philanthropy-item-border-color: rgba(205, 217, 241, 1);
-    --philanthropy-card-bg-color: url(../img/bg-main-dark.svg) no-repeat right / cover, rgba(232, 238, 249, 1);
+    --philanthropy-card-bg-color: rgba(232, 238, 249, 1);
 }
 
 .philanthropy {
@@ -143,15 +143,6 @@
             height: 100%;
             min-height: 400px;
             max-height: 100%;
-        }
-        &:nth-child(1) {
-            background: url(../../img/img_15.webp) no-repeat center / cover;
-        }
-        &:nth-child(2) {
-            background: url(../../img/img_16.webp) no-repeat center / cover;
-        }
-        &:nth-child(3) {
-            background: url(../../img/img_17.webp) no-repeat center / cover;
         }
         & .philanthropy__title-field {
             width: 100%;

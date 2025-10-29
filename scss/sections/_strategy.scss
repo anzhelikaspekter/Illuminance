@@ -4,21 +4,17 @@
     --strategy-example-bg-color: rgba(222, 230, 246, 1);
 
     --strategy-choice-bg-color: rgba(225, 232, 247, 0.5);
-    --strategy-item-choice-light-bg-color:
-        url(../../img/bg-main-dark.svg) no-repeat center / 105%, rgba(255, 255, 255, 0.4);
-    --strategy-item-choice-dark-bg-color:
-        url(../../img/bg-main-light.svg) no-repeat center / 105%, rgba(50, 73, 120, 1);
+    --strategy-item-choice-light-bg-color: rgba(255, 255, 255, 0.4);
+    --strategy-item-choice-dark-bg-color: rgba(50, 73, 120, 1);
 
-    --strategy-about-item-dark-bg-color: url(../../img/bg-card.svg) no-repeat top right / 50%, rgba(50, 73, 120, 1);
+    --strategy-about-item-dark-bg-color: rgba(50, 73, 120, 1);
 
-    --strategy-step-item-light-bg-color:
-        url(../../img/bg-card-dark.svg) no-repeat top right / contain, rgba(221, 230, 245, 1);
+    --strategy-step-item-light-bg-color: rgba(221, 230, 245, 1);
 
     --strategy-panel-border-color: rgba(50, 73, 120, 0.3);
     --strategy-panel-border-active-color: rgba(50, 73, 120, 1);
 
-    --strategy-panel-info-bg-color:
-        url(../../img/bg-card-dark.svg) no-repeat top right / contain, rgba(205, 217, 241, 1);
+    --strategy-panel-info-bg-color: rgba(205, 217, 241, 1);
 
     --strategy-panel-count-bg-color: rgba(50, 73, 120, 1);
 }
@@ -235,7 +231,17 @@
             flex: 1 1 100%;
         }
     }
-
+    &__example-icon {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: rgba(205, 217, 241, 1);
+    }
     &__panel {
         width: 100%;
         display: flex;

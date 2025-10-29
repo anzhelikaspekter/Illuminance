@@ -3,11 +3,11 @@
     --partners-item-bg-color: rgba(232, 238, 249, 1);
     --partners-tooltip-bg-color: rgba(50, 73, 120, 1);
     --partners-item-border-color: rgba(205, 217, 241, 1);
-    --partners-card-bg-color: url(../../img/bg-card-dark.svg) no-repeat top right / contain, rgba(232, 238, 249, 1);
+    --partners-card-bg-color: rgba(232, 238, 249, 1);
     --partners-link-bg-color: rgba(50, 73, 120, 1);
     --partners-choice-bg-color: rgba(255, 255, 255, 0.45);
-    --partners-item-choice-light-bg-color: url(../img/bg-main-dark.svg) no-repeat center / 105%, rgba(205, 217, 241, 1);
-    --partners-item-choice-dark-bg-color: url(../img/bg-main-light.svg) no-repeat center / 105%, rgba(50, 73, 120, 1);
+    --partners-item-choice-light-bg-color: rgba(205, 217, 241, 1);
+    --partners-item-choice-dark-bg-color: rgba(50, 73, 120, 1);
     --partners-icon-bg-light-color: rgba(228, 234, 247, 1);
     --partners-reward-bg-color: rgba(203, 215, 240, 1);
     --partners-reward-inner-bg-color: rgba(232, 238, 249, 0.5);
@@ -384,7 +384,6 @@
         border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
         position: relative;
         overflow: hidden;
-        background: url(../../img/img_24.webp) no-repeat center / cover;
         @media (max-width: 1023.9px) {
             height: 100%;
             min-height: 400px;
@@ -434,12 +433,6 @@
             height: auto;
             min-height: 600px;
             max-height: auto;
-        }
-        &:first-child {
-            background: url(../../img/img_22.webp) no-repeat center / cover;
-        }
-        &:last-child {
-            background: url(../../img/img_23.webp) no-repeat center / cover;
         }
         & .partners__title-field {
             width: 100%;

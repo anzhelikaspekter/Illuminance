@@ -167,6 +167,11 @@
                 color: var(--desc-primary-dark-color);
             }
         }
+        &:hover {
+            & a {
+                color: var(--desc-primary-dark-color);
+            }
+        }
     }
     &__text-field {
         display: flex;

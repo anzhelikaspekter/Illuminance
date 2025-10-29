@@ -1,8 +1,8 @@
 :root {
     --registration-bg: rgba(12, 17, 28, 0.8);
 
-    --hero-light-bg-color: url(../img/bg-main-dark.svg) no-repeat center / 130%, rgba(255, 255, 255, 0.35);
-    --hero-dark-bg-color: url(../img/bg-main-light.svg) no-repeat center / 130%, rgba(50, 73, 120, 1);
+    --hero-light-bg-color: url(../img/bg-main-dark.svg) no-repeat center / cover, rgba(255, 255, 255, 0.35);
+    --hero-dark-bg-color: url(../img/bg-main-light.svg) no-repeat center / cover, rgba(50, 73, 120, 1);
 }
 
 .section {
