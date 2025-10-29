@@ -1,21 +1,14 @@
 :root {
     --strategy-item-bg-color: rgba(232, 238, 249, 1);
-
     --strategy-example-bg-color: rgba(222, 230, 246, 1);
-
     --strategy-choice-bg-color: rgba(225, 232, 247, 0.5);
     --strategy-item-choice-light-bg-color: rgba(255, 255, 255, 0.4);
     --strategy-item-choice-dark-bg-color: rgba(50, 73, 120, 1);
-
     --strategy-about-item-dark-bg-color: rgba(50, 73, 120, 1);
-
     --strategy-step-item-light-bg-color: rgba(221, 230, 245, 1);
-
     --strategy-panel-border-color: rgba(50, 73, 120, 0.3);
     --strategy-panel-border-active-color: rgba(50, 73, 120, 1);
-
     --strategy-panel-info-bg-color: rgba(205, 217, 241, 1);
-
     --strategy-panel-count-bg-color: rgba(50, 73, 120, 1);
 }
 
@@ -44,9 +37,9 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 24px;
-            padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
+            padding: var(--padding-lg);
             background: var(--strategy-example-bg-color);
-            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            border-radius: var(--border-radius-lg);
         }
     }
     &__title-field {
@@ -92,7 +85,7 @@
         height: 100%;
         min-height: 300px;
         max-height: 300px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         object-fit: cover;
     }
     &__list {
@@ -106,9 +99,9 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
         background: var(--strategy-item-bg-color);
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         & .desc {
             text-align: left;
         }
@@ -135,7 +128,7 @@
         gap: 12px;
         background: var(--strategy-about-item-dark-bg-color);
         padding: 24px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         @media (min-width: 768px) and (max-width: 1439.9px) {
             flex: 1 1 calc(50% - 16px);
         }
@@ -168,7 +161,7 @@
         justify-content: space-between;
         gap: 16px;
         padding: 24px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         background: var(--strategy-step-item-light-bg-color);
         &:nth-child(1) {
             height: 15vw;
@@ -324,8 +317,8 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
+        border-radius: var(--border-radius-lg);
         background: var(--strategy-panel-info-bg-color);
         @media (min-width: 768px) and (max-width: 1439.9px) {
             flex: 1 1 calc(50% - 16px);
@@ -343,7 +336,7 @@
         align-items: center;
         justify-content: center;
         background: var(--strategy-panel-count-bg-color);
-        border-radius: calc(4px + (8 - 4) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-sm);
     }
 
     &__choice {
@@ -365,8 +358,8 @@
         justify-content: center;
         align-items: center;
         gap: 12px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-        border-radius: calc(8px + (20 - 8) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
+        border-radius: var(--border-radius-md);
         background: var(--strategy-item-choice-light-bg-color);
         cursor: pointer;
         @media (max-width: 767.9px) {

@@ -73,7 +73,7 @@
         gap: 16px;
         & > img {
             object-fit: cover;
-            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            border-radius: var(--border-radius-lg);
             &:nth-child(3) {
                 min-width: calc(15% - 16px);
                 max-width: calc(20% - 16px);
@@ -110,11 +110,11 @@
         flex-direction: column;
         gap: 0;
         background: var(--node-about-list-bg);
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         overflow: hidden;
     }
     &__about-item {
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
         &:first-child {
             display: flex;
             align-items: stretch;
@@ -149,7 +149,7 @@
         width: 100%;
         height: auto;
         object-fit: contain;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
     }
     &__about-list-get {
         width: 100%;
@@ -163,8 +163,8 @@
         align-items: center;
         gap: 16px;
         background: var(--node-about-item-get-bg-color);
-        padding: calc(16px + (16 - 16) * ((100vw - 320px) / (1440 - 320)));
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-sm);
+        border-radius: var(--border-radius-lg);
         @media (min-width: 768px) and (max-width: 1439.9px) {
             flex: 1 1 calc(50% - 16px);
         }
@@ -180,7 +180,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: calc(4px + (8 - 4) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-sm);
         background: var(--node-about-icon-bg-color);
     }
     &__ahead-list {
@@ -196,10 +196,25 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 40px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
+        padding: var(--padding-md);
         position: relative;
         overflow: hidden;
+        &:nth-child(1) {
+            & .node__ahead-img {
+                @media (max-width: 464.9px) {
+                    top: 70px;
+                }
+            }
+        }
+        &:nth-child(2) {
+            & .node__ahead-img {
+                bottom: 10px;
+                @media (max-width: 464.9px) {
+                    bottom: 70px;
+                }
+            }
+        }
         &:nth-child(3) {
             background: var(--node-quote-bg-color);
             min-height: max-content;
@@ -214,6 +229,10 @@
         width: 300px;
         height: 300px;
         object-fit: contain;
+        @media (max-width: 464.9px) {
+            width: 200px;
+            height: 200px;
+        }
     }
     &__ahead-inner-list {
         display: flex;
@@ -229,7 +248,7 @@
     }
     &.key {
         background: var(--node-key-bg-color);
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
     }
     &__header {
         width: 100%;
@@ -267,7 +286,7 @@
         }
     }
     &__choose-item {
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         transition: background 0.3s ease;
         position: relative;
         &::before {
@@ -289,13 +308,13 @@
             height: 2px;
             background: #324978;
             border-radius: 2px;
-            animation: nodeProgress 5s linear forwards; /* 5с прогресс */
+            animation: nodeProgress 5s linear forwards;
         }
     }
     &__choose-btn {
         display: flex;
         gap: 16px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
         background: transparent;
         border: none;
         text-align: left;
@@ -330,7 +349,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         @media (max-width: 1023.9px) {
             min-height: 400px;
             max-height: 400px;
@@ -345,10 +364,10 @@
         left: 16px;
         right: 16px;
         bottom: 16px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
         background: rgba(50, 73, 120, 0.5);
         border: 1px solid rgba(225, 232, 247, 0.04);
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         backdrop-filter: blur(47px);
         display: flex;
         flex-direction: column;
@@ -441,15 +460,15 @@
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.04);
             padding: 4px;
-            border-radius: calc(12px + (16 - 12) * ((100vw - 320px) / (1440 - 320)));
+            border-radius: var(--border-radius-md);
             & .daily-item {
                 flex: 1 1 calc(100% / 3 - 8px);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 24px;
-                padding: calc(16px + (16 - 16) * ((100vw - 320px) / (1440 - 320)));
-                border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1440 - 320)));
+                padding: var(--padding-sm);
+                border-radius: var(--border-radius-sm);
                 & .desc.small {
                     display: flex;
                     flex-direction: column;
@@ -537,7 +556,7 @@
         align-items: stretch;
         gap: 8px;
         padding: 4px;
-        border-radius: calc(12px + (16 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-md);
         @media (min-width: 1023.9px) and (max-width: 1439.9px) {
             flex: 1 1 100%;
             height: 150px;
@@ -552,7 +571,7 @@
         flex: 1 1 calc(100% / 3 - 8px);
         width: 100%;
         height: 100%;
-        border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-sm);
         display: flex;
         align-items: flex-end;
         justify-content: center;

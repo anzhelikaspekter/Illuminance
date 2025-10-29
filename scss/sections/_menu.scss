@@ -42,7 +42,7 @@
         gap: 24px;
     }
     &__link {
-        font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1440 - 320)));
+        font-size: var(--title-md);
         font-weight: 400;
         color: var(--menu-nav-list-item-color);
         text-decoration: none;

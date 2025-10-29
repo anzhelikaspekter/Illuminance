@@ -31,8 +31,8 @@
         flex-direction: column;
         gap: 24px;
         background: var(--modal-bg-color);
-        padding: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-lg);
+        border-radius: var(--border-radius-lg);
         box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
         outline: none;
     }
@@ -63,7 +63,7 @@
     &__item {
         background: var(--modal-item-bg-color);
         padding: 16px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         display: flex;
         flex-direction: column;
         gap: 24px;

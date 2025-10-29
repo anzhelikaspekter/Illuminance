@@ -11,12 +11,12 @@
 }
 
 @mixin desc-primary {
-    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+    font-size: var(--desc-size);
     font-weight: 400;
 }
 
 @mixin desc-secondary {
-    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+    font-size: var(--desc-size);
     font-weight: 400;
     line-height: 28px;
 }

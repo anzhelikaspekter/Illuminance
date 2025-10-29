@@ -9,8 +9,8 @@
         align-items: start;
         justify-content: space-between;
         gap: 40px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
-        padding: calc(24px + (48 - 24) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
+        padding: var(--padding-lg);
         background: var(--footer-bg-color);
         @media (max-width: 767.9px) {
             flex-wrap: wrap;

@@ -4,7 +4,7 @@
 
 .hero-video__frame {
     position: relative;
-    border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
     background: rgba(50, 73, 120, 1);
 }
@@ -28,7 +28,7 @@
     max-width: 40px;
     height: 40px;
     max-height: 40px;
-    border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1440 - 320)));
+    border-radius: var(--border-radius-md);
     border: 0;
     background: rgba(52, 61, 74, 0.35);
     display: flex;
@@ -45,7 +45,7 @@
 .hero-video__overlay {
     position: absolute;
     inset: auto 0 0 0;
-    padding: 16px;
+    padding: var(--padding-md);
     z-index: 2;
     pointer-events: none;
 }
@@ -90,7 +90,7 @@
 .hero-video__btn {
     border: 0;
     cursor: pointer;
-    border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1440 - 320)));
+    border-radius: var(--border-radius-md);
     padding: 12px;
     display: flex;
     align-items: center;

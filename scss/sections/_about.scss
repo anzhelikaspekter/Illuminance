@@ -78,7 +78,7 @@
         width: max-content;
         height: auto;
         background: var(--about-icon-bg-color);
-        border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-md);
         &.light {
             background: var(--about-icon-bg-light-color);
         }
@@ -88,7 +88,7 @@
         height: 100%;
         min-height: 300px;
         max-height: 300px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         object-fit: cover;
         object-position: 70%;
         @media (max-width: 767.9px) {
@@ -133,8 +133,8 @@
             display: flex;
             flex-direction: column;
             gap: 40px;
-            padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            padding: var(--padding-md);
+            border-radius: var(--border-radius-lg);
         }
         &--team {
             display: flex;
@@ -153,8 +153,8 @@
                 justify-content: flex-end;
                 gap: 20px;
                 background: var(--about-story-item-bg-color);
-                padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-                border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+                padding: var(--padding-md);
+                border-radius: var(--border-radius-lg);
                 position: relative;
                 overflow: hidden;
                 @media (max-width: 767.9px) {
@@ -181,8 +181,8 @@
                 justify-content: flex-end;
                 gap: 20px;
                 background: var(--about-story-item-bg-color);
-                padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-                border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+                padding: var(--padding-md);
+                border-radius: var(--border-radius-lg);
                 position: relative;
                 overflow: hidden;
                 @media (max-width: 1023.9px) {
@@ -197,7 +197,7 @@
                     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
                     backdrop-filter: blur(10px);
                     -webkit-backdrop-filter: blur(10px);
-                    border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+                    border-radius: var(--border-radius-lg);
                     overflow: hidden;
                 }
             }
@@ -216,8 +216,8 @@
         &--team-item {
             flex: 1 1 100%;
             background: var(--about-team-item-bg-dark-color);
-            padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            padding: var(--padding-md);
+            border-radius: var(--border-radius-lg);
             &:nth-child(2) {
                 background: var(--about-team-item-bg-light-color);
             }
@@ -229,8 +229,8 @@
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        padding: calc(16px + (48 - 16) * ((100vw - 320px) / (1440 - 320)));
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-lg);
+        border-radius: var(--border-radius-lg);
         background: var(--about-values-bg-color);
         &--step-list {
             width: 100%;
@@ -258,7 +258,7 @@
             justify-content: space-between;
             gap: 16px;
             padding: 24px;
-            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            border-radius: var(--border-radius-lg);
             &:nth-child(1) {
                 height: 15vw;
             }
@@ -326,8 +326,8 @@
                 justify-content: flex-end;
                 gap: 20px;
                 background: var(--about-story-item-bg-color);
-                padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-                border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+                padding: var(--padding-md);
+                border-radius: var(--border-radius-lg);
                 position: relative;
                 overflow: hidden;
                 & .about__title-field {
@@ -337,7 +337,7 @@
                     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
                     backdrop-filter: blur(10px);
                     -webkit-backdrop-filter: blur(10px);
-                    border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+                    border-radius: var(--border-radius-lg);
                     overflow: hidden;
                 }
             }
@@ -367,8 +367,8 @@
             flex-direction: column;
             align-items: stretch;
             gap: 16px;
-            padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            padding: var(--padding-md);
+            border-radius: var(--border-radius-lg);
             background: var(--about-investment-list-bg-color);
             &.row {
                 width: 100%;
@@ -400,8 +400,8 @@
             justify-content: space-between;
             gap: 16px;
             background: var(--about-investment-item-bg-light-color);
-            padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            padding: var(--padding-md);
+            border-radius: var(--border-radius-lg);
             @media (min-width: 768px) and (max-width: 1023.9px) {
                 flex: 1 1 calc(100% / 3 - 16px);
             }
@@ -415,7 +415,7 @@
             align-items: center;
             justify-content: center;
             background: var(--about-investment-count-bg-color);
-            border-radius: calc(4px + (8 - 4) * ((100vw - 320px) / (1440 - 320)));
+            border-radius: var(--border-radius-sm);
         }
     }
     &__vision {
@@ -424,8 +424,8 @@
         flex-direction: column;
         justify-content: center;
         gap: 40px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
+        border-radius: var(--border-radius-lg);
         background: var(--about-vision-bg-color);
         & > .about__title-field {
             align-items: center;
@@ -465,8 +465,8 @@
             min-height: calc(200px + (400 - 200) * ((100vw - 320px) / (1440 - 320)));
             max-height: calc(200px + (400 - 200) * ((100vw - 320px) / (1440 - 320)));
             position: relative;
-            padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            padding: var(--padding-md);
+            border-radius: var(--border-radius-lg);
             overflow: hidden;
             & > .icon {
                 position: absolute;
@@ -479,7 +479,7 @@
                     bottom: -1px;
                     left: 0;
                     right: 0;
-                    padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+                    padding: var(--padding-md);
                     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
                     backdrop-filter: blur(2px);
                     -webkit-backdrop-filter: blur(2px);

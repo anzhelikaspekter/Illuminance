@@ -107,7 +107,7 @@
         width: max-content;
         height: auto;
         background: var(--philanthropy-icon-bg-color);
-        border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-md);
         &.light {
             background: var(--philanthropy-icon-bg-light-color);
         }
@@ -117,7 +117,7 @@
         height: 100%;
         min-height: 300px;
         max-height: 300px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-md);
         object-fit: cover;
         object-position: 25%;
         @media (max-width: 767.9px) {
@@ -135,8 +135,8 @@
         flex-direction: column;
         justify-content: flex-end;
         gap: 20px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
+        border-radius: var(--border-radius-md);
         position: relative;
         overflow: hidden;
         @media (max-width: 1023.9px) {
@@ -153,7 +153,7 @@
             background: linear-gradient(0deg, rgba(52, 61, 74, 0.35) 0%, rgba(52, 61, 74, 0.35) 100%);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            border-radius: var(--border-radius-md);
             overflow: hidden;
         }
     }
@@ -200,7 +200,7 @@
         display: flex;
         flex-direction: column;
         background: var(--philanthropy-list-bg-color);
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-md);
         overflow: hidden;
     }
     &__item {
@@ -208,7 +208,7 @@
         display: flex;
         align-items: center;
         gap: 16px;
-        padding: calc(16px + (16 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-sm);
         background: var(--philanthropy-item-bg-color);
         border-bottom: 1px solid var(--philanthropy-item-border-color);
         &--wrap {
@@ -251,8 +251,8 @@
             }
         }
         &:nth-child(2) {
-            border-top-right-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
-            border-top-left-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+            border-top-right-radius: var(--border-radius-md);
+            border-top-left-radius: var(--border-radius-md);
         }
         &:last-child {
             border: none;
@@ -267,11 +267,11 @@
         align-items: stretch;
         gap: 40px;
         background: var(--philanthropy-card-bg-color);
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-md);
         &--wrap {
             width: 100%;
             flex: 1 1 calc(50% - 40px);
-            padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+            padding: var(--padding-md);
             display: flex;
             flex-direction: column;
             gap: 40px;

@@ -43,9 +43,9 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-lg);
         background: var(--representative-item-bg-color);
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         & .desc {
             text-align: left;
         }
@@ -83,7 +83,7 @@
         flex-direction: column;
         gap: 12px;
         padding: 12px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         background: var(--representative-choice-bg-color);
         & > .desc {
             font-size: 12px;
@@ -105,8 +105,8 @@
         justify-content: center;
         align-items: center;
         gap: 12px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-        border-radius: calc(8px + (20 - 8) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-lg);
+        border-radius: var(--border-radius-md);
         background: var(--representative-item-choice-light-bg-color);
         cursor: pointer;
         @media (max-width: 767.9px) {
@@ -142,7 +142,7 @@
         justify-content: space-between;
         gap: 24px;
         padding: 0 0 0 24px;
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
         background: var(--representative-program-item-light-bg-color);
         overflow: hidden;
         @media (max-width: 1023.9px) {
@@ -317,8 +317,8 @@
     }
     &__program-card {
         min-width: 90%;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-lg);
+        border-radius: var(--border-radius-lg);
         background: var(--representative-program-card-light-bg-color);
         display: flex;
         flex-direction: column;

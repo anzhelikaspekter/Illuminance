@@ -8,6 +8,11 @@
     --border-radius-sm: clamp(4px, 2vw + 1rem, 8px);
     --border-radius-md: clamp(8px, 2vw + 1rem, 16px);
     --border-radius-lg: clamp(12px, 2vw + 1rem, 24px);
+    --desc-size: clamp(14px, 2vw + 1rem, 16px);
+    --code-size: clamp(24px, 2vw + 1rem, 32px);
+    --title-lg: clamp(28px, 2vw + 1rem, 38px);
+    --title-md: clamp(20px, 2vw + 1rem, 24px);
+    --title-sm: clamp(16px, 2vw + 1rem, 18px);
 }
 
 @import "_fonts";

@@ -7,14 +7,14 @@
 .faq {
     &__list {
         background: var(--faq-bg-color);
-        border-radius: calc(12px + (24 - 12) * ((100vw - 320px) / (1440 - 320)));
+        border-radius: var(--border-radius-lg);
     }
     &__item {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 16px;
-        padding: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
         border-bottom: 1px solid var(--faq-devinder-color);
     }
     &__heading {

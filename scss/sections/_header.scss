@@ -12,7 +12,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 20px;
-        padding: calc(16px + (28 - 16) * ((100vw - 320px) / (1440 - 320)));
+        padding: var(--padding-md);
     }
     &__menu {
         width: 40px;
