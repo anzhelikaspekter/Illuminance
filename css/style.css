@@ -294,6 +294,7 @@ html {
 }
 .section.header {
   width: 100vw;
+  max-width: 1440px;
   position: absolute;
   top: 0;
   z-index: 9999;
@@ -446,6 +447,7 @@ html {
 }
 .section.footer {
   width: 100vw;
+  max-width: 1440px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6228,6 +6230,8 @@ input.form__input--dark:-moz-autofill {
 body {
   background-color: var(--bg-color);
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 ul {
