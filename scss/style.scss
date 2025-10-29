@@ -1,6 +1,13 @@
 :root {
     --bg-color: rgba(205, 217, 241, 1);
     --font-primary: "Euclid Circular B";
+    --padding-sm: clamp(16px, 2vw + 1rem, 20px);
+    --padding-md: clamp(16px, 2vw + 1rem, 24px);
+    --padding-lg: clamp(24px, 2vw + 1rem, 48px);
+    --padding-content: clamp(24px, 2vw + 1rem, 144px);
+    --border-radius-sm: clamp(4px, 2vw + 1rem, 8px);
+    --border-radius-md: clamp(8px, 2vw + 1rem, 16px);
+    --border-radius-lg: clamp(12px, 2vw + 1rem, 24px);
 }
 
 @import "_fonts";
