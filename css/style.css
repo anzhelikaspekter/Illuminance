@@ -456,6 +456,14 @@ html {
   gap: 40px;
   padding: var(--padding-lg);
 }
+.section.future {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 40px;
+  padding: var(--padding-lg);
+}
 .section.footer {
   width: 100vw;
   max-width: 1440px;
@@ -589,7 +597,7 @@ html {
   padding: var(--padding-sm);
   gap: 12px;
   border-radius: var(--border-radius-md);
-  border: 1px solid transparent;
+  border: none;
   background: transparent;
   color: transparent;
   text-decoration: none;
@@ -1416,7 +1424,7 @@ html {
   padding: var(--padding-sm);
   gap: 12px;
   border-radius: var(--border-radius-md);
-  border: 1px solid transparent;
+  border: none;
   background: transparent;
   color: transparent;
   text-decoration: none;
@@ -2490,6 +2498,12 @@ input.form__input--dark:-moz-autofill {
   position: relative;
 }
 .hero__node {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.hero__future {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6179,6 +6193,248 @@ input.form__input--dark:-moz-autofill {
 .chart__bar:nth-child(3) .chart__bar-fill {
   background: #0f529a;
   border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+:root {
+  --future-bg-color-light: rgba(228, 234, 247, 1);
+  --future-concept-list-bg-color: #cbd7f0;
+  --future-concept-item-bg-color: #e8eef9;
+  --future-components-item-bg-color: #e8eef9;
+  --future-roadmap-border-color: #cdd9f1;
+}
+
+.future__wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+.future__wrap.row {
+  flex-direction: row;
+  align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  .future__wrap.row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767.9px) {
+  .future__wrap.row {
+    flex-direction: column;
+  }
+}
+.future__wrap .title, .future__wrap .desc {
+  text-align: left;
+}
+.future__wrap.center {
+  align-items: center;
+}
+.future__wrap .btn {
+  border: none;
+}
+.future__wrap.components {
+  align-items: stretch;
+}
+.future__wrap.roadmap {
+  width: 100%;
+  gap: 40px;
+}
+.future__title-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.future__title-field.row {
+  flex-direction: row;
+}
+.future__title-field.row > .node__title-field {
+  gap: 8px;
+}
+.future__title-field > .desc, .future__title-field > .title {
+  text-align: left;
+}
+.future__title-field.center {
+  align-items: center;
+}
+.future__title-field.center > .desc {
+  max-width: 65%;
+  text-align: center;
+}
+.future__title-field.center > .title {
+  max-width: 65%;
+  text-align: center;
+}
+.future__title-field.small {
+  gap: 8px;
+}
+.future__hero-wrap {
+  flex: 1 1 calc(50% - 24px);
+}
+@media (max-width: 1023.9px) {
+  .future__hero-wrap {
+    flex: 1 1 100%;
+  }
+}
+.future__hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--border-radius-lg);
+}
+@media (max-width: 1023.9px) {
+  .future__hero-img {
+    max-height: none;
+  }
+}
+.future.light {
+  background: var(--future-bg-color-light);
+  border-radius: var(--border-radius-lg);
+  margin-top: 16px;
+}
+.future__concept-list {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  background: var(--future-concept-list-bg-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--padding-sm);
+}
+@media (max-width: 1023.9px) {
+  .future__concept-list {
+    flex-wrap: wrap;
+  }
+}
+.future__concept-item {
+  flex: 1 1 calc(50% - 16px);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: auto;
+  min-height: 360px;
+  border-radius: var(--border-radius-md);
+  background: var(--future-concept-item-bg-color);
+  position: relative;
+  overflow: hidden;
+}
+.future__concept-item:first-child .future__concept-img-field {
+  justify-content: flex-end;
+}
+@media (max-width: 767.9px) {
+  .future__concept-item:last-child {
+    min-height: 400px;
+  }
+}
+.future__concept-item:last-child .future__concept-img-field {
+  justify-content: flex-end;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+}
+@media (max-width: 429.9px) {
+  .future__concept-item:last-child .future__concept-img-field {
+    min-height: 45vw;
+  }
+}
+.future__concept-item:last-child .future__concept-img-field .future__concept-img {
+  top: -50px;
+}
+@media (max-width: 429.9px) {
+  .future__concept-item:last-child .future__concept-img-field .future__concept-img {
+    top: 0;
+  }
+}
+.future__concept-item .future__title-field {
+  padding: var(--padding-md);
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1023.9px) {
+  .future__concept-item {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+.future__concept-img-field {
+  width: 100%;
+  min-height: 200px;
+  max-height: 200px;
+  display: flex;
+  position: relative;
+}
+.future__concept-img {
+  width: auto;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+}
+@media (max-width: 429.9px) {
+  .future__concept-img {
+    position: absolute;
+    right: 0px;
+  }
+}
+.future__components-wrap {
+  flex: 1 1 calc(50% - 24px);
+}
+.future__components-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.future__components-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 150px;
+  padding: var(--padding-md);
+  border-radius: var(--border-radius-lg);
+}
+.future__roadmap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.future__roadmap-item {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-top: 1px dashed var(--future-roadmap-border-color);
+}
+.future__roadmap-year {
+  flex: 1 1 10%;
+  padding: var(--padding-sm);
+  padding-left: 0;
+  border-right: 1px dashed var(--future-roadmap-border-color);
+}
+.future__roadmap-year:first-child .desc {
+  opacity: 0;
+}
+.future__roadmap-description {
+  flex: 1 1 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: var(--padding-sm);
+  padding-left: clamp(20px, 2vw + 1rem, 200px);
+  padding-right: 0;
+}
+.future__roadmap-description .desc {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.future__roadmap-description .desc .icon {
+  margin-top: 4px;
 }
 
 :root {

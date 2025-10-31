@@ -317,6 +317,14 @@
         gap: 40px;
         padding: var(--padding-lg);
     }
+    &.future {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 40px;
+        padding: var(--padding-lg);
+    }
     &.footer {
         width: 100vw;
         max-width: 1440px;

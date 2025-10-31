@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Future">
+    <title>Our Future</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="section header" role="banner">
+        <nav class="header__nav" aria-label="Primary">
+            <!-- Menu -->
+            <a href="menu.html" class="header__menu header__menu--light">
+                <img src="img/icons/menu.svg" width="20" height="20" alt="Menu" class="icon">
+                <span class="desc primary primary--dark visually-hidden">Menu</span>
+            </a>
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="img/logo.svg" width="208" height="24" alt="Illuminance" class="logo">
+            </a>
+            <!-- Lang Menu -->
+            <div class="header__lang-wrap">
+                <button class="header__lang header__lang--light" type="button" aria-haspopup="menu"
+                    aria-expanded="false" aria-controls="lang-menu">
+                    <img src="img/en.svg" width="20" height="20" alt="English" class="icon">
+                    <span class="desc primary primary--light visually-hidden">Language</span>
+                </button>
+                <ul id="lang-menu" class="header__lang-menu" role="menu" hidden>
+                    <li role="none">
+                        <button role="menuitemradio" class="header__lang header__lang--light" type="button"
+                            data-lang="en" aria-checked="true" tabindex="0">
+                            <img src="img/en.svg" width="20" height="20" alt="English" class="icon">
+                            <span class="desc primary primary--light visually-hidden">English</span>
+                        </button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitemradio" class="header__lang header__lang--light" type="button"
+                            data-lang="uk" aria-checked="false" tabindex="-1">
+                            <img src="img/ua.svg" width="20" height="20" alt="Українська" class="icon">
+                            <span class="desc primary primary--light visually-hidden">Українська</span>
+                        </button>
+                    </li>
+                </ul>
+                <output id="lang-status" class="visually-hidden" aria-live="polite"></output>
+            </div>
+        </nav>
+    </header>
+    <!-- node -->
+    <main class="content">
+        <!-- Hero -->
+        <section class="section hero hero__future hero--dark">
+            <div class="future__title-field">
+                <div class="tooltip tooltip--dark">
+                    <p class="tooltip__title tooltip__title--light">Protect first, then grow</p>
+                </div>
+                <h1 class="title primary primary--light">Illuminance - Our Future</h1>
+            </div>
+            <div class="future__wrap row">
+                <div class="future__hero-wrap">
+                    <img src="img/img_10.webp" width="600" height="300" alt="Illuminance - Our Future"
+                        class="future__hero-img">
+                </div>
+                <div class="future__hero-wrap">
+                    <div class="future__title-field">
+                        <h2 class="title thirdly primary--light">We are creating an ecosystem where investments,
+                            technology, and people come together.</h2>
+                        <p class="desc primary primary--light"><strong>Illuminance</strong> <span
+                                class="desc primary primary--middle">- is not just an investment platform. It is the
+                                financial technology ecosystem of the future, where every partner receives everything
+                                they need for earning, development, and growth.</span></p>
+                        <p class="desc primary primary--light"><strong>Our mission</strong> <span
+                                class="desc primary primary--middle">- is to unite investments, technology, and
+                                entrepreneurship in a single space that opens up new opportunities and shapes the future
+                                of financial systems.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Concept -->
+        <section class="section future light">
+            <div class="future__title-field">
+                <div class="tooltip tooltip--dark">
+                    <p class="tooltip__title tooltip__title--dark">Full Transparency</p>
+                </div>
+                <h2 class="title primary secondary--dark">The Concept of Illuminance</h2>
+                <p class="desc primary primary--dark">We do not just invest — we create.</p>
+            </div>
+            <ul class="future__concept-list">
+                <li class="future__concept-item"
+                    style="background: url(img/bg-card-dark.svg) no-repeat 280% -25vw / 120%, rgba(255, 255, 255, 0.4);">
+                    <div class="future__concept-img-field">
+                        <img src="img/img_41.svg" width="300" height="300" alt="Technological synergy"
+                            class="future__concept-img">
+                    </div>
+                    <div class="future__title-field small">
+                        <h3 class="title thirdly thirdly--dark">Technological synergy</h3>
+                        <p class="desc secondary secondary--dark">Illuminance is an ecosystem where capital works
+                            alongside intelligence, and technology serves as a conduit to new heights.</p>
+                        <p class="desc secondary secondary--dark">We integrate investment, development, marketing, and
+                            digital solutions into a single, self-evolving platform.</p>
+                    </div>
+                </li>
+                <li class="future__concept-item"
+                    style="background: url(img/bg-card-dark.svg) no-repeat 280% 5vw / 120%, rgba(255, 255, 255, 0.4);">
+                    <div class="future__title-field small">
+                        <h3 class="title thirdly thirdly--dark">Human-centric</h3>
+                        <p class="desc secondary secondary--dark">At the centre is the individual.</p>
+                        <p class="desc secondary secondary--dark">Each partner becomes part of a living community, where
+                            personal success enhances collective outcomes.</p>
+                    </div>
+                    <div class="future__concept-img-field">
+                        <img src="img/img_42.svg" width="300" height="300" alt="Technological synergy"
+                            class="future__concept-img">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- Components -->
+        <section class="section future">
+            <div class="future__wrap row components">
+                <div class="future__components-wrap">
+                    <div class="future__title-field">
+                        <div class="tooltip tooltip--dark">
+                            <p class="tooltip__title tooltip__title--dark">Quantum Network</p>
+                        </div>
+                        <h2 class="title primary secondary--dark">Components of the Illuminance ecosystem</h2>
+                        <p class="desc primary primary--dark">Artificial intelligence, marketing, news, and tokenization
+                            work together to create stable growth. Every user becomes part of a network that rewards
+                            activity and fosters community. This is a platform that transforms innovations into real
+                            profit
+                            opportunities.</p>
+                    </div>
+                </div>
+                <div class="future__components-wrap">
+                    <ul class="future__components-list">
+                        <li class="future__components-item"
+                            style="background: url(img/bg-card-dark.svg) no-repeat -150% -25vw / 120%, rgba(255, 255, 255, 0.4);">
+                            <img src="img/icons/concept_frst-one.svg" width="20" height="20" alt="Trading robots and artificial
+                                    intelligence" class="icon">
+                            <p class="desc secondary secondary--dark"><strong>Trading robots and artificial
+                                    intelligence:</strong> Innovative trading algorithms developed for Illuminance Node
+                                and based on quantum technologies provide a stable passive income. Every action within
+                                the platform is rewarded with token points, enhancing profits and encouraging
+                                participation.</p>
+                        </li>
+                        <li class="future__components-item"
+                            style="background: url(img/bg-card-dark.svg) no-repeat -150% -25vw / 120%, rgba(255, 255, 255, 0.4);">
+                            <img src="img/icons/concept_frst-two.svg" width="20" height="20" alt="Marketing Agency"
+                                class="icon">
+                            <p class="desc secondary secondary--dark"><strong>Marketing Agency:</strong> The in-house
+                                agency Illuminance assists partners in promoting their personal and corporate brands.
+                                Referral programmes, bonuses, promotions, and giveaways create a dynamic ecosystem that
+                                is beneficial for all participants.</p>
+                        </li>
+                        <li class="future__components-item"
+                            style="background: url(img/bg-card-dark.svg) no-repeat -150% -25vw / 120%, rgba(255, 255, 255, 0.4);">
+                            <img src="img/icons/concept_frst-three.svg" width="20" height="20" alt="Built-in messenger"
+                                class="icon">
+                            <p class="desc secondary secondary--dark"><strong>Built-in messenger:</strong> Communication
+                                is key to growth. We are creating an integrated messenger where users can chat, create
+                                team chats, VIP groups, and channels featuring the founders of Illuminance. Each level
+                                of entrepreneurs gains access to new communication formats.</p>
+                        </li>
+                        <li class="future__components-item"
+                            style="background: url(img/bg-card-dark.svg) no-repeat -150% -25vw / 120%, rgba(255, 255, 255, 0.4);">
+                            <img src="img/icons/concept_frst-four.svg" width="20" height="20" alt="News Portal"
+                                class="icon">
+                            <p class="desc secondary secondary--dark"><strong>News Portal:</strong> Stay at the heart of
+                                events. We are developing our own news hub that covers current topics in the world of
+                                technology, investments, artificial intelligence, and financial markets.</p>
+                        </li>
+                        <li class="future__components-item"
+                            style="background: url(img/bg-card-dark.svg) no-repeat -150% -25vw / 120%, rgba(255, 255, 255, 0.4);">
+                            <img src="img/icons/concept_frst-five.svg" width="20" height="20"
+                                alt="Token and tokenisation" class="icon">
+                            <p class="desc secondary secondary--dark"><strong>Token and tokenisation:</strong> The
+                                internal token Illuminance will be the core of the ecosystem: it will facilitate
+                                payments for services, provide benefits, enable participation in projects, and enhance
+                                income. This is an internal economy that grows alongside each user.</p>
+                        </li>
+                        <li class="future__components-item"
+                            style="background: url(img/bg-card-dark.svg) no-repeat -150% -25vw / 120%, rgba(255, 255, 255, 0.4);">
+                            <img src="img/icons/concept_frst-six.svg" width="20" height="20" alt="Digital asset storage"
+                                class="icon">
+                            <p class="desc secondary secondary--dark"><strong>Digital asset storage:</strong> Security
+                                and convenience are our priorities. Partners will be able to earn, store, and manage
+                                crypto assets in a secure environment, choosing whether to withdraw funds or use the
+                                internal Illuminance storage.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Roadmap -->
+        <section class="section future light">
+            <div class="future__title-field roadmap">
+                <h2 class="title primary secondary--dark">Illuminance Roadmap 2025 - 2035</h2>
+                <p class="desc primary primary--dark">Create the technological and ideological foundation of the
+                    ecosystem.</p>
+            </div>
+            <ul class="future__roadmap">
+                <li class="future__roadmap-item">
+                    <div class="future__roadmap-year">
+                        <p class="desc primary secondary--dark"><strong>2025</strong></p>
+                    </div>
+                    <div class="future__roadmap-description">
+                        <div class="future__title-field small">
+                            <h3 class="title thirdly primary--dark">Phase I. Foundation & Launch 2025 - 2035</h3>
+                            <p class="desc secondary secondary--dark"><img src="img/icons/roadmap__frst-one.svg"
+                                    width="20" height="20" alt="Goal" class="icon"> Goal: Establish the Illuminance
+                                brand, structure,
+                                and core technology.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- Welcome -->
+        <section class="section future">
+            <div class="future__wrap center">
+                <div class="future__title-field center">
+                    <h2 class="title primary primary--dark">Illuminance: The Light of the New Economy</h2>
+                    <p class="desc primary primary--dark">We are building a future where technology, capital, and people
+                        work in synergy.Illuminance is not just a company — it is a movement forward, where every
+                        participant becomes part of a global transformation of the financial world.</p>
+                </div>
+                <p class="desc primary primary--dark"><strong>Welcome to the next-generation ecosystem.</strong></p>
+                <a href="sign-in.html" class="btn desc primary primary--light">Welcome to Illuminance</a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="section footer">
+        <div class="footer__wrap">
+            <div class="footer__info">
+                <div class="footer__info-wrap">
+                    <a href="index.html">
+                        <img src="img/logo_black.svg" width="208" height="24" alt="Illuminance" class="logo">
+                    </a>
+                    <p class="desc primary primary--dark">Illuminance.com provides information and resources about the
+                        fundamentals of
+                        the
+                        decentralised non-custodial liquidity protocol called the Aave Protocol, comprised.</p>
+                </div>
+                <!-- Social -->
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="#" class="social__link" aria-label="Twitter">
+                            <img src="img/icons/prime_twitter.svg" width="20" height="20" alt="Twitter" class="icon">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link" aria-label="Facebook">
+                            <img src="img/icons/ic_baseline-facebook.svg" width="20" height="20" alt="Facebook"
+                                class="icon">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link" aria-label="YouTube">
+                            <img src="img/icons/mdi_youtube.svg" width="20" height="20" alt="YouTube" class="icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Nav -->
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <nav class="footer__nav" aria-label="Resources">
+                        <h3 class="title secondary secondary--dark">Resources</h3>
+                        <ul class="footer__list--inner">
+                            <li class="footer__item--inner">
+                                <a href="news.html" class="footer__link desc secondary secondary--middle">Blog</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Brand</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="faq.html" class="footer__link desc secondary secondary--middle">FAQ</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Help &amp; Support</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Governance</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="footer__item">
+                    <nav class="footer__nav" aria-label="Developers">
+                        <h3 class="title secondary secondary--dark">Developers</h3>
+                        <ul class="footer__list--inner">
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Build</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Case Studies</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Documentation</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Technical Paper</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Security</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="#" class="footer__link desc secondary secondary--middle">Bug Bounty</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="footer__item">
+                    <nav class="footer__nav" aria-label="Company">
+                        <h3 class="title secondary secondary--dark">Company</h3>
+                        <ul class="footer__list--inner">
+                            <li class="footer__item--inner">
+                                <a href="privacy-policy.html"
+                                    class="footer__link desc secondary secondary--middle">Privacy Policy</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="user-terms.html" class="footer__link desc secondary secondary--middle">Terms of
+                                    Use</a>
+                            </li>
+                            <li class="footer__item--inner">
+                                <a href="contact.html" class="footer__link desc secondary secondary--middle">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script>
+        /* === MENU ICON HOVER EFFECT === */
+        const menuLinks = document.querySelectorAll('.header__menu');
+
+        menuLinks.forEach(link => {
+            const icon = link.querySelector('.icon');
+            if (!icon) return;
+
+            const defaultSrc = icon.getAttribute('src');
+            const darkSrc = defaultSrc.replace('menu.svg', 'menu_dark.svg');
+
+            const toDark = () => icon.setAttribute('src', darkSrc);
+            const toLight = () => icon.setAttribute('src', defaultSrc);
+
+            link.addEventListener('mouseenter', toDark);
+            link.addEventListener('mouseleave', toLight);
+            link.addEventListener('focus', toDark);
+            link.addEventListener('blur', toLight);
+            link.addEventListener('touchstart', toDark, { passive: true });
+            link.addEventListener('touchend', toLight, { passive: true });
+            link.addEventListener('touchcancel', toLight, { passive: true });
+        });
+
+
+        /* === LANGUAGE MENU === */
+        const root = document.documentElement;
+        const langBtn = document.querySelector('.header__lang');
+        const langMenu = document.getElementById('lang-menu');
+        const langItems = Array.from(langMenu?.querySelectorAll('[role="menuitemradio"]') || []);
+        const live = document.getElementById('lang-status');
+
+        const LS_KEY = 'siteLang';
+        const URL_PARAM = 'lang';
+
+        function getDefaultLang() {
+            const urlLang = URL_PARAM ? new URLSearchParams(location.search).get(URL_PARAM) : null;
+            const lsLang = localStorage.getItem(LS_KEY);
+            return (urlLang || lsLang || root.lang || 'en').toLowerCase();
+        }
+
+        function syncChecked(targetLang) {
+            langItems.forEach(btn => {
+                const isActive = btn.dataset.lang.toLowerCase() === targetLang.toLowerCase();
+                btn.setAttribute('aria-checked', String(isActive));
+                btn.tabIndex = isActive ? 0 : -1;
+
+                if (isActive) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+        }
+
+        function announce(text) {
+            if (live) live.value = live.textContent = text;
+        }
+
+        function setLang(langCode, { persist = true, updateUrl = true } = {}) {
+            const code = langCode.toLowerCase();
+            document.documentElement.lang = code;
+            syncChecked(code);
+            announce(`Language: ${code}`);
+
+            const triggerIcon = langBtn.querySelector('.icon');
+            if (triggerIcon) {
+                const currentSrc = triggerIcon.getAttribute('src');
+                let newSrc = currentSrc;
+
+                if (code === 'en') newSrc = currentSrc.replace('ua.svg', 'en.svg');
+                else if (code === 'uk') newSrc = currentSrc.replace('en.svg', 'ua.svg');
+
+                triggerIcon.setAttribute('src', newSrc);
+                triggerIcon.setAttribute('alt', code === 'en' ? 'English' : 'Українська');
+            }
+
+            if (persist) localStorage.setItem(LS_KEY, code);
+
+            if (URL_PARAM && updateUrl) {
+                const sp = new URLSearchParams(location.search);
+                sp.set(URL_PARAM, code);
+                const newUrl = `${location.pathname}?${sp.toString()}${location.hash}`;
+                history.replaceState(null, '', newUrl);
+            }
+        }
+
+        function openLangMenu() {
+            langBtn.setAttribute('aria-expanded', 'true');
+            langMenu.hidden = false;
+            const current = langMenu.querySelector('[role="menuitemradio"][aria-checked="true"]') || langItems[0];
+            current?.focus();
+        }
+
+        function closeLangMenu() {
+            langBtn.setAttribute('aria-expanded', 'false');
+            langMenu.hidden = true;
+            langBtn.focus();
+        }
+
+        function toggleLangMenu() {
+            const expanded = langBtn.getAttribute('aria-expanded') === 'true';
+            expanded ? closeLangMenu() : openLangMenu();
+        }
+
+        function moveLangFocus(current, dir) {
+            if (!current) return;
+            const idx = langItems.indexOf(current);
+            if (idx < 0) return;
+            let nextIdx = idx + dir;
+            if (nextIdx < 0) nextIdx = langItems.length - 1;
+            if (nextIdx >= langItems.length) nextIdx = 0;
+            langItems[nextIdx].focus();
+        }
+
+        const initial = getDefaultLang();
+        setLang(initial, { persist: false, updateUrl: false });
+
+        langBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleLangMenu();
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!langMenu.hidden && !e.target.closest('#lang-menu') && e.target !== langBtn) {
+                closeLangMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!langMenu.hidden && e.key === 'Escape') {
+                e.preventDefault();
+                closeLangMenu();
+            }
+        });
+
+        langItems.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                setLang(lang);
+                closeLangMenu();
+            });
+
+            btn.addEventListener('keydown', (e) => {
+                const key = e.key;
+                if (key === 'ArrowDown') {
+                    e.preventDefault();
+                    moveLangFocus(e.currentTarget, +1);
+                } else if (key === 'ArrowUp') {
+                    e.preventDefault();
+                    moveLangFocus(e.currentTarget, -1);
+                } else if (key === 'Home') {
+                    e.preventDefault();
+                    langItems[0].focus();
+                } else if (key === 'End') {
+                    e.preventDefault();
+                    langItems[langItems.length - 1].focus();
+                } else if (key === 'Enter' || key === ' ') {
+                    e.preventDefault();
+                    const lang = e.currentTarget.dataset.lang;
+                    setLang(lang);
+                    closeLangMenu();
+                } else if (key === 'Tab') {
+                    closeLangMenu();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
